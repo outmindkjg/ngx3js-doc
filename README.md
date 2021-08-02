@@ -1,1 +1,0 @@
-# outmindkjg.github.io
