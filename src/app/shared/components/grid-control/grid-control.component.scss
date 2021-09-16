@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.left,
+.right {
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  ::ng-deep {
+    >div {
+      display: inline-block;
+    }
+    dx-button,
+    dx-text-box {
+      display: inline-block;
+    }
+  }
+}
+
+.left {
+  width: 30%;
+  text-align: left;
+  ::ng-deep {
+    dx-button,
+    dx-text-box {
+      margin-right: 5px;
+    }
+  }
+  input.file-upload {
+    position: relative;
+    display: inline-block;
+    margin-left: -110px;
+    width: 104px;
+    opacity: 0;
+    z-index: 5;
+    margin-right: 5px;
+  }
+}
+.right {
+  width: 70%;
+  text-align: right;
+  ::ng-deep {
+    dx-button,
+    dx-text-box {
+      margin-left: 5px;
+    }
+  }
+}

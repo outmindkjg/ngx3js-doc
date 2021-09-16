@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@import "../themes/generated/variables.base.scss";
+
+$primary:       $button-default-bg;
+$secondary:     $button-normal-bg;
+$success:       $button-success-bg;
+$info:          $button-normal-bg;
+$warning:       $toast-warning-bg;
+$danger:        $button-danger-bg;
+$light:         $base-border-color;
+$dark:          $base-hover-color;
+$input-btn-padding-y:         .1rem;
+
+$grid-gutter-width:10px;
+
+$input-btn-focus-box-shadow: none;
+$input-btn-focus-width: 0;

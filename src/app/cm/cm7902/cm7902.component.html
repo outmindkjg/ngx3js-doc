@@ -1,0 +1,133 @@
+<app-layout #layout>
+  <div slot="search">
+    <form [formGroup]="form" (ngSubmit)="goSearch()" class="with-right-search">
+      <div class="row">
+        <app-field
+          class="col-6"
+          label="Assured"
+          [required]="true"
+          [isGroup]="true"
+        >
+          <dx-text-box
+            stylingMode="outlined"
+            name="in02"
+            formControlName="in02"
+            [isValid]="formControls.in02.isValid"
+            [validationError]="formControls.in02.message"
+          >
+          </dx-text-box>
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary">
+              <i class="icon dx-icon-search"></i>
+            </button>
+          </div>
+        </app-field>
+        <app-field class="col-3" label="New/#Renewal">
+          <dx-text-box
+            stylingMode="outlined"
+            formControlName="entered"
+          ></dx-text-box>
+        </app-field>
+        <app-field class="col-3" label="Entered">
+          <dx-text-box
+            stylingMode="outlined"
+            formControlName="entered"
+          ></dx-text-box>
+        </app-field>
+      </div>
+      <div class="row">
+        <app-field class="col-6" label="Insurance#Type">
+          <dx-select-box
+            stylingMode="outlined"
+            formControlName="insurance"
+            [dataSource]="'city' | code"
+            [valueExpr]="'value'"
+            [displayExpr]="'text'"
+          ></dx-select-box>
+        </app-field>
+        <app-field class="col-6" label="Entered#Period">
+          <dx-date-box
+            stylingMode="outlined"
+            formControlName="period"
+          ></dx-date-box>
+        </app-field>
+      </div>
+      <div class="right-search">
+        <dx-button type="default" stylingMode="filled" (onClick)="goSearch()">
+          Search
+        </dx-button>
+        <dx-button
+          type="default"
+          stylingMode="outlined"
+          (onClick)="clearForm()"
+        >
+          Clear
+        </dx-button>
+      </div>
+    </form>
+  </div>
+  <app-grid-control
+    slot="top"
+    [upload]="true"
+    [download]="true"
+    [add]="true"
+    [delete]="true"
+    [search]="true"
+    [dataGrid]="dataGrid"
+    [gridConfig]="gridConfig"
+    (onUpload)="onUploadJson($event)"
+  >
+    <span slot="left">
+      <dx-button type="success" icon="add" text="CREATE" [routerLink]="'/cm/cm7902/create'"></dx-button>
+    </span>
+    <span slot="right"></span>
+  </app-grid-control>
+  <div class="card-view">
+    <dx-data-grid
+      [columnAutoWidth]="true"
+      [wordWrapEnabled]="true"
+      [showBorders]="true"
+      [dataSource]="dataSource"
+      
+      [paging]="gridConfig.paging"
+      [editing]="gridConfig.editing"
+    >
+      <dxo-scrolling mode="virtual"></dxo-scrolling>
+      <dxo-selection mode="multiple"></dxo-selection>
+      <dxi-column
+        dataField="codeGrp"
+        caption="Code Group"
+        [minWidth]="120"
+        [allowSearch]="true"
+      >
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="grpName" caption="Group Name" [allowSearch]="true">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="codeLeng" caption="Length"></dxi-column>
+      <dxi-column dataField="codeDtm" caption="Code Date"></dxi-column>
+      <dxi-column type="buttons" caption="Manager">
+        <dxi-button name="delete"></dxi-button>
+        <dxi-button
+            text="Link"
+            icon="link"
+            hint="View"
+            [onClick]="goView"
+          >
+        </dxi-button>
+      </dxi-column>
+    </dx-data-grid>
+  </div>
+  <app-grid-bottom
+    slot="bottom"
+    [dataGrid]="dataGrid"
+    [gridConfig]="gridConfig"
+  >
+    <div slot="left">
+    </div>
+    <div slot="right">
+      <dx-button type="success" icon="add" text="CREATE" [routerLink]="'/cm/cm7902/create'"></dx-button>
+    </div>
+  </app-grid-bottom>
+</app-layout>

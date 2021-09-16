@@ -1,0 +1,14 @@
+{
+    "TIT_MODAL_ALERT" : "Info",
+    "TIT_MODAL_CONFIRM" : "Confirm", 
+    "BTN_CLOSE" : "Close",
+    "BTN_YES" : "Yes",
+    "BTN_NO" : "No",
+    "BTN_OK" : "Ok",
+    "MESSAGE" : "msg {{value}}",
+    "MSG_GRID_NOSELECTED" : "Has No Selected Items.",
+    "MSG_EXCEL_IMPORTED" : "Total {{rowCnt}} rows imported!!",
+    "MSG_EXCEL_IMPORT_ERROR" : "No Data was imported from {{fileName}}!",
+    "MSG_LOGIN_ERROR" : "아이디 혹은 암호 상이 합니다. 다시 확인 하여 주십시요.",
+    "MGS_LOGIN_SUCCESS" : "Welcome {{name}}!!"
+}

@@ -1,0 +1,9 @@
+<div class="dx-field">
+  <div class="dx-field-label">
+    <span [innerHTML]="label.split('#').join('<br />')"></span>
+    <i *ngIf="required" class="fa fa-asterisk"></i>
+  </div>
+  <div class="dx-field-value" [ngClass]="{ 'input-group': isGroup }">
+    <ng-content></ng-content>
+  </div>
+</div>

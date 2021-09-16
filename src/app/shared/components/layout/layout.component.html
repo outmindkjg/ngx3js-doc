@@ -1,0 +1,21 @@
+<div class="search-area" [ngClass]="{ 'search-inactive': !showSearch }" #search>
+  <div class="search-container">
+    <ng-content select="[slot=search]"></ng-content>
+  </div>
+  <button
+    type="button"
+    class="btn btn-sm search-toggle"
+    (click)="toggleSearch()"
+  >
+    <i class="fa fa-chevron-up"></i>
+  </button>
+</div>
+<div class="top-container" #top>
+  <ng-content select="[slot=top]"></ng-content>
+</div>
+<dx-scroll-view class="contents-container" [height]="dataGridHeight + 20">
+  <ng-content></ng-content>
+</dx-scroll-view>
+<div class="bottom-container" #bottom>
+  <ng-content select="[slot=bottom]"></ng-content>
+</div>

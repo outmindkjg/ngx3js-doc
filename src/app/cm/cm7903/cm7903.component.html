@@ -1,0 +1,193 @@
+<app-layout #layout>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h3>Text Box</h3>
+    <div class="card-view modify-layout">
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-text-box
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+            [isValid]="formControls.codeGrp.isValid"
+            [validationError]="formControls.codeGrp.message"
+          >
+          </dx-text-box>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-text-box
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+            [isValid]="formControls.grpName.isValid"
+            [validationError]="formControls.grpName.message"
+          >
+          </dx-text-box>
+        </app-field>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h3>Text Area</h3>
+    <div class="card-view modify-layout">
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-text-area
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+            [isValid]="formControls.codeGrp.isValid"
+            [validationError]="formControls.codeGrp.message"
+          >
+          </dx-text-area>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-text-area
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+            [isValid]="formControls.grpName.isValid"
+            [validationError]="formControls.grpName.message"
+          >
+          </dx-text-area>
+        </app-field>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h3>Select Box</h3>
+    <div class="card-view modify-layout">
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-select-box
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+            [dataSource]="'CPT_ST_CD' | code"
+            [valueExpr]="'id'"
+            [displayExpr]="'label'"
+            [isValid]="formControls.codeGrp.isValid"
+            [validationError]="formControls.codeGrp.message"
+          >
+          </dx-select-box>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-select-box
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+            [dataSource]="'CAGO_TY_CD' | code"
+            [valueExpr]="'id'"
+            [displayExpr]="'label'"
+            [isValid]="formControls.grpName.isValid"
+            [validationError]="formControls.grpName.message"
+          >
+          </dx-select-box>
+        </app-field>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <h3>Date Box</h3>
+    <div class="card-view modify-layout">
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-date-box
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+            [isValid]="formControls.codeGrp.isValid"
+            [validationError]="formControls.codeGrp.message"
+          >
+          </dx-date-box>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-date-box
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+            [isValid]="formControls.grpName.isValid"
+            [validationError]="formControls.grpName.message"
+          >
+          </dx-date-box>
+        </app-field>
+      </div>
+    </div>    
+
+    <br>
+    <br>
+    <h3>Number Box</h3>
+    <div class="card-view modify-layout">
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-number-box
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+          >
+          </dx-number-box>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-date-box
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+          >
+          </dx-date-box>
+        </app-field>
+      </div>
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-number-box
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+            [showSpinButtons]="true"
+            [showClearButton]="true"
+          >
+          </dx-number-box>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-number-box
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+            [showSpinButtons]="true"
+            [showClearButton]="true"
+          >
+          </dx-number-box>
+        </app-field>
+      </div>
+
+    </div>        
+    <br>
+    <br>
+    <h3>Result</h3>
+    <div class="card-view">
+      <div class="row">
+        <div class="col-12">
+          <pre style="color:white">{{ form.value | json }}</pre>
+        </div>
+      </div>
+    </div>
+  </form>
+  <app-grid-bottom slot="bottom">
+    <div slot="left">
+      <dx-button
+        type="default"
+        icon="bulletlist"
+        text="LIST"
+        [routerLink]="'/cm/cm9920'"
+      ></dx-button>
+    </div>
+    <div slot="right">
+      <dx-button
+        type="danger"
+        icon="save"
+        text="SAVE"
+        (onClick)="submit()"
+        [disabled]="!formControls.form.isValid"
+      ></dx-button>
+    </div>
+  </app-grid-bottom>
+</app-layout>

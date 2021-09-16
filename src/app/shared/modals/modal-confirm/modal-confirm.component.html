@@ -1,0 +1,9 @@
+<app-modal-skin headerTitle="TIT_MODAL_CONFIRM" [useDone]="true" doneTxt="BTN_YES" (onDone)="setAnswer(true)" [useCancel]="true" cancelTxt="BTN_NO" (onCancel)="setAnswer(false)" [modalRef]="modalRef">
+	<p>{{ question }}</p>
+	<small *ngIf="subQuestion">{{ subQuestion }}</small>
+
+	{{ 'TIT_MODAL_CONFIRM' | translate }}
+
+	{{ 'adad.asdada' | translate }}
+	
+</app-modal-skin>

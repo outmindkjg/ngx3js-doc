@@ -1,0 +1,278 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "animate";
+
+
+:root {
+  --top-height: 70px;
+  --top-bg : #2a2a2a;
+  --menu-width: 250px;
+  --body-bg : rgb(41, 42, 45);
+  --menu-bg : #111111;
+  --menu-line : #3a3b3d;
+  --contents-bg : #040404;
+  --card-bg : #{$scrollable-scroll-bg};
+  --grid-gutter-width : #{$grid-gutter-width};
+  --main-height : 700px;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+.scrollable-vertical {
+  overflow: auto;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color:transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color:transparent;
+    border-radius: 10px;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #2f3542;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: grey;
+      box-shadow: inset 0px 0px 5px white;
+    }
+  }
+
+}
+
+app-layout {
+  .row {
+    --label-width: 120px;
+    app-field {
+      margin-top: 5px;
+      margin-bottom:5px;
+      vertical-align: middle;
+      .dx-field-label {
+        width: var(--label-width);
+        padding: 0 0;
+        line-height: 110%;
+      }
+      .dx-field-value-static,
+      .dx-field-value:not(.dx-switch):not(.dx-checkbox):not(.dx-button) {
+        width: calc(100% - var(--label-width));
+        min-height: 30px;
+      }
+      .dx-texteditor-input {
+        padding: 3px 5px;
+        min-height: 28px;
+      }
+      .dx-placeholder::before {
+        padding: 3px 5px;
+      }
+    }
+  }
+  div.card-view {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    &.view-layout,
+    &.modify-layout {
+      .row {
+        app-field {
+          margin-top:0;
+          margin-bottom:0;
+          .dx-field {
+            background-color: #595B5E;
+            border:1px solid #393B3E;
+            margin-top:-1px;
+            .dx-field-value,
+            .dx-field-label {
+              vertical-align: middle;
+            }
+            .dx-field-label {
+              padding: 0 8px;
+              vertical-align: middle;
+            }
+            .dx-field-value {
+              background-color: #2D2C30;
+              padding: 4px 8px;
+              vertical-align: middle;
+              border-width: 0;
+              >span {
+                line-height: 30px;
+                min-height: 30px;
+                &::after {
+                  content: '';
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  form.with-right-search {
+    position: relative;
+    --margin-right : 220px;
+    padding-right: var(--margin-right);
+    > div.right-search {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      width: var(--margin-right);
+      dx-button {
+        margin-left: 5px;
+      }
+    }
+  }
+  .dx-header-row > td {
+    .dx-datagrid-text-content {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+button.btn.btn-clear,
+button.btn.btn-submit {
+  margin-right: 0.1rem;
+  width: 85px;
+}
+.modal-dialog {
+  .modal-content {
+    background-color: var(--body-bg);
+  }
+}
+
+.dx-datagrid {
+  background-color: $pivotgrid-grandtotalcolor;
+}
+
+.dx-texteditor.dx-editor-outlined {
+  background-color: $base-bg;
+}
+.dx-rtl .dx-texteditor.dx-editor-filled.dx-show-clear-button .dx-texteditor-input,
+.dx-rtl .dx-texteditor.dx-editor-outlined.dx-show-clear-button .dx-texteditor-input,
+.dx-rtl.dx-texteditor.dx-editor-filled.dx-show-clear-button .dx-texteditor-input,
+.dx-rtl.dx-texteditor.dx-editor-outlined.dx-show-clear-button .dx-texteditor-input,
+.dx-texteditor.dx-editor-filled .dx-placeholder::before,
+.dx-texteditor.dx-editor-filled .dx-texteditor-input,
+.dx-texteditor.dx-editor-outlined .dx-placeholder::before,
+.dx-texteditor.dx-editor-outlined .dx-texteditor-input {
+  padding-top: 8px;
+  padding-bottom: 7px;
+}
+
+.dx-button {
+  height: 30px;
+}
+
+.dx-datagrid-headers {
+  background-color: #595B5E;
+}
+
+.input-group {
+  flex-wrap: nowrap;
+  >.input-group-append > .btn,
+  > .input-group-append > .input-group-text,
+  > .input-group-prepend:not(:first-child) > .btn,
+  > .input-group-prepend:not(:first-child) > .input-group-text,
+  > .input-group-prepend:first-child > .btn:not(:first-child),
+  > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-color : $texteditor-border-color;
+  }
+  .dx-texteditor.dx-editor-outlined {
+    border-radius: $base-border-radius 0 0 $base-border-radius;
+  }
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+div.col-dual {
+  --col-left-width : 30%;
+  >div.col-left {
+    max-width: var(--col-left-width);
+  }
+  >div.col-right {
+    min-width: calc(100% - var(--col-left-width));
+  }
+}
+div.layout-row-dual {
+  --row-height : 50%;
+  --sub-height : var(--main-height);
+  div.row-top {
+    --main-height : calc(var(--sub-height) - var(--row-height)) ;
+  }
+  div.row-bottom {
+    --main-height : var(--row-height);
+  }
+  div.row-top,
+  div.row-bottom {
+    height : var(--main-height);
+    overflow:hidden;
+  }
+}
+div.layout-row-dual>div.row {
+  --min-height : 80px;
+  min-height: calc(var(--min-height) + var(--grid-gutter-width));
+  >.col,
+  >.col-1,
+  >.col-2,
+  >.col-3,
+  >.col-4,
+  >.col-5,
+  >.col-6,
+  >.col-7,
+  >.col-8,
+  >.col-9,
+  >.col-10,
+  >.col-11,
+  >.col-12 {
+    min-height: calc(var(--min-height) + var(--grid-gutter-width));
+    height : var(--main-height);
+    --sub-height : var(--main-height);
+    >app-card-view>div.card-view,
+    >div.card-view {
+      --main-height : calc(var(--sub-height) - var(--grid-gutter-width));
+    }
+  }
+}
+div.card-view {
+  height : var(--main-height);
+  min-height:var(--min-height);
+  dx-data-grid {
+    height : calc(var(--main-height) - var(--grid-gutter-width) * 2 );
+    min-height:calc(var(--min-height) - var(--grid-gutter-width) * 2 );
+  }
+  >div.card-view-contents {
+    height : var(--main-height);
+    min-height:calc(var(--min-height) - var(--grid-gutter-width) * 2 );
+    overflow: hidden;
+  }
+}

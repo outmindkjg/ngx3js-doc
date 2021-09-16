@@ -1,0 +1,82 @@
+<app-layout #layout>
+  <dx-accordion
+    [dataSource]="dataSource"
+    [collapsible]="false"
+    [multiple]="false"
+    [animationDuration]="300"
+    [selectedItems]="[dataSource[0]]"
+  >
+    >
+    <div *dxTemplate="let info of 'title'">
+      {{ info.title }}
+    </div>
+    <div
+      *dxTemplate="let info of 'item'"
+      class="card-view"
+      [ngSwitch]="info.type"
+    >
+      <div *ngSwitchCase="'button'">
+        <div class="row">
+          <div class="col-4" *ngFor="let button of info.buttons">
+            <div style="margin: 5px">
+              <dx-button
+                [stylingMode]="button.stylingMode"
+                [text]="button.text"
+                [type]="button.type"
+                [width]="'100%'"
+              >
+              </dx-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'gallery'">
+        <dx-gallery
+          #gallery
+          [dataSource]="info.images"
+          [height]="300"
+          [slideshowDelay]="2000"
+          [loop]="true"
+          [showNavButtons]="true"
+          [showIndicator]="true"
+        ></dx-gallery>
+      </div>
+      <div *ngSwitchCase="'drop-down-button'">
+        <div class="row">
+          <div class="col-4" *ngFor="let button of info.buttons">
+            <div style="margin: 5px">
+              <dx-drop-down-button
+                [stylingMode]="button.stylingMode"
+                [dropDownOptions]="{ width: 230 }"
+                icon="save"
+                [text]="button.text"
+                [items]="dropDownItems"
+                (onItemClick)="onItemClick($event)"
+              >
+              </dx-drop-down-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'chart'">
+        <div class="row">
+          <div class="col-6">
+            <dx-chart
+              id="chart"
+              title="World Population by Decade"
+              [dataSource]="info.data"
+            >
+              <dxo-legend [visible]="false"></dxo-legend>
+              <dxi-series type="bar"></dxi-series>
+              <dxo-argument-axis [tickInterval]="10">
+                <dxo-label>
+                  <dxo-format type="decimal"></dxo-format>
+                </dxo-label>
+              </dxo-argument-axis>
+            </dx-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dx-accordion>
+</app-layout>

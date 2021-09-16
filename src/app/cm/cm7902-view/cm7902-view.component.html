@@ -1,0 +1,37 @@
+<app-layout #layout>
+  <div class="card-view view-layout" *ngIf="item">
+    <div class="row">
+      <app-field class="col-6" label="codeGrp">
+        <span>{{ item.codeGrp }}</span>
+      </app-field>
+      <app-field class="col-6" label="grpName">
+        <span>{{ item.grpName }}</span>
+      </app-field>
+    </div>
+    <div class="row">
+      <app-field class="col-6" label="abbrName">
+        <span>{{ item.abbrName }}</span>
+      </app-field>
+      <app-field class="col-6" label="codeLeng">
+        <span>{{ item.codeLeng }}</span>
+      </app-field>
+    </div>
+    <div class="row">
+      <app-field class="col-6" label="codeDtm">
+        <span>{{ item.codeDtm }}</span>
+      </app-field>
+      <app-field class="col-6" label="auth">
+        <span>{{ item.auth }}</span>
+      </app-field>
+    </div>
+  </div>
+  <app-grid-bottom slot="bottom">
+    <div slot="left">
+      <dx-button type="default" icon="bulletlist" text="LIST" [routerLink]="'/cm/cm7902'"></dx-button>
+    </div>
+    <div slot="right" *ngIf="item">
+      <dx-button type="danger" icon="trash" text="DELETE" (onClick)="getPageDelete()"></dx-button>
+      <dx-button type="danger" icon="edit" text="MODIFY" [routerLink]="['/cm/cm7902', item.codeGrp, 'modify' ]"></dx-button>
+    </div>
+  </app-grid-bottom>
+</app-layout>

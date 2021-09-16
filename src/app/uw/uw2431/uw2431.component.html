@@ -1,0 +1,95 @@
+<app-layout #layout>
+  <!-- Start Top search of uw2431 ( 요율안내서_OpenCover ) -->
+  <div slot="search">
+    <form [formGroup]="form" (ngSubmit)="goSearch()" class="with-right-search">
+      <div class="row">
+        <app-field class="col-12" label="Grp Cd" [required]="true">
+          <dx-text-box
+            stylingMode="outlined"
+            formControlName="cmnGrpCd"
+            [isValid]="formControls.cmnGrpCd.isValid"
+            [validationError]="formControls.cmnGrpCd.message"
+          >
+          </dx-text-box>
+        </app-field>
+      </div>
+      <div class="right-search">
+        <dx-button
+          type="default"
+          stylingMode="filled"
+          icon="search"
+          text="SEARCH"
+          (onClick)="goSearch()"
+        ></dx-button>
+        <dx-button
+          type="default"
+          stylingMode="outlined"
+          icon="trash"
+          text="CLEAR"
+          (onClick)="clearForm()"
+        ></dx-button>
+      </div>
+    </form>
+  </div>
+  <!-- End Top search of uw2431 ( 요율안내서_OpenCover ) -->
+
+  <!-- Start Grid Card View of uw2431 ( 요율안내서_OpenCover ) -->
+  <app-card-view [title]="''">
+    <!-- Start Top Grid Control of uw2431 ( 요율안내서_OpenCover ) -->
+    <app-grid-control
+      slot="top"
+      [upload]="true"
+      [download]="true"
+      [add]="true"
+      [delete]="true"
+      [search]="true"
+      [dataGrid]="dataGrid"
+      [gridConfig]="gridConfig"
+      (onUpload)="onUploadJson($event)"
+    >
+      <span slot="left"></span>
+      <span slot="right"></span>
+    </app-grid-control>
+    <!-- End Top Grid Control of uw2431 ( 요율안내서_OpenCover ) -->
+
+    <dx-data-grid
+      #dataGrid
+      [columnAutoWidth]="true"
+      [wordWrapEnabled]="true"
+      [showBorders]="true"
+      [dataSource]="dataSource"
+      [paging]="gridConfig.paging"
+      [editing]="gridConfig.editing"
+    >
+      <dxo-scrolling mode="virtual"></dxo-scrolling>
+      <dxo-selection mode="multiple"></dxo-selection>
+      <dxi-column
+        dataField="codeGrp"
+        caption="Code Group"
+        [minWidth]="120"
+        [allowSearch]="true"
+      >
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="grpName" caption="Group Name" [allowSearch]="true">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="codeLeng" caption="Length"></dxi-column>
+      <dxi-column dataField="codeDtm" caption="Code Date"></dxi-column>
+    </dx-data-grid>
+  </app-card-view>
+  <!-- End Grid Card View of uw2431 ( 요율안내서_OpenCover ) -->
+
+  <!-- Start Grid Bottom of uw2431 ( 요율안내서_OpenCover ) -->
+  <app-grid-bottom
+    slot="bottom"
+    [dataGrid]="dataGrid"
+    [gridConfig]="gridConfig"
+    [save]="true"
+    (onSave)="setGridSave()"
+  >
+    <div slot="left"></div>
+    <div slot="right"></div>
+  </app-grid-bottom>
+  <!-- End Grid Bottom of uw2431 ( 요율안내서_OpenCover ) -->
+</app-layout>

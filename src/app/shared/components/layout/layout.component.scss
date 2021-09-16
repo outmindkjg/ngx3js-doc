@@ -1,0 +1,90 @@
+:host {
+  --margin-height : 0px;
+  height:100%;
+  display: block;
+}
+div.search-area {
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  background-color: #292a2d;
+  position: relative;
+  div.search-container {
+    overflow: hidden;
+    max-height:300px;
+    padding: 10px;
+    transition: max-height 0.5s,opacity 0.5s;
+  }
+  button.search-toggle {
+    position: absolute;
+    top : 100%;
+    left : 50%;
+    width: 135px;
+    margin-left: -67px;
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 0 0 20px 20px;
+    padding: 0 0;
+    color : var(--white);
+    line-height: 1.1em;
+    font-size: 1rem;
+    i.fa {
+      transition: transform 0.5s ;
+    }
+  }
+  &.search-inactive {
+    border-radius : 10px 10px 0 0;
+    div.search-container {
+      max-height: 0px;
+      opacity: 0;
+      padding-bottom: 0px ;
+    }
+    button.search-toggle {
+      i.fa {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+div.top-container {
+  margin-top: 10px;
+  background-color:transparent;
+}
+dx-scroll-view.contents-container {
+  height : calc(100% - var(--margin-height) + 15px);
+  transition: height 0.5s;
+  position: relative;
+  display: block;
+  ::ng-deep {
+    div.dx-scrollview-content {
+      padding : 0 20px 0 20px;
+    }
+  }
+}
+
+div.search-area,
+div.top-container,
+div.bottom-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+div.bottom-container {
+  position: relative;
+  padding: 5px 0px;
+  ::ng-deep {
+    div.right-area,
+    div.left-area {
+      height: 50px;
+      padding: 3px;
+      button {
+        margin:3px 3px;
+      }
+    }
+    div.right-area {
+      position: absolute;
+      right : 30px;
+      top : 0;
+    }
+  }
+}

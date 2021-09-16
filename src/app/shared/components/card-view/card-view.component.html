@@ -1,0 +1,18 @@
+<div class="card-view" [ngClass]="{ 'has-title' :  title, 'is-open' : isOpen, 'view-layout' : isView, 'modify-layout' : isModify }">
+  <div class="card-view-title" *ngIf="title">
+    <i class="icon dx-icon-isnotblank dot-icon"></i>
+    {{ title }}
+    <a href="" (click)="toggleOpen()" class="card-view-togle">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+  <div class="card-view-top" #top>
+    <ng-content select="[slot=top]"></ng-content>
+  </div>
+  <div class="card-view-contents" #cardContents>
+    <ng-content></ng-content>
+  </div>
+  <div class="card-view-bottom" #bottom>
+    <ng-content select="[slot=bottom]"></ng-content>
+  </div>
+</div>

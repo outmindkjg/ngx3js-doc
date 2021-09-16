@@ -1,0 +1,7 @@
+pluginManagement {
+  plugins {
+    id 'com.moowork.node' version "${mooworkNodeVersion}"
+  }
+}
+
+rootProject.name = 'nepsis-ui'

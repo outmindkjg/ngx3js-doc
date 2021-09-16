@@ -1,0 +1,80 @@
+<app-layout #layout>
+  <div class="card-view modify-layout">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="row">
+        <app-field class="col-6" label="codeGrp">
+          <dx-text-box
+            stylingMode="outlined"
+            name="codeGrp"
+            formControlName="codeGrp"
+            [isValid]="formControls.codeGrp.isValid"
+            [validationError]="formControls.codeGrp.message"
+          >
+          </dx-text-box>
+        </app-field>
+        <app-field class="col-6" label="grpName">
+          <dx-text-box
+            stylingMode="outlined"
+            name="grpName"
+            formControlName="grpName"
+            [isValid]="formControls.grpName.isValid"
+            [validationError]="formControls.grpName.message"
+          >
+          </dx-text-box>
+        </app-field>
+      </div>
+      <div class="row">
+        <app-field class="col-6" label="abbrName">
+          <dx-text-box
+            stylingMode="outlined"
+            name="abbrName"
+            formControlName="abbrName"
+            [isValid]="formControls.abbrName.isValid"
+            [validationError]="formControls.abbrName.message"
+          >
+          </dx-text-box>
+        </app-field>
+        <app-field class="col-6" label="codeLeng">
+          <dx-text-box
+            stylingMode="outlined"
+            name="codeLeng"
+            formControlName="codeLeng"
+            [isValid]="formControls.codeLeng.isValid"
+            [validationError]="formControls.codeLeng.message"
+          >
+          </dx-text-box>
+        </app-field>
+      </div>
+      <div class="row">
+        <app-field class="col-6" label="codeDtm">
+          <dx-text-box
+            stylingMode="outlined"
+            name="codeDtm"
+            formControlName="codeDtm"
+            [isValid]="formControls.codeDtm.isValid"
+            [validationError]="formControls.codeDtm.message"
+          >
+          </dx-text-box>
+        </app-field>
+        <app-field class="col-6" label="auth">
+          <dx-text-box
+            stylingMode="outlined"
+            name="auth"
+            formControlName="auth"
+            [isValid]="formControls.auth.isValid"
+            [validationError]="formControls.auth.message"
+          >
+          </dx-text-box>
+        </app-field>
+      </div>
+    </form>
+  </div>
+  <app-grid-bottom slot="bottom">
+    <div slot="left">
+      <dx-button type="default" icon="bulletlist" text="LIST" [routerLink]="'/cm/cm7902'"></dx-button>
+    </div>
+    <div slot="right">
+      <dx-button type="danger" icon="save" text="SAVE" (onClick)="submit()" [disabled]="!formControls.form.isValid"></dx-button>
+    </div>
+  </app-grid-bottom>
+</app-layout>

@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h4 class="modal-title" #handler [class.draggable-handle]="useDrag">
+    {{ headerTitle | translate }}<span *ngIf="subTitle">_{{ subTitle | translate }}</span>
+  </h4>
+  <button type="button" class="close" aria-label="Close" (click)="dismissModal()">
+    <i class="icon dx-icon-close"></i>
+  </button>
+</div>
+<div class="modal-fix-search">
+  <ng-content select=".fix-search"></ng-content>
+</div>
+<div class="modal-body y-scrollbar">
+  <ng-content></ng-content>
+</div>
+<div *ngIf="isUnderloading" class="loading">
+  
+</div>
+<div class="modal-footer">
+  <button *ngIf="useDone" type="button" class="btn btn-sm btn-outline-dark" (click)="doDone()" [disabled]="useDoneDisable">
+    {{ doneTxt | translate }}
+    <span *ngIf="doneNum"> ({{ doneNum | numberFormat: "INT" }}) </span>
+  </button>
+  <button *ngIf="useCancel" type="button" class="btn btn-sm btn-outline-danger" (click)="doCancel()">
+    {{ cancelTxt | translate }}
+  </button>
+  <button type="button" class="btn btn-sm btn-outline-primary" (click)="dismissModal()">
+    {{ "BTN_CLOSE" | translate }}
+  </button>
+</div>

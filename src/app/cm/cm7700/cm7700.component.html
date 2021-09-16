@@ -1,0 +1,265 @@
+<app-layout #layout>
+  <div slot="search">
+    <form [formGroup]="form" (ngSubmit)="goSearch()" class="with-right-search">
+      <div class="row">
+        <app-field class="col-12" label="Cmn Grp Cd">
+          <dx-text-box
+            stylingMode="outlined"
+            formControlName="cmnGrpCd"
+          ></dx-text-box>
+        </app-field>
+      </div>
+      <div class="right-search">
+        <dx-button type="default" stylingMode="filled" (onClick)="goSearch()">
+          Search
+        </dx-button>
+        <dx-button
+          type="default"
+          stylingMode="outlined"
+          (onClick)="clearForm()"
+        >
+          Clear
+        </dx-button>
+      </div>
+    </form>
+  </div>
+  <app-grid-control
+    slot="top"
+    [upload]="false"
+    [download]="true"
+    [add]="false"
+    [delete]="false"
+    [search]="true"
+    [dataGrid]="dataGrid"
+    [gridConfig]="gridConfig"
+  >
+    <span slot="left">
+      <dx-button
+        type="default"
+        [icon]="'add'"
+        text="New"
+        (click)="newData()"
+      ></dx-button>
+    </span>
+  </app-grid-control>
+  <div class="layout-row-dual">
+    <div class="row row-top">
+      <div class="col-12">
+        <app-card-view>
+          <dx-data-grid
+            #dataGrid
+            [columnAutoWidth]="true"
+            [wordWrapEnabled]="true"
+            [showBorders]="false"
+            [dataSource]="dataSource"
+            [focusedRowEnabled]="true"
+            [focusedRowIndex]="0"
+            [columnAutoWidth]="true"
+            [allowColumnResizing]="true"
+            [columnHidingEnabled]="true"
+            [(focusedRowKey)]="focusedGroupCodeRowKey"
+            (onFocusedRowChanged)="focusedRowChanged($event)"
+          >
+            <dxo-scrolling mode="virtual"></dxo-scrolling>
+            <dxi-column
+              dataField="cmnGrpCd"
+              caption="Group Code"
+              [width]="120"
+              [allowSearch]="true"
+            ></dxi-column>
+            <dxi-column
+              dataField="cmnGrpCdNm"
+              caption="Group Code Name"
+              [width]="190"
+              [allowSearch]="true"
+            ></dxi-column>
+            <dxi-column
+              dataField="cdDesc"
+              caption="Description"
+              [allowSearch]="true"
+            ></dxi-column>
+            <dxi-column
+              dataField="jobStCd"
+              caption="Job Code"
+              [width]="200"
+              [allowSearch]="true"
+            >
+              <dxo-lookup
+                [dataSource]="'JOB_ST_CD' | code"
+                [valueExpr]="'id'"
+                [displayExpr]="'label'"
+              ></dxo-lookup>
+            </dxi-column>
+            <dxi-column dataField="useYn" caption="Use Y/N"></dxi-column>
+          </dx-data-grid>
+        </app-card-view>
+      </div>
+    </div>
+    <div class="row row-bottom col-dual">
+      <div class="col col-left">
+        <app-card-view>
+          <form [formGroup]="modifyForm">
+            <div class="row">
+              <div class="col-12">
+                <h3>Group Code</h3>
+              </div>
+            </div>
+            <div class="row">
+              <app-field class="col-12" label="Group Code" [isGroup]="true">
+                <dx-text-box
+                  stylingMode="outlined"
+                  formControlName="cmnGrpCd"
+                  [disabled]="modifyKey !== null"
+                  [isValid]="modifyFormControls.cmnGrpCd.isValid"
+                  [validationError]="modifyFormControls.cmnGrpCd.message"
+                ></dx-text-box>
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    type="button"
+                    (click)="verificationKey()"
+                    [disabled]="modifyKey !== null"
+                  >
+                    Validate
+                  </button>
+                </div>
+              </app-field>
+            </div>
+            <div class="row">
+              <app-field class="col-12" label="Group Name">
+                <dx-text-box
+                  stylingMode="outlined"
+                  formControlName="cmnGrpCdNm"
+                  [isValid]="modifyFormControls.cmnGrpCdNm.isValid"
+                  [validationError]="modifyFormControls.cmnGrpCdNm.message"
+                ></dx-text-box>
+              </app-field>
+            </div>
+            <div class="row">
+              <app-field class="col-12" label="Description">
+                <dx-text-area
+                  stylingMode="outlined"
+                  [height]="70"
+                  formControlName="cdDesc"
+                  [isValid]="modifyFormControls.cdDesc.isValid"
+                  [validationError]="modifyFormControls.cdDesc.message"
+                ></dx-text-area>
+              </app-field>
+            </div>
+            <div class="row">
+              <app-field class="col-12" label="Job Code">
+                <dx-select-box
+                  stylingMode="outlined"
+                  formControlName="jobStCd"
+                  [dataSource]="'JOB_ST_CD' | code"
+                  [displayExpr]="'label'"
+                  [valueExpr]="'id'"
+                  [isValid]="modifyFormControls.jobStCd.isValid"
+                  [validationError]="modifyFormControls.jobStCd.message"
+                ></dx-select-box>
+              </app-field>
+            </div>
+            <div class="row">
+              <app-field class="col-12" label="Use Y/N">
+                <dx-radio-group
+                  stylingMode="outlined"
+                  formControlName="useYn"
+                  [dataSource]="'USE_YN' | code"
+                  [displayExpr]="'label'"
+                  [valueExpr]="'id'"
+                  layout="horizontal"
+                  [isValid]="modifyFormControls.useYn.isValid"
+                  [validationError]="modifyFormControls.useYn.message"
+                ></dx-radio-group>
+              </app-field>
+            </div>
+          </form>
+        </app-card-view>
+      </div>
+      <div class="col col-right">
+        <app-card-view>
+          <dx-data-grid
+            #modifyDataGrid
+            [columnAutoWidth]="true"
+            [wordWrapEnabled]="true"
+            [showBorders]="false"
+            [dataSource]="modifyDataSource"
+            [columnAutoWidth]="true"
+            [allowColumnResizing]="true"
+            [columnHidingEnabled]="true"
+            [editing]="modifyGridConfig.editing"
+          >
+            <dxo-scrolling mode="virtual"></dxo-scrolling>
+            <dxi-column
+              dataField="cmnCd"
+              caption="Code"
+              [width]="80"
+              [allowSearch]="true"
+            >
+              <dxi-validation-rule
+                type="stringLength"
+                [min]="1"
+                message="code를 입력해주세요."
+              >
+              </dxi-validation-rule>
+            </dxi-column>
+            <dxi-column
+              dataField="cmnCdNm"
+              caption="Code Name"
+              [width]="150"
+              [allowSearch]="true"
+            ></dxi-column>
+            <dxi-column
+              dataField="rmk"
+              caption="Code Desc"
+              [allowSearch]="true"
+            ></dxi-column>
+            <dxi-column dataField="useYn" caption="Use Y/N">
+              <dxo-lookup
+                [dataSource]="'USE_YN' | code"
+                [valueExpr]="'id'"
+                [displayExpr]="'label'"
+              ></dxo-lookup>
+            </dxi-column>
+            <dxi-column
+              dataField="srtOdr"
+              caption="Sort Order"
+              [width]="70"
+            ></dxi-column>
+          </dx-data-grid>
+        </app-card-view>
+      </div>
+    </div>
+  </div>
+  <app-grid-bottom slot="bottom">
+    <div slot="left">
+      <dx-button
+        type="default"
+        [icon]="'add'"
+        text="New"
+        (click)="newData()"
+      ></dx-button>
+      <dx-button
+        type="default"
+        [icon]="'insertrowabove'"
+        text="Add Row"
+        (click)="newRow()"
+      ></dx-button>
+      <dx-button
+        type="default"
+        [icon]="'trash'"
+        text="Delete Selected"
+        (click)="newRow()"
+      ></dx-button>
+    </div>
+    <div slot="right">
+      <dx-button
+        type="danger"
+        [icon]="'save'"
+        (click)="modifyData()"
+        [text]="'Save'"
+        [disabled]="!modifyFormControls.form.isValid"
+      ></dx-button>
+    </div>
+  </app-grid-bottom>
+</app-layout>

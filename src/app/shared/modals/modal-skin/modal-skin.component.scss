@@ -1,0 +1,68 @@
+
+.modal-header {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #393B3C;
+  align-items: center;
+  padding: 30px 30px 10px 30px;
+  h4.modal-title {
+    display: block;
+    span {
+      display: inline-block;
+      font-size: 0.94rem;
+      margin-left: 1.25rem;
+    }
+
+    &.draggable-handle {
+      cursor: move;
+      width:100%;
+    }
+  }
+
+  .close {
+    i {
+      color : var(--white);
+      font-size: 1rem;
+      text-shadow: none;
+    }
+  }
+}
+
+.modal-fix-search::ng-deep {
+  form {
+    padding: 0.63rem;
+  }
+}
+
+.modal-body {
+  max-height: 43.75rem;
+  min-height: 6.25rem;
+  background-color: transparent;
+  padding: 30px;
+
+}
+
+.modal-footer {
+  border-top : 0 none;
+  border-radius: 0 0 10px 10px;
+  padding:30px;
+}
+
+.loading {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 90px;
+  bottom: 20px;
+  z-index: 50;
+  border-radius: 10px;
+
+  fa {
+    display: inline-block;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}

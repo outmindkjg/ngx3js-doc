@@ -1,0 +1,17 @@
+div.icon-wraper {
+    height: 16px;
+    position: relative;
+    i {
+      position: absolute;
+      font-size: 13px;
+      left: 0;
+      top: 0;
+    }
+    &:hover {
+      i {
+        top: -10px;
+        font-size: 35px;
+      }
+    }
+  }
+  

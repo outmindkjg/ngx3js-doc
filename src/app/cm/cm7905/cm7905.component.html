@@ -1,0 +1,51 @@
+<app-layout #layout>
+  <app-grid-control
+    slot="top"
+    [upload]="false"
+    [download]="true"
+    [add]="false"
+    [delete]="false"
+    [search]="true"
+    [dataGrid]="dataGrid"
+  >
+  </app-grid-control>
+  <div class="card-view">
+    <dx-data-grid
+      #dataGrid
+      [columnAutoWidth]="true"
+      [wordWrapEnabled]="true"
+      [showBorders]="true"
+      [dataSource]="dataSource"
+      
+    >
+      <dxo-scrolling mode="virtual"></dxo-scrolling>
+      <dxi-column
+        dataField="icon"
+        caption="Icon"
+        [minWidth]="70"
+        cellTemplate="cellTemplate"
+      >
+        <div *dxTemplate="let data of 'cellTemplate'" class="icon-wraper">
+          <i [class]="data.value" aria-hidden="true"></i>
+        </div>
+      </dxi-column>
+      <dxi-column
+        dataField="type"
+        caption="Type"
+        [minWidth]="70"
+        [allowSearch]="true"
+      ></dxi-column>
+      <dxi-column
+        dataField="name"
+        caption="Name"
+        [minWidth]="100"
+        [allowSearch]="true"
+      ></dxi-column>
+      <dxi-column
+        dataField="tag"
+        caption="Tag"
+        [allowSearch]="true"
+      ></dxi-column>
+    </dx-data-grid>
+  </div>
+</app-layout>

@@ -1,0 +1,259 @@
+{
+    "items": [
+        {
+            "key": "$button-default-bg",
+            "value": "rgba(53, 176, 173, 1)"
+        },
+        {
+            "key": "$texteditor-border-color",
+            "value": "rgba(45, 81, 82, 1)"
+        },
+        {
+            "key": "$texteditor-bg",
+            "value": "rgba(15, 18, 15, 1)"
+        },
+        {
+            "key": "$texteditor-focused-border-color",
+            "value": "rgba(51, 140, 139, 1)"
+        },
+        {
+            "key": "$texteditor-hover-border-color",
+            "value": "rgba(51, 140, 139, 0.66)"
+        },
+        {
+            "key": "$texteditor-hover-bg",
+            "value": "rgba(17, 17, 17, 0.88)"
+        },
+        {
+            "key": "$base-border-radius",
+            "value": "4px"
+        },
+        {
+            "key": "$pivotgrid-grandtotalcolor",
+            "value": "rgba(45, 45, 49, 1)"
+        },
+        {
+            "key": "$pivotgrid-area-color",
+            "value": "rgba(246, 246, 247, 1)"
+        },
+        {
+            "key": "$list-group-color",
+            "value": "rgba(0, 0, 0, 0.6)"
+        },
+        {
+            "key": "$selectbox-list-bg",
+            "value": "rgba(45, 45, 49, 1)"
+        },
+        {
+            "key": "$base-danger",
+            "value": "rgba(251, 112, 101, 1)"
+        },
+        {
+            "key": "$base-success",
+            "value": "rgba(16, 124, 63, 1)"
+        },
+        {
+            "key": "$button-success-color",
+            "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+            "key": "$button-default-color",
+            "value": "rgba(249, 243, 241, 1)"
+        },
+        {
+            "key": "$button-danger-color",
+            "value": "rgba(253, 255, 255, 1)"
+        },
+        {
+            "key": "$pager-page-selected-bg",
+            "value": "rgba(54, 175, 172, 1)"
+        },
+        {
+            "key": "$datagrid-search-bg",
+            "value": "rgba(103, 184, 110, 1)"
+        },
+        {
+            "key": "$datagrid-drag-header-border-color",
+            "value": "rgba(21, 97, 63, 0.5)"
+        },
+        {
+            "key": "$switch-handle-on-bg",
+            "value": "rgba(28, 64, 64, 1)"
+        },
+        {
+            "key": "$switch-on-bg",
+            "value": "rgba(51, 176, 174, 1)"
+        },
+        {
+            "key": "$calendar-shevron-icon-color",
+            "value": "rgba(53, 176, 172, 1)"
+        },
+        {
+            "key": "$calendar-cell-selected-bg",
+            "value": "rgba(53, 176, 172, 1)"
+        },
+        {
+            "key": "$pivotgrid-totalcolor",
+            "value": "rgba(64, 63, 67, 1)"
+        },
+        {
+            "key": "$button-normal-bg",
+            "value": "rgba(144, 152, 168, 1)"
+        },
+        {
+            "key": "$button-normal-color",
+            "value": "rgba(253, 255, 255, 1)"
+        },
+        {
+            "key": "$button-danger-bg",
+            "value": "rgba(251, 112, 101, 1)"
+        },
+        {
+            "key": "$scheduler-current-time-cell-color",
+            "value": "rgba(53, 176, 172, 1)"
+        },
+        {
+            "key": "$scheduler-appointment-base-color",
+            "value": "rgba(53, 176, 172, 1)"
+        },
+        {
+            "key": "$base-text-color",
+            "value": "rgba(250, 252, 253, 1)"
+        },
+        {
+            "key": "$base-accent",
+            "value": "rgba(52, 175, 173, 1)"
+        },
+        {
+            "key": "$base-border-color",
+            "value": "rgba(56, 58, 61, 1)"
+        },
+        {
+            "key": "$base-font-family",
+            "value": "'Helvetica Neue','Segoe UI',helvetica,verdana,'Malgun Gothic', '맑은 고딕', sans-serif"
+        },
+        {
+            "key": "$base-label-color",
+            "value": "rgba(234, 234, 235, 1)"
+        },
+        {
+            "key": "$base-link-color",
+            "value": "rgba(51, 140, 139, 1)"
+        },
+        {
+            "key": "$base-icon-color",
+            "value": "rgba(204, 204, 204, 1)"
+        },
+        {
+            "key": "$base-spin-icon-color",
+            "value": "rgba(204, 204, 204, 1)"
+        },
+        {
+            "key": "$datagrid-focused-border-color",
+            "value": "rgba(44, 82, 84, 1)"
+        },
+        {
+            "key": "$button-group-danger-selected-bg",
+            "value": "rgba(251, 112, 101, 0.64)"
+        },
+        {
+            "key": "$button-group-danger-selected-color",
+            "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+            "key": "$form-field-item-color",
+            "value": "rgba(234, 234, 235, 1)"
+        },
+        {
+            "key": "$gallery-indicator-bg",
+            "value": "rgba(53, 176, 173, 1)"
+        },
+        {
+            "key": "$overlay-content-bg",
+            "value": "rgba(45, 45, 49, 1)"
+        },
+        {
+            "key": "$popup-title-bg",
+            "value": "rgba(45, 45, 49, 1)"
+        },
+        {
+            "key": "$overlay-shader-bg",
+            "value": "rgba(0, 0, 0, 0.56)"
+        },
+        {
+            "key": "$scrollable-scroll-bg",
+            "value": "rgba(41, 42, 45, 1)"
+        },
+        {
+            "key": "$material-slider-tooltip-color",
+            "value": "rgba(247, 247, 247, 0.87)"
+        },
+        {
+            "key": "$accordion-icon-active-color",
+            "value": "rgba(52, 175, 172, 1)"
+        },
+        {
+            "key": "$accordion-title-color",
+            "value": "rgba(52, 175, 172, 1)"
+        },
+        {
+            "key": "$accordion-item-border-color",
+            "value": "rgba(9, 9, 10, 1)"
+        },
+        {
+            "key": "$datagrid-editor-bg",
+            "value": "rgba(28, 64, 64, 0)"
+        },
+        {
+            "key": "$texteditor-focused-bg",
+            "value": "rgba(17, 17, 17, 0.3)"
+        },
+        {
+            "key": "$datagrid-row-focused-color",
+            "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+            "key": "$texteditor-placeholder-color",
+            "value": "rgba(171, 171, 171, 0.18)"
+        },
+        {
+            "key": "$drawer-shader-background-color",
+            "value": "rgba(17, 17, 17, 0.57)"
+        },
+        {
+            "key": "$tabs-tab-selected-color",
+            "value": "rgba(53, 176, 173, 1)"
+        },
+        {
+            "key": "$tabs-selected-tab-bottom-border-color",
+            "value": "rgba(22, 75, 73, 1)"
+        },
+        {
+            "key": "$tabs-tab-color",
+            "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+            "key": "$base-bg",
+            "value": "rgba(17, 17, 17, 1)"
+        },
+        {
+            "key": "$datagrid-selection-bg",
+            "value": "rgba(29, 29, 32, 1)"
+        },
+        {
+            "key": "$datagrid-row-selected-border-color",
+            "value": "rgba(56, 58, 61, 0.79)"
+        },
+        {
+            "key": "$datagrid-row-focused-bg",
+            "value": "rgba(29, 29, 32, 0.67)"
+        }
+    ],
+    "baseTheme": "material.blue.dark.compact",
+    "assetsBasePath": "../../../node_modules/devextreme/dist/css/",
+    "outputColorScheme": "base",
+    "makeSwatch": false,
+    "version": "21.1.5",
+    "widgets": [],
+    "removeExternalResources": false
+}

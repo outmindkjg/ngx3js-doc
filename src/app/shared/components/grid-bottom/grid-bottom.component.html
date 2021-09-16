@@ -1,0 +1,15 @@
+<div class="left">
+  <ng-content select="[slot=left]"></ng-content>
+</div>
+<div class="right">
+  <ng-content select="[slot=right]"></ng-content>
+  <dx-button
+    *ngIf="save && gridConfig"
+    [disabled]="!gridConfig!.hasUnsaved"
+    (onClick)="saveGrid()"
+    type="danger"
+    icon="save"
+    text="Save Grid"
+    [hint]="'Save Grid'"
+  ></dx-button>
+</div>

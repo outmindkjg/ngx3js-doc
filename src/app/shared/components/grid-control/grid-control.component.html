@@ -1,0 +1,55 @@
+<div class="left">
+  <dx-button *ngIf="upload" icon="upload" text="upload"> </dx-button>
+  <input
+    *ngIf="upload"
+    class="file-upload"
+    type="file"
+    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    (change)="uploadFile($event)"
+  />
+  <ng-content select="[slot=left]"></ng-content>
+</div>
+<div class="right">
+  <ng-content select="[slot=right]"></ng-content>
+  <dx-button
+    *ngIf="delete"
+    (onClick)="deleteRow()"
+    icon="minus"
+    class="dx-shape-standard"
+    [hint]="'Delete Row'"
+  ></dx-button>
+  <dx-button
+    *ngIf="add"
+    (onClick)="addRow()"
+    icon="edit-button-addrow"
+    class="dx-datagrid-addrow-button dx-shape-standard"
+    [hint]="'Add Row'"
+  ></dx-button>
+  <dx-button
+    *ngIf="download"
+    [id]="'excel_download'"
+    icon="export-to"
+    class="dx-datagrid-export-button dx-shape-standard"
+    [hint]="'Download Excel File'"
+  ></dx-button>
+  <dx-text-box
+    *ngIf="search"
+    #search
+    [mode]="'search'"
+    [(ngModel)]="query"
+    (onKeyUp)="queryChanged($event)"
+    (onValueChanged)="queryChanged($event)"
+    [width]="160"
+    stylingMode="outlined"
+  ></dx-text-box>
+</div>
+<dx-context-menu
+  *ngIf="download"
+  [dataSource]="exceldownItems"
+  [width]="200"
+  target="#excel_download"
+  [showEvent]="'click'"
+  [position]="{ my: 'right top', at: 'right bottom', offset: { x: 0, y: 5 } }"
+  (onItemClick)="downloadFile($event)"
+>
+</dx-context-menu>

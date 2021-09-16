@@ -1,0 +1,116 @@
+<header>
+  <h1>
+    <a [routerLink]="'/home'">NEPSIS</a>
+  </h1>
+  <ul class="top-menu">
+    <li *ngFor="let menu of menuInfos">
+      <a
+        [routerLink]="menu.path"
+        class="btn btn-lg"
+        [ngClass]="{ active: menu.selected }"
+        >{{ menu.name }}</a
+      >
+    </li>
+  </ul>
+  <div *ngIf="loginInfo.userId" class="login-info">
+    반갑습니다! <span>{{ loginInfo.userNm }}</span
+    >님 |
+    <a href="#" (click)="setLogout()">Logout</a>
+  </div>
+</header>
+<div class="body-container" [ngClass]="{ 'left-menu-inactive': !showMenu }">
+  <div class="menu-container">
+    <div class="form-quickgo">
+      <input
+        type="search"
+        class="form-control bg-primary border-primary"
+        (search)="goSearch($event)"
+      />
+      <button type="button">
+        <i class="icon dx-icon-search"></i>
+      </button>
+    </div>
+    <button
+      type="button"
+      class="btn btn-sm btn-primary menu-toggle"
+      (click)="toggleMenu()"
+    >
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <ul class="scrollable-vertical">
+      <li
+        *ngFor="let menu of menuInfos"
+        [ngClass]="{ active: menu.selected, collapsed: menu.collapsed }"
+      >
+        <a href="#" (click)="collapsedMenu(menuInfos, menu)">
+          {{ menu.name }}
+          <i class="icon dx-icon-spinup"></i>
+        </a>
+        <ul *ngIf="menu.children">
+          <li
+            *ngFor="let smenu of menu.children"
+            [ngClass]="{ active: smenu.selected, collapsed: smenu.collapsed }"
+          >
+            <a
+              href="#"
+              (click)="collapsedMenu(menu.children, smenu)"
+              *ngIf="smenu.path === '#'"
+            >
+              {{ smenu.name }}
+              <i class="icon dx-icon-spinup"></i>
+            </a>
+            <a [routerLink]="smenu.path" *ngIf="smenu.path !== '#'">
+              {{ smenu.name }}
+            </a>
+            <ul *ngIf="smenu.children">
+              <li
+                *ngFor="let tmenu of smenu.children"
+                [ngClass]="{
+                  active: tmenu.selected,
+                  collapsed: tmenu.collapsed
+                }"
+              >
+                <a [routerLink]="tmenu.path">
+                  - <span>{{ tmenu.name }}</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="contents">
+    <ul class="nav-map">
+      <li>
+        <i class="fa fa-home"></i>
+        <a [routerLink]="'/'"> Home </a>
+      </li>
+      <li *ngFor="let menu of navMap">
+        <i class="fa fa-chevron-right"></i>
+        <a [routerLink]="menu.path" *ngIf="menu.path !== '#'">
+          {{ menu.name }}
+        </a>
+        <span *ngIf="menu.path === '#'">
+          {{ menu.name }}
+        </span>
+      </li>
+    </ul>
+    <h3>
+      <i class="icon dx-icon-isnotblank"></i>
+      {{ pageTitle }} &nbsp;
+    </h3>
+    <div class="body-wraper scrollable-vertical">
+      <div class="inner-body-wraper">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-info">
+      <span *ngFor="let message of bottomMsg" [ngClass]="message.type">
+        {{ message.text }}
+      </span>
+    </div>
+  </footer>
+</div>

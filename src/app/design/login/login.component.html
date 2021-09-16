@@ -1,0 +1,35 @@
+<div class="login-body-wraper">
+  <div class="out-wraper">
+    <h1>Sign In</h1>
+    <form [formGroup]="form" (ngSubmit)="goLogin()">
+      <dx-text-box
+        mode="text"
+        stylingMode="outlined"
+        formControlName="userId"
+        [showClearButton]="true"
+        [inputAttr]="{ autocomplete: 'new-password' }"
+        [isValid]="formControls.userId.isValid"
+        [validationError]="formControls.userId.message"
+        [width]="250"
+      ></dx-text-box>
+      <dx-text-box
+        mode="password"
+        stylingMode="outlined"
+        formControlName="pw"
+        [showClearButton]="true"
+        [inputAttr]="{ autocomplete: 'new-password' }"
+        [isValid]="formControls.pw.isValid"
+        [validationError]="formControls.pw.message"
+        [width]="250"
+      ></dx-text-box>
+      <dx-button
+        (onClick)="goLogin()"
+        [type]="'default'"
+        [width]="250"
+        [disabled]="!formControls.form.isValid"
+      >
+        Sign In
+      </dx-button>
+    </form>
+  </div>
+</div>

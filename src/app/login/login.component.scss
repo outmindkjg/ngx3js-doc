@@ -1,0 +1,40 @@
+div.login-body-wraper {
+  position: fixed;
+  left : 0;
+  top : 0;
+  bottom: 0;
+  right:0;
+  z-index: 100;
+  background-color: var(--contents-bg);
+  div.out-wraper {
+    width: 330px;
+    margin-left: -165px;
+    height: 252px;
+    margin-top: -126px;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--gray);
+    padding: 40px;
+    h1 {
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: var(--white);
+    }
+    form > dx-text-box {
+      margin-bottom: 10px;
+      background-color: #111;
+      ::ng-deep {
+        .dx-texteditor-input {
+          background-color: transparent;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

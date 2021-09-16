@@ -1,0 +1,89 @@
+:host {
+  display: block;
+  --margin-height : 0px;
+  --title-height : 10px;
+}
+
+div.card-view {
+  --card-height : var(--main-height, --card-height, 100px);
+  padding-top : calc(var(--grid-gutter-width) / 2);
+  position: relative;
+  --height : var(--card-height);
+  max-height: var(--card-height);
+  .card-view-title {
+    height: 43px;
+    border-radius: 10px 10px 0 0;
+    background-color: #3d4147;
+    position: absolute;
+    left :0;
+    top:0;
+    right:0;
+    padding: 18px 20px 10px 20px;
+    font-size: 13px;
+    color : var(--primary);
+    .dot-icon {
+      font-size: 11px;
+    }
+    .card-view-togle {
+      position: absolute;
+      right : 20px;
+      bottom:10px;
+      transition: transform 0.5s;
+    }
+  }
+  div.card-view-bottom {
+    margin-bottom: 10px;
+    position: relative;
+    padding: 0;
+    ::ng-deep {
+      div.right-area,
+      div.left-area {
+        padding: 3px;
+        button {
+          margin:3px 3px;
+        }
+      }
+      div.right-area {
+        position: absolute;
+        right : 30px;
+        top : 0;
+      }
+    }
+  }
+  .card-view-top {
+    margin-top: 5px;
+  }
+  .card-view-contents {
+    margin-top : calc(var(--grid-gutter-width) / 2);
+    --height : calc(var(--card-height) - var(--margin-height, 0px) - var(--title-height, 0px) - var(--grid-gutter-width));
+    --main-height : calc(var(--card-height) - var(--margin-height, 0px) - var(--title-height, 0px) + var(--grid-gutter-width));
+    height : calc(var(--card-height) - var(--margin-height, 0px) - var(--title-height, 0px) - var(--grid-gutter-width));
+  }
+
+  &.has-title {
+    padding-top: 43px;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: max-height 1s, border-radius 0.5s;
+    max-height: 50px;
+    border-radius: 10px 10px 0 0;
+    .card-view-top {
+      margin-top: 10px;
+    }
+    .card-view-title .card-view-togle {
+      transform : rotate(180deg);
+    }
+    .card-view-contents {
+      margin-bottom: calc(var(--grid-gutter-width) / 2);
+      --title-height : 55px;
+    }
+    &.is-open {
+      border-radius: 10px;
+      max-height: var(--main-height);
+      .card-view-title .card-view-togle {
+        transform : rotate(0deg);
+      }
+    }
+  }
+
+}
