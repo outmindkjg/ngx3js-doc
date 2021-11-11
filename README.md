@@ -60,6 +60,7 @@ import { Ngx3JsModule } from 'ngx3js';
 		  ......
           "options": {
             "allowedCommonJsDependencies" : [
+<<<<<<< HEAD
               "ammojs-typed"
             ],
 		    ......
@@ -71,6 +72,19 @@ import { Ngx3JsModule } from 'ngx3js';
                     "output": "/assets/examples/"
                 }
 	    	    ......
+=======
+              "ammojs-typed",
+              "three/examples/js/libs/lottie_canvas",
+              "three/examples/js/libs/draco/draco_encoder",
+              "crypto",
+              "crypto-js",
+              "highlight.js"
+            ],
+		    ......
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+>>>>>>> 13b5d1a502d629fe54a41b1225a236a482d5d969
             ],
 		    ......
           },
@@ -97,6 +111,7 @@ import { Ngx3JsModule } from 'ngx3js';
 }
 ```
 
+<<<<<<< HEAD
 // src/app/app.component.html
 ~~~html
 <div style="width: 700px; height: 500px; display: block; position: relative">
@@ -169,6 +184,55 @@ import { Ngx3JsModule } from 'ngx3js';
   </ngx3js-renderer>
 </div>
 ~~~
+=======
+### Document ###
+```sh
+npm install -g @angular/cli
+npm install ammojs-typed
+npm install three
+npm install --save three three.ar.js
+npm install @types/three
+npm install @types/dat.gui –save-dev
+npm install @types/physijs –save-dev
+npm install @types/stats-js –save-dev
+npm run maxmem
+npm run maxbuild
+npm run maxbuildprod
+
+npm install typedoc --save-dev
+npx typedoc --out docs --exclude "**/*+(index|.spec|.e2e).ts"
+npx typedoc --exclude "**/*+(index|.spec|.e2e).ts"
+npx typedoc --json docs_api.json --exclude "**/*+(index|.spec|.e2e).ts"
+
+rm -rf src/app/**/*spec.ts
+rm -rf src/app/**/*.js
+
+npm install --no-optional --no-shrinkwrap --no-package-lock
+npm install -f
+
+
+git remote set-url origin https://github.com/outmindkjg/ngx3js.git
+git remote -v
+
+grep -Ril "AmmoLib = await Ammo" ./node_modules
+
+cd ngx3js-module build
+cd ngx3js-module watch
+ng serve
+
+export NODE_OPTIONS=--max_old_space_size=5024
+
+```
+
+```sh
+# prettier format change
+npx prettier --write src/**/*.json
+npx prettier --write src/**/*.ts
+npx prettier --write src/**/*.html
+npx prettier --write src/**/*.scss
+```
+
+>>>>>>> 13b5d1a502d629fe54a41b1225a236a482d5d969
 
 ### Cloning this repository ###
 
