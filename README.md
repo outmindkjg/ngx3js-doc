@@ -44,20 +44,8 @@ npm install fs
 npm install fs-web
 ```
 
-<<<<<<< HEAD
 
 #### Auto Formater - optional ####
-=======
-OR
-
-```sh
-npm install -g @angular/cli
-npm install ngx3js
-node ./node_modules/ngx3js/bin/patch.js
-npm install 
-```
-
->>>>>>> 82f2805dfe7e021ed5bd4a72d1ec420213af217e
 ```sh
 # prettier format change
 npx prettier --write src/**/*.json
