@@ -36,9 +36,6 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-ammojs-typed
-MIT
-
 chroma-js
 (BSD-3-Clause AND Apache-2.0)
 chroma.js - JavaScript library for color conversions
@@ -96,6 +93,9 @@ http://www.w3.org/TR/css3-color/#svg-color
 
 @preserve
 
+
+fs-web
+BSD-2-Clause
 
 gsap
 Standard 'no charge' license: https://greensock.com/standard-license. Club GreenSock members get more: https://greensock.com/licensing/. Why GreenSock doesn't employ an MIT license: https://greensock.com/why-license/
