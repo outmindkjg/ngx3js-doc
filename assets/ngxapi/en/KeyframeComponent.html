@@ -9,7 +9,7 @@
 	<body>
 		[page:AbstractSubscribeComponent] &rarr;
 
-		<h1>[name]</h1>
+		<h1>KeyframeComponent</h1>
 
 		<p class="desc">
 			KeyframeComponent<br>
@@ -61,48 +61,50 @@
 			[page:KeyframeTrack KeyframeTrack] - THREE.KeyframeTrack
 		</p>
 
-		<h2>Component</h2>
+		<h2>Constructor</h2>
+		<h3>new [method:KeyframeComponent KeyframeComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Creates an instance of keyframe component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
 		<code data-type="html">&lt;ngx3js-keyframe
-			[booleans]="..."
-			[colors]="..."
-			[debug]="..."
-			[enabled]="..."
-			[interpolation]="..."
-			[name]="..."
-			(onDestory)="...($event)"
-			(onLoad)="...($event)"
-			[overrideParams]="..."
-			[quaternions]="..."
-			[times]="..."
-			[tween]="..."
-			[type]="..."
-			[userData]="..."
-			[values]="..."
-			[vectors]="..."
-			[windowExport]="..."
+			[ booleans ]="... number[]|boolean[] -- values for the keyframes at th... "
+			[ colors ]="... string[]|number[] -- values for the keyframes at th... "
+			[ debug ]="... boolean -- Debug this Object "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ interpolation ]="... string -- the type of interpolation to u... "
+			[ name ]="... string -- identifier for the KeyframeTra... "
+			( onDestory )="...($event : KeyframeComponent -- Will be called when before des... )"
+			( onLoad )="...($event : KeyframeComponent -- Will be called when load compl... )"
+			[ overrideParams ]="... any -- The override params "
+			[ quaternions ]="... number[] -- values for the keyframes at th... "
+			[ times ]="... number[] -- (required) array of keyframe t... "
+			[ tween ]="... any -- Tween animation params "
+			[ type ]="... string -- identifier for the KeyframeTra... "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ values ]="... number[] -- values for the keyframes at th... "
+			[ vectors ]="... number[] -- values for the keyframes at th... "
+			[ windowExport ]="... string -- Export this Object to window g... "
 		&gt;&lt;/ngx3js-keyframe&gt;
 		</code>
 
-		<h2>Properties - Input</h2>
+		<h2>Properties</h2>
 		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common input properties.
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common properties.
 		</p>
 
-		<h3>[property:mixed booleans]</h3>
+		<h3>[property:number[]|boolean[] booleans] &nbsp; = [] <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
-			values for the keyframes at the times specified.<br>
-			<br>
-			[page:number number] | [page:boolean boolean]
+			values for the keyframes at the times specified.
 		</p>
 
-		<h3>[property:mixed colors]</h3>
+		<h3>[property:string[]|number[] colors] &nbsp; = [] <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
-			values for the keyframes at the times specified.<br>
-			<br>
-			[page:string string] | [page:number number]
+			values for the keyframes at the times specified.
 		</p>
 
-		<h3>[property:string interpolation]</h3>
+		<h3>[property:string interpolation] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			the type of interpolation to use. See<br>
 			<br>
@@ -111,24 +113,22 @@
 			[page:InterpolateSmooth InterpolateSmooth] - THREE.InterpolateSmooth - InterpolateSmooth, Smooth
 		</p>
 
-		<h3>[property:string name]</h3>
+		<h3>[property:string name] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			identifier for the KeyframeTrack
 		</p>
 
-		<h3>[property:mixed quaternions]</h3>
+		<h3>[property:number[] quaternions] &nbsp; = [] <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
-			values for the keyframes at the times specified.<br>
-			<br>
-			[page:number number]
+			values for the keyframes at the times specified.
 		</p>
 
-		<h3>[property:number times][]</h3>
+		<h3>[property:number[] times]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			(required) array of keyframe times.
 		</p>
 
-		<h3>[property:string type]</h3>
+		<h3>[property:string type] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			identifier for the KeyframeTrack<br>
 			<br>
@@ -153,21 +153,14 @@
 			[page:BooleanKeyframeTrack BooleanKeyframeTrack] - THREE.BooleanKeyframeTrack  - Boolean, BooleanKeyframe, BooleanKeyframeTrack - The Boolean of object3d
 		</p>
 
-		<h3>[property:number values][]</h3>
+		<h3>[property:number[] values] &nbsp; = [] <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			values for the keyframes at the times specified.
 		</p>
 
-		<h3>[property:mixed vectors]</h3>
+		<h3>[property:number[] vectors] &nbsp; = [] <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
-			values for the keyframes at the times specified.<br>
-			<br>
-			[page:number number]
-		</p>
-
-		<h2>Properties - Output</h2>
-		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common output properties.
+			values for the keyframes at the times specified.
 		</p>
 
 		<h2>Methods</h2>
@@ -175,26 +168,33 @@
 			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common methods.
 		</p>
 
-		<h3>[method:void applyChanges](  [param:string changes][] )</h3>
+		<h3>[method:void applyChanges](  [param:string[] changes] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
 		<p>
-			Applys changes<br>
-			<br>
-			Returns :
+			[parameter:string[] changes] - The changes.
+		</p>
+		<p>
+			Applys changes
 		</p>
 
-		<h3>[method:KeyframeTrack getKeyframe](  )</h3>
+		<h3>[method:KeyframeTrack getKeyframe](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets keyframe<br>
 			<br>
 			Returns : keyframe
 		</p>
 
-		<h3>[method:void setClip](  [param:AnimationClip clip] )</h3>
+		<h3>[method:void setClip](  [param:AnimationClip clip] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:AnimationClip clip] - The clip.
+		</p>
 		<p>
 			Sets clip
 		</p>
 
+		<br /><br />
 		<h2>Source</h2>
-		<p>[link:https://github.com/outmindkjg/three-sample/tree/master/src/app/three//keyframe/keyframe.component.ts /keyframe/keyframe.component.ts]</p>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/keyframe/keyframe.component.ts /keyframe/keyframe.component.ts]</p>
 	</body>
 </html>

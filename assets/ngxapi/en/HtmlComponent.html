@@ -9,100 +9,100 @@
 	<body>
 		[page:AbstractSubscribeComponent] &rarr; [page:AbstractTweenComponent] &rarr;
 
-		<h1>[name]</h1>
+		<h1>HtmlComponent</h1>
 
 		<p class="desc">
 			HtmlComponent
 		</p>
 
-		<h2>Component</h2>
+		<h2>Constructor</h2>
+		<h3>new [method:HtmlComponent HtmlComponent](  [param:ElementRef ele] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ElementRef ele] - The ele.
+		</p>
+		<p>
+			Creates an instance of html component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
 		<code data-type="html">&lt;ngx3js-html
-			[childType]="..."
-			[debug]="..."
-			[dlList]="..."
-			[enabled]="..."
-			[list]="..."
-			(onDestory)="...($event)"
-			(onLoad)="...($event)"
-			[overrideParams]="..."
-			[src]="..."
-			[style]="..."
-			[table]="..."
-			[tableFoot]="..."
-			[tableHead]="..."
-			[tween]="..."
-			[tweenStart]="..."
-			[type]="..."
-			[userData]="..."
-			[windowExport]="..."
+			[ childType ]="... string -- The child append method. "
+			[ debug ]="... boolean -- Debug this Object "
+			[ dlList ]="... any -- The dlList of html component "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ list ]="... any -- The list of html component "
+			( onDestory )="...($event : HtmlComponent -- Will be called when before des... )"
+			( onLoad )="...($event : HtmlComponent -- Will be called when load compl... )"
+			[ overrideParams ]="... any -- The override params "
+			[ src ]="... string -- The src of image or iframe "
+			[ style ]="... string|CssStyle -- The Style "
+			[ table ]="... any -- The table of html component "
+			[ tableFoot ]="... any -- The tableFoot of html componen... "
+			[ tableHead ]="... any -- The tableHead of html componen... "
+			[ tween ]="... any -- Tween animation params "
+			[ tweenStart ]="... boolean -- Start tween "
+			[ type ]="... string -- The html tag. "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ windowExport ]="... string -- Export this Object to window g... "
 		&gt;&lt;/ngx3js-html&gt;
 		</code>
 
-		<h2>Properties - Input</h2>
+		<h2>Properties</h2>
 		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common input properties.
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common properties.
 		</p>
 		<p>
-			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common input properties.
+			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common properties.
 		</p>
 
-		<h3>[property:string childType]</h3>
+		<h3>[property:string childType] &nbsp; = 'innerHTML' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The child append method.<br>
 			<br>
 			Notice - case insensitive.
 		</p>
 
-		<h3>[property:any dlList]</h3>
+		<h3>[property:any dlList]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The dlList of html component
 		</p>
 
-		<h3>[property:any list]</h3>
+		<h3>[property:any list]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The list of html component
 		</p>
 
-		<h3>[property:string src]</h3>
+		<h3>[property:string src]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The src of image or iframe
 		</p>
 
-		<h3>[property:mixed style]</h3>
+		<h3>[property:string|CssStyle style]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
-			The Style<br>
-			<br>
-			[page:string string] | [page:CssStyle CssStyle]
+			The Style
 		</p>
 
-		<h3>[property:any table]</h3>
+		<h3>[property:any table]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The table of html component
 		</p>
 
-		<h3>[property:any tableFoot]</h3>
+		<h3>[property:any tableFoot]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The tableFoot of html component
 		</p>
 
-		<h3>[property:any tableHead]</h3>
+		<h3>[property:any tableHead]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The tableHead of html component
 		</p>
 
-		<h3>[property:string type]</h3>
+		<h3>[property:string type] &nbsp; = 'div' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The html tag.<br>
 			<br>
 			Notice - case insensitive.
-		</p>
-
-		<h2>Properties - Output</h2>
-		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common output properties.
-		</p>
-		<p>
-			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common output properties.
 		</p>
 
 		<h2>Methods</h2>
@@ -113,26 +113,35 @@
 			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common methods.
 		</p>
 
-		<h3>[method:void applyChanges2d](  [param:string changes][] )</h3>
+		<h3>[method:void applyChanges2d](  [param:string[] changes] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string[] changes] - The changes.
+		</p>
 		<p>
 			Applys changes2d
 		</p>
 
-		<h3>[method:HTMLElement getHtml](  )</h3>
+		<h3>[method:HTMLElement getHtml](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets html<br>
 			<br>
 			Returns : html
 		</p>
 
-		<h3>[method:boolean setParent](  [param:mixed refObject3d] )</h3>
+		<h3>[method:boolean setParent](  [param:HTMLElement|Object3D refObject3d] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:HTMLElement|Object3D refObject3d] - The ref object3d.
+		</p>
 		<p>
 			Sets parent<br>
 			<br>
 			Returns : true if parent
 		</p>
 
+		<br /><br />
 		<h2>Source</h2>
-		<p>[link:https://github.com/outmindkjg/three-sample/tree/master/src/app/three//html/html.component.ts /html/html.component.ts]</p>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/html/html.component.ts /html/html.component.ts]</p>
 	</body>
 </html>

@@ -9,77 +9,78 @@
 	<body>
 		[page:AbstractSubscribeComponent] &rarr;
 
-		<h1>[name]</h1>
+		<h1>ScaleComponent</h1>
 
 		<p class="desc">
 			ScaleComponent
 		</p>
 
-		<h2>Component</h2>
+		<h2>Constructor</h2>
+		<h3>new [method:ScaleComponent ScaleComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Creates an instance of scale component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
 		<code data-type="html">&lt;ngx3js-scale
-			[debug]="..."
-			[enabled]="..."
-			[multiply]="..."
-			(onDestory)="...($event)"
-			(onLoad)="...($event)"
-			[overrideParams]="..."
-			[refName]="..."
-			[refer]="..."
-			[scaleMode]="..."
-			[tween]="..."
-			[userData]="..."
-			[windowExport]="..."
-			[x]="..."
-			[y]="..."
-			[z]="..."
+			[ debug ]="... boolean -- Debug this Object "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ multiply ]="... number -- Multiplies this vector by scal... "
+			( onDestory )="...($event : ScaleComponent -- Will be called when before des... )"
+			( onLoad )="...($event : ScaleComponent -- Will be called when load compl... )"
+			[ overrideParams ]="... any -- The override params "
+			[ refName ]="... string -- The refName of rotation compon... "
+			[ refer ]="... any -- The refer of scale component "
+			[ scaleMode ]="... string -- The scaleMode of scale compone... "
+			[ tween ]="... any -- Tween animation params "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ windowExport ]="... string -- Export this Object to window g... "
+			[ x ]="... number -- The current value of the x com... "
+			[ y ]="... number -- The current value of the y com... "
+			[ z ]="... number -- The current value of the z com... "
 		&gt;&lt;/ngx3js-scale&gt;
 		</code>
 
-		<h2>Properties - Input</h2>
+		<h2>Properties</h2>
 		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common input properties.
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common properties.
 		</p>
 
-		<h3>[property:number multiply]</h3>
+		<h3>[property:number multiply]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Multiplies this vector by scalar [page:Float s].
 		</p>
 
-		<h3>[property:string refName]</h3>
+		<h3>[property:string refName]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The refName of rotation component
 		</p>
 
-		<h3>[property:any refer]</h3>
+		<h3>[property:any refer]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The refer of scale component
 		</p>
 
-		<h3>[property:string scaleMode]</h3>
+		<h3>[property:string scaleMode] &nbsp; = 'max' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The scaleMode of scale component<br>
 			<br>
 			Notice - case insensitive.
 		</p>
 
-		<h3>[property:number x]</h3>
+		<h3>[property:number x] &nbsp; = 1 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The current value of the x component. Default value is *1*.
 		</p>
 
-		<h3>[property:number y]</h3>
+		<h3>[property:number y] &nbsp; = 1 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The current value of the y component. Default value is *1*.
 		</p>
 
-		<h3>[property:number z]</h3>
+		<h3>[property:number z] &nbsp; = 1 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The current value of the z component. Default value is *1*.
-		</p>
-
-		<h2>Properties - Output</h2>
-		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common output properties.
 		</p>
 
 		<h2>Methods</h2>
@@ -87,48 +88,74 @@
 			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common methods.
 		</p>
 
-		<h3>[method:void applyChanges](  [param:string changes][] )</h3>
+		<h3>[method:void applyChanges](  [param:string[] changes] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
 		<p>
-			Applys changes<br>
-			<br>
-			Returns :
+			[parameter:string[] changes] - The changes.
+		</p>
+		<p>
+			Applys changes
 		</p>
 
-		<h3>[method:Vector3 getScale](  )</h3>
+		<h3>[method:Vector3 getScale](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets scale<br>
 			<br>
 			Returns : scale
 		</p>
 
-		<h3>[method:TagAttributes getTagAttribute](  [param:any options] )</h3>
+		<h3>[method:TagAttributes getTagAttribute](  [param:any options]? )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any options] - (optional) The options.
+		</p>
 		<p>
 			Gets tag attribute<br>
 			<br>
 			Returns : tag attribute
 		</p>
 
-		<h3>[method:void setObject3d](  [param:AbstractSubscribeComponent object3d] )</h3>
+		<h3>[method:void setObject3d](  [param:AbstractSubscribeComponent object3d] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:AbstractSubscribeComponent object3d] - The object3d.
+		</p>
 		<p>
 			Sets object3d
 		</p>
 
-		<h3>[method:void setScale](  [param:number x],  [param:number y],  [param:number z] )</h3>
+		<h3>[method:void setScale](  [param:number x]?,  [param:number y]?,  [param:number z]? )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number x] - (optional) The x.<br />
+			[parameter:number y] - (optional) The y.<br />
+			[parameter:number z] - (optional) The z.
+		</p>
 		<p>
 			Sets scale
 		</p>
 
-		<h3>[method:void synkObject3d](  [param:Vector3 scale],  [param:string key] )</h3>
+		<h3>[method:void synkObject3d](  [param:Vector3 scale],  [param:string key] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Vector3 scale] - The scale.<br />
+			[parameter:string key] - The key.
+		</p>
 		<p>
 			Synks object3d
 		</p>
 
-		<h3>[method:void unsetObject3d](  [param:AbstractSubscribeComponent object3d] )</h3>
+		<h3>[method:void unsetObject3d](  [param:AbstractSubscribeComponent object3d] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:AbstractSubscribeComponent object3d] - The object3d.
+		</p>
 		<p>
 			unSets object3d
 		</p>
 
+		<br /><br />
 		<h2>Source</h2>
-		<p>[link:https://github.com/outmindkjg/three-sample/tree/master/src/app/three//scale/scale.component.ts /scale/scale.component.ts]</p>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/scale/scale.component.ts /scale/scale.component.ts]</p>
 	</body>
 </html>

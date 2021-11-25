@@ -9,76 +9,73 @@
 	<body>
 		[page:AbstractSubscribeComponent] &rarr; [page:AbstractTweenComponent] &rarr; [page:AbstractObject3dComponent] &rarr; [page:AbstractChartComponent] &rarr;
 
-		<h1>[name]</h1>
+		<h1>ChartRadarComponent</h1>
 
 		<p class="desc">
 			Component
 		</p>
 
-		<h2>Component</h2>
+		<h2>Constructor</h2>
+		<h3>new [method:ChartRadarComponent ChartRadarComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Creates an instance of chart radar component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
 		<code data-type="html">&lt;ngx3js-chart-radar
-			[castShadow]="..."
-			[debug]="..."
-			[depth]="..."
-			[depthIdx]="..."
-			[depthLength]="..."
-			[depthSize]="..."
-			[enabled]="..."
-			[frustumCulled]="..."
-			[geometry]="..."
-			[height]="..."
-			[material]="..."
-			[materialIsArray]="..."
-			[matrixAutoUpdate]="..."
-			[name]="..."
-			(onDestory)="...($event)"
-			(onLoad)="...($event)"
-			[overrideParams]="..."
-			[receiveShadow]="..."
-			[scaleMax]="..."
-			[scaleMin]="..."
-			[tween]="..."
-			[tweenStart]="..."
-			[type]="..."
-			[userData]="..."
-			[visible]="..."
-			[width]="..."
-			[widthLength]="..."
-			[windowExport]="..."
+			[ castShadow ]="... boolean -- Whether the object gets render... "
+			[ debug ]="... boolean -- Debug this Object "
+			[ depth ]="... number -- Depth; that is, the length of ... "
+			[ depthIdx ]="... number -- Depth; that is, the length of ... "
+			[ depthLength ]="... number -- Depth; that is, the length of ... "
+			[ depthSize ]="... number -- Depth; that is, the length of ... "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ frustumCulled ]="... boolean -- When this is set, it checks ev... "
+			[ geometry ]="... any -- The geometry of mesh "
+			[ height ]="... number -- Height; that is, the length of... "
+			[ label ]="... string"
+			[ material ]="... AbstractMaterialComponent|Material -- The material of mesh "
+			[ materialIsArray ]="... boolean -- The material of mesh is array "
+			[ matrixAutoUpdate ]="... boolean -- When this is set, it calculate... "
+			[ name ]="... string -- The name of the object (doesn'... "
+			( onDestory )="...($event : ChartRadarComponent -- Will be called when before des... )"
+			( onLoad )="...($event : ChartRadarComponent -- Will be called when load compl... )"
+			[ options ]="... ShapeInfo"
+			[ overrideParams ]="... any -- The override params "
+			[ pointOffset ]="... number"
+			[ pointOptions ]="... ShapeInfo"
+			[ pointStyle ]="... string"
+			[ receiveShadow ]="... boolean -- Whether the material receives ... "
+			[ scaleMax ]="... number -- Depth; that is, the length of ... "
+			[ scaleMin ]="... number -- Depth; that is, the length of ... "
+			[ tween ]="... any -- Tween animation params "
+			[ tweenStart ]="... boolean -- Start tween "
+			[ type ]="... string -- The type of chart radar compon... "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ visible ]="... boolean -- Object gets rendered if *true*... "
+			[ width ]="... number -- Width; that is, the length of ... "
+			[ widthLength ]="... number -- Depth; that is, the length of ... "
+			[ windowExport ]="... string -- Export this Object to window g... "
 		&gt;&lt;/ngx3js-chart-radar&gt;
 		</code>
 
-		<h2>Properties - Input</h2>
+		<h2>Properties</h2>
 		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common input properties.
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common properties.
 		</p>
 		<p>
-			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common input properties.
+			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common properties.
 		</p>
 		<p>
-			See the base [page:AbstractObject3dComponent AbstractObject3dComponent] class for common input properties.
+			See the base [page:AbstractObject3dComponent AbstractObject3dComponent] class for common properties.
 		</p>
 		<p>
-			See the base [page:AbstractChartComponent AbstractChartComponent] class for common input properties.
+			See the base [page:AbstractChartComponent AbstractChartComponent] class for common properties.
 		</p>
 
-		<h3>[property:string type]</h3>
+		<h3>[property:string type] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The type of chart radar component
-		</p>
-
-		<h2>Properties - Output</h2>
-		<p>
-			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common output properties.
-		</p>
-		<p>
-			See the base [page:AbstractTweenComponent AbstractTweenComponent] class for common output properties.
-		</p>
-		<p>
-			See the base [page:AbstractObject3dComponent AbstractObject3dComponent] class for common output properties.
-		</p>
-		<p>
-			See the base [page:AbstractChartComponent AbstractChartComponent] class for common output properties.
 		</p>
 
 		<h2>Methods</h2>
@@ -95,7 +92,8 @@
 			See the base [page:AbstractChartComponent AbstractChartComponent] class for common methods.
 		</p>
 
+		<br /><br />
 		<h2>Source</h2>
-		<p>[link:https://github.com/outmindkjg/three-sample/tree/master/src/app/three//chart/radar/radar.component.ts /chart/radar/radar.component.ts]</p>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/chart/radar/radar.component.ts /chart/radar/radar.component.ts]</p>
 	</body>
 </html>

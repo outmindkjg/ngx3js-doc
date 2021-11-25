@@ -7,58 +7,118 @@
 		<link type="text/css" rel="stylesheet" href="page.css" />
 	</head>
 	<body>
-		<h1>[name]</h1>
+		<h1>CurveUtils</h1>
 
 		<p class="desc">
 			Curve utils
 		</p>
 
-		<h2>Properties - Input</h2>
-		<h2>Properties - Output</h2>
+		<h2>Constructor</h2>
+		<p>
+			None
+		</p>
+
+		<h2>Properties</h2>
+		<p>
+			None
+		</p>
+
 		<h2>Methods</h2>
-		<h3>[method:void addCurve](  [param:string key],  [param:CurveClass curve],  [param:string alias][] )</h3>
+		<h3>[method:void addCurve](  [param:string key],  [param:CurveClass curve],  [param:string[] alias]? )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-static">Static</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:CurveClass curve] - The curve.<br />
+			[parameter:string[] alias] - (optional) The alias.
+		</p>
 		<p>
 			Adds curve
 		</p>
 
-		<h3>[method:Curve getCurve](  [param:string key],  [param:number scale],  [param:any options] )</h3>
+		<h3>[method:Curve getCurve](  [param:string key],  [param:number scale]?,  [param:any options]? )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-static">Static</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:number scale] - (optional) The scale.<br />
+			[parameter:any options] - (optional) The options.
+		</p>
 		<p>
 			Gets curve<br>
 			<br>
 			Returns : curve
 		</p>
 
-		<h3>[method:CurveClass getCurveClass](  [param:string key] )</h3>
+		<h3>[method:CurveClass getCurveClass](  [param:string key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-static">Static</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.
+		</p>
 		<p>
 			Gets curve class<br>
 			<br>
 			Returns : curve class
 		</p>
 
-		<h3>[method:CurvesNormal getCurveNormal](  [param:mixed key],  [param:CurvesNormalParameters normalOption],  [param:any option] )</h3>
+		<h3>[method:CurvesNormal getCurveNormal](  [param:string|Curve key],  [param:CurvesNormalParameters normalOption]?,  [param:any option]? )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-static">Static</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string|Curve key] - The key.<br />
+			[parameter:CurvesNormalParameters normalOption] - (optional) The normal option.<br />
+			[parameter:any option] - (optional) The option.
+		</p>
 		<p>
 			Gets curve normal<br>
 			<br>
 			Returns : curve normal
 		</p>
 
-		<hr>
-		<h1 id="CurveClass">CurveClass</h1>
+		<hr class="interface-line"/>
+		<h3 id="CurveClass">CurveClass <i class="modifier modifier-interface">Interface</i></h3>
+		<h4>Properties</h4>
+		<p>
+			
+		</p>
+
+		<p>
+			None
+		</p>
+
 
 		<p class="desc">
 			Curve class
 		</p>
 
-		<h2>Properties</h2>
-		<hr>
-		<h1 id="CurvesNormalParameters">CurvesNormalParameters</h1>
+		<hr class="interface-line"/>
+		<h3 id="CurvesNormalParameters">CurvesNormalParameters <i class="modifier modifier-interface">Interface</i></h3>
+		<h4>Properties</h4>
+		<p>
+			[property:Vector3 center]? -  The center.<br />
+			[property:number multiply]? -  The multiply.<br />
+			[property:string options]? -  The options.<br />
+			[property:Euler rotation]? -  The rotation.<br />
+			[property:Vector3 scale]? -  The scale.
+		</p>
+
 
 		<p class="desc">
 			Curves normal parameters
 		</p>
 
-		<h2>Properties</h2>
+		<hr class="interface-line"/>
+		<h3 id="CurveConf">CurveConf <i class="modifier modifier-interface">Interface</i></h3>
+		<h3> { [  [param:string key] ] : [param:CurveClass|string emptyName] }</h3>
+		<p>
+			
+		</p>
+
+
+
+		<p class="desc">
+			
+		</p>
+
+		<br /><br />
 		<h2>Source</h2>
-		<p>[link:https://github.com/outmindkjg/three-sample/tree/master/src/app/three//curve/curveUtils.ts /curve/curveUtils.ts]</p>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/curve/curveUtils.ts /curve/curveUtils.ts]</p>
 	</body>
 </html>
