@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		[page:AbstractSubscribeComponent] &rarr;
+
+		<h1>CanvasComponent</h1>
+
+		<p class="desc">
+			The Canvas component.<br />
+			<br />
+			<h3>Preview - ngx hud</h3><br />
+			<iframe src="#/viewer/ngx_hud"></iframe><br />
+			<br />
+			See the [page:CanvasComponent ngx3js docs] page for details.<br />
+			See the [example:ngx_hud ngx hud] page for a live demo.
+		</p>
+
+		<h2>Constructor</h2>
+		<h3>new [method:CanvasComponent CanvasComponent](  [param:ElementRef ele] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ElementRef ele] - The ele.
+		</p>
+		<p>
+			Creates an instance of canvas component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
+		<code data-type="html">&lt;ngx3js-canvas
+			[ debug ]="... boolean -- Debug this Object "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ name ]="... string -- The name of the object (doesn'... "
+			( onDestory )="...($event : CanvasComponent -- Will be called when before des... )"
+			( onLoad )="...($event : CanvasComponent -- Will be called when load compl... )"
+			[ overrideParams ]="... any -- The override params "
+			[ tween ]="... any -- Tween animation params "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ windowExport ]="... string -- Export this Object to window g... "
+		&gt;&lt;/ngx3js-canvas&gt;
+		</code>
+
+		<h2>Properties</h2>
+		<p>
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common properties.
+		</p>
+
+		<h3>[property:string name] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The name of the object (doesn't need to be unique). Default is an empty string.
+		</p>
+
+		<h2>Methods</h2>
+		<p>
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common methods.
+		</p>
+
+		<h3>[method:void applyChanges](  [param:string[] changes] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string[] changes] - The changes.
+		</p>
+		<p>
+			Applys changes
+		</p>
+
+		<h3>[method:void applyHtmlStyle](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Applys html style
+		</p>
+
+		<h3>[method:HTMLElement getCanvas](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets canvas<br />
+			<br />
+			Returns : canvas
+		</p>
+
+		<h3>[method:HtmlCollection getCollection](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets collection<br />
+			<br />
+			Returns : collection
+		</p>
+
+		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Gets object<br />
+			<br />
+			Returns : object
+		</p>
+
+		<h3>[method:CssStyle getStyle](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets style<br />
+			<br />
+			Returns : style
+		</p>
+
+		<h3>[method:void setParentNode](  [param:HTMLElement parentNode] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:HTMLElement parentNode] - The parent node.
+		</p>
+		<p>
+			Sets parent node
+		</p>
+
+		<h3>[method:void setSize](  [param:Vector2 size] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Vector2 size] - The size.
+		</p>
+		<p>
+			Sets size
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/canvas/canvas.component.ts /canvas/canvas.component.ts]</p>
+	</body>
+</html>

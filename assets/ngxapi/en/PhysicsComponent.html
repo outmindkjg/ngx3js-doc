@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		[page:AbstractSubscribeComponent] &rarr;
+
+		<h1>PhysicsComponent</h1>
+
+		<p class="desc">
+			PhysicsComponent<br />
+			<br />
+			<h3>Preview - ngx physics</h3><br />
+			<iframe src="#/viewer/ngx_physics"></iframe><br />
+			<br />
+			See the [page:PhysicsComponent ngx3js docs] page for details.<br />
+			See the [example:ngx_physics ngx physics] page for a live demo.<br />
+			<br />
+			<code data-type="html"><br />
+			&lt;ngx3js-physics&gt;<br />
+			&lt;/ngx3js-physics&gt;<br />
+			&lt;ngx3js-physics<br />
+				[gravity]="-7.8"<br />
+			&gt;&lt;/ngx3js-physics&gt;<br />
+			&lt;ngx3js-physics<br />
+				[type]="'oimo'" [gravity]="-9.8"<br />
+			&gt;&lt;/ngx3js-physics&gt;<br />
+			</code>
+		</p>
+
+		<h2>Constructor</h2>
+		<h3>new [method:PhysicsComponent PhysicsComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Creates an instance of physics component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
+		<code data-type="html">&lt;ngx3js-physics
+			[ debug ]="... boolean -- Debug this Object "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ gravity ]="... number -- The gravity of physics compone... "
+			[ gravityX ]="... number -- The gravityX of physics compon... "
+			[ gravityY ]="... number -- The gravityY of physics compon... "
+			[ gravityZ ]="... number -- The gravityZ of physics compon... "
+			( onDestory )="...($event : PhysicsComponent -- Will be called when before des... )"
+			( onLoad )="...($event : PhysicsComponent -- Will be called when load compl... )"
+			[ overrideParams ]="... any -- The override params "
+			[ tween ]="... any -- Tween animation params "
+			[ type ]="... string -- The Input of physics component "
+			[ useCollision ]="... boolean -- The useCollision of physics co... "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ windowExport ]="... string -- Export this Object to window g... "
+		&gt;&lt;/ngx3js-physics&gt;
+		</code>
+
+		<h2>Properties</h2>
+		<p>
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common properties.
+		</p>
+
+		<h3>[property:number gravity]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The gravity of physics component
+		</p>
+
+		<h3>[property:number gravityX]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The gravityX of physics component
+		</p>
+
+		<h3>[property:number gravityY]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The gravityY of physics component
+		</p>
+
+		<h3>[property:number gravityZ]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The gravityZ of physics component
+		</p>
+
+		<h3>[property:string type] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The Input of physics component<br />
+			Notice - case insensitive.
+		</p>
+
+		<h3>[property:boolean useCollision] &nbsp; = false <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The useCollision of physics component
+		</p>
+
+		<h2>Methods</h2>
+		<p>
+			See the base [page:AbstractSubscribeComponent AbstractSubscribeComponent] class for common methods.
+		</p>
+
+		<h3>[method:void applyChanges](  [param:string[] changes] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string[] changes] - The changes.
+		</p>
+		<p>
+			Applys changes
+		</p>
+
+		<h3>[method:AmmoType getAmmo](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets ammo
+		</p>
+
+		<h3>[method:any getBtVector3](  [param:any pointer] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any pointer] - The pointer.
+		</p>
+		<p>
+			Gets bt vector3<br />
+			<br />
+			Returns : bt vector3
+		</p>
+
+		<h3>[method:Object3D getCollisionObject](  [param:btCollisionObject body] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:btCollisionObject body] - The body.
+		</p>
+		<p>
+			Gets collision object<br />
+			<br />
+			Returns : collision object
+		</p>
+
+		<h3>[method:ConvexObjectBreaker getConvexObjectBreaker](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets convex object breaker<br />
+			<br />
+			Returns : convex object breaker
+		</p>
+
+		<h3>[method:btSoftRigidDynamicsWorld getPhysics](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets physics<br />
+			<br />
+			Returns : physics
+		</p>
+
+		<h3>[method:btRigidBody getRigidBody](  [param:btCollisionObject body] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:btCollisionObject body] - The body.
+		</p>
+		<p>
+			Gets rigid body<br />
+			<br />
+			Returns : rigid body
+		</p>
+
+		<h3>[method:btSoftBodyHelpers getSoftBodyHelpers](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets soft body helpers<br />
+			<br />
+			Returns : soft body helpers
+		</p>
+
+		<h3>[method:void update](  [param:RendererTimer timer] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:RendererTimer timer] - The timer.
+		</p>
+		<p>
+			Updates physics component
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/physics/physics.component.ts /physics/physics.component.ts]</p>
+	</body>
+</html>
