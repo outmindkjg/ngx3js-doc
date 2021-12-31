@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		[page:Loader] &rarr;
+
+		<h1>SVGLoader</h1>
+
+		<p class="desc">
+			Svgloader<br />
+			See the [page:SVGLoader ngx3js docs] page for details.<br />
+			<br />
+			<h3>Preview - webgl / geometry / text / stroke</h3><br />
+			<iframe src="#/viewer/webgl_geometry_text_stroke"></iframe><br />
+			<br />
+			<h2>Examples</h2><br />
+			[example:webgl_geometry_text_stroke webgl / geometry / text / stroke]<br />
+			[example:webgl_loader_svg webgl / loader / svg]
+		</p>
+
+		<h2>Constructor</h2>
+		<h3>[constructor:SVGLoader SVGLoader](  [param:LoadingManager manager]?,  [param:any options]? )<i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:LoadingManager manager] - (optional) The [page:LoadingManager loadingManager] for the loader to use. Default is [page:LoadingManager THREE.DefaultLoadingManager].<br />
+			[parameter:any options] - (optional) The options.
+		</p>
+		<p>
+			Creates a new Loader.
+		</p>
+
+		<h2>Properties</h2>
+		<p>
+			See the base [page:Loader Loader] class for common properties.
+		</p>
+
+		<h3>[property:string crossOrigin]<i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The crossOrigin string to implement CORS for loading the url from a different domain that allows CORS.<br />
+			Default is <i>anonymous</i>.
+		</p>
+
+		<h3>[property:number defaultDPI]</h3>
+		<p>
+			
+		</p>
+
+		<h3>[property:string defaultUnit]</h3>
+		<p>
+			
+		</p>
+
+		<h3>[property:LoadingManager manager]<i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The [page:LoadingManager loadingManager]  the loader is using. Default is [page:DefaultLoadingManager DefaultLoadingManager].
+		</p>
+
+		<h3>[property:string path]<i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The base path from which the asset will be loaded.<br />
+			Default is the empty string.
+		</p>
+
+		<h3>[property:any requestHeader]<i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header request header] used in HTTP request. See <i>.setRequestHeader</i>. Default is empty object.
+		</p>
+
+		<h3>[property:string resourcePath]<i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The base path from which additional resources like textures will be loaded.<br />
+			Default is the empty string.
+		</p>
+
+		<h3>[property:boolean withCredentials]<i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Whether the XMLHttpRequest uses credentials. See <i>.setWithCredentials</i>.<br />
+			Default is <i>false</i>.
+		</p>
+
+		<h2>Methods</h2>
+		<p>
+			See the base [page:Loader Loader] class for common methods.
+		</p>
+
+		<h3>[method:Shape[] createShapes](  [param:ShapePath shapePath] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ShapePath shapePath] - The shape path.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:StrokeStyle getStrokeStyle](  [param:number width]?,  [param:string color]?,  [param:string lineJoin]?,  [param:string lineCap]?,  [param:number miterLimit]? )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number width] - (optional) The width.<br />
+			[parameter:string color] - (optional) The color.<br />
+			[parameter:string lineJoin] - (optional) The line join.<br />
+			[parameter:string lineCap] - (optional) The line cap.<br />
+			[parameter:number miterLimit] - (optional) The miter limit.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:void load](  [param:string url],  [param:any onLoad],  [param:any onProgress]?,  [param:any onError]? )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string url] - The path or URL to the file.<br />
+			[parameter:any onLoad] - Will be called when load completes.<br />
+			[parameter:any onProgress] - (optional) Will be called while load progresses.<br />
+			[parameter:any onError] - (optional) Will be called when load errors.
+		</p>
+		<p>
+			Begin loading from url.
+		</p>
+
+		<h3>[method:Promise loadAsync](  [param:string url],  [param:any onProgress]? )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string url] - The path or URL to the file.<br />
+			[parameter:any onProgress] - (optional) Will be called while load progresses.
+		</p>
+		<p>
+			Begin loading from url.
+		</p>
+
+		<h3>[method:SVGResult parse](  [param:string text] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string text] - The text.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:BufferGeometry pointsToStroke](  [param:Vector3[] points],  [param:StrokeStyle style],  [param:number arcDivisions]?,  [param:number minDistance]? )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Vector3[] points] - The points.<br />
+			[parameter:StrokeStyle style] - The style.<br />
+			[parameter:number arcDivisions] - (optional) The arc divisions.<br />
+			[parameter:number minDistance] - (optional) The min distance.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:number pointsToStrokeWithBuffers](  [param:Vector3[] points],  [param:StrokeStyle style],  [param:number arcDivisions]?,  [param:number minDistance]?,  [param:number[] vertices]?,  [param:number[] normals]?,  [param:number[] uvs]?,  [param:number vertexOffset]? )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Vector3[] points] - The points.<br />
+			[parameter:StrokeStyle style] - The style.<br />
+			[parameter:number arcDivisions] - (optional) The arc divisions.<br />
+			[parameter:number minDistance] - (optional) The min distance.<br />
+			[parameter:number[] vertices] - (optional) The vertices.<br />
+			[parameter:number[] normals] - (optional) The normals.<br />
+			[parameter:number[] uvs] - (optional) The uvs.<br />
+			[parameter:number vertexOffset] - (optional) The vertex offset.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:SVGLoader setCrossOrigin](  [param:string crossOrigin] )<i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string crossOrigin] - The crossOrigin string to implement CORS for loading the url from a different domain that allows CORS.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:SVGLoader setPath](  [param:string path] )<i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string path] - Set the base path for the asset.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:SVGLoader setRequestHeader](  [param:any requestHeader] )<i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any requestHeader] - key: The name of the header whose value is to be set. value: The value to set as the body of the header.
+Set the [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header request header] used in HTTP request.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:SVGLoader setResourcePath](  [param:string resourcePath] )<i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string resourcePath] - Set the base path for dependent resources like textures.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:SVGLoader setWithCredentials](  [param:boolean value] )<i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:boolean value] - The value.
+		</p>
+		<p>
+			Whether the XMLHttpRequest uses credentials such as cookies, authorization headers or TLS client certificates. See [link:https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials XMLHttpRequest.withCredentials].<br />
+			Note that this has no effect if you are loading files locally or from the same domain.
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+		<hr class="interface-line top"/>
+		<h3 id="StrokeStyle">StrokeStyle <i class="modifier modifier-interface">Interface</i></h3>
+		<hr class="interface-line bottom"/>
+		<h4>Properties</h4>
+		<p>
+			[property:string strokeColor] -  The stroke color.<br />
+			[property:string strokeLineCap] -  The stroke line cap.<br />
+			[property:string strokeLineJoin] -  The stroke line join.<br />
+			[property:number strokeMiterLimit] -  The stroke miter limit.<br />
+			[property:number strokeWidth] -  The stroke width.
+		</p>
+
+		<p class="desc">
+			Stroke style
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/examples/loaders.ts /threejs-library/types/three/examples/loaders.ts]</p>
+	</body>
+</html>

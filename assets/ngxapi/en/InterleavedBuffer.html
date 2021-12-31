@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		<h1>InterleavedBuffer</h1>
+
+		<p class="desc">
+			"Interleaved" means that multiple attributes, possibly of different types, (e.g., position, normal, uv, color) are packed into a single array buffer.<br />
+			An introduction into interleaved arrays can be found here: [link:https://blog.tojicode.com/2011/05/interleaved-array-basics.html Interleaved array basics]<br />
+			<br />
+			<h3>Preview - webgl / buffergeometry / points / interleaved</h3><br />
+			<iframe src="#/viewer/webgl_buffergeometry_points_interleaved"></iframe><br />
+			<br />
+			<h2>Examples</h2><br />
+			[example:webgl_buffergeometry_points_interleaved webgl / buffergeometry / points / interleaved]
+		</p>
+
+		<h2>Constructor</h2>
+		<h3>[constructor:InterleavedBuffer InterleavedBuffer](  [param:ArrayLike array],  [param:number stride] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ArrayLike array] - A typed array with a shared buffer. Stores the geometry data.<br />
+			[parameter:number stride] - The number of typed-array elements per vertex.
+		</p>
+		<p>
+			
+		</p>
+
+		<h2>Properties</h2>
+		<h3>[property:ArrayLike array]</h3>
+		<p>
+			A typed array with a shared buffer. Stores the geometry data.
+		</p>
+
+		<h3>[property:number count]</h3>
+		<p>
+			Gives the total number of elements in the array.
+		</p>
+
+		<h3>[property:number length]</h3>
+		<p>
+			
+		</p>
+
+		<h3>[property:boolean needsUpdate]</h3>
+		<p>
+			Default is <i>false</i>. Setting this to true increments [page:InterleavedBuffer.version version].
+		</p>
+
+		<h3>[property:number stride]</h3>
+		<p>
+			The number of typed-array elements per vertex.
+		</p>
+
+		<h3>[property:any updateRange]</h3>
+		<p>
+			Object containing offset and count.
+		</p>
+
+		<h3>[property:Usage usage]</h3>
+		<p>
+			Defines the intended usage pattern of the data store for optimization purposes. Corresponds to the <i>usage</i> parameter of [link:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData WebGLRenderingContext.bufferData]().
+		</p>
+
+		<h3>[property:string uuid]</h3>
+		<p>
+			[link:http://en.wikipedia.org/wiki/Universally_unique_identifier UUID] of this instance. This gets automatically assigned, so this shouldn't be edited.
+		</p>
+
+		<h3>[property:number version]</h3>
+		<p>
+			A version number, incremented every time the needsUpdate property is set to true.
+		</p>
+
+		<h2>Methods</h2>
+		<h3>[method:InterleavedBuffer clone](  [param:object data] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:object data] - This object holds shared array buffers required for properly cloning geometries with interleaved attributes.
+Creates a clone of this InterleavedBuffer.
+		</p>
+		<p>
+			
+		</p>
+
+		<h3>[method:InterleavedBuffer copy](  [param:InterleavedBuffer source] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:InterleavedBuffer source] - The source.
+		</p>
+		<p>
+			Copies another InterleavedBuffer to this InterleavedBuffer.
+		</p>
+
+		<h3>[method:InterleavedBuffer copyAt](  [param:number index1],  [param:InterleavedBufferAttribute attribute],  [param:number index2] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number index1] - The index1.<br />
+			[parameter:InterleavedBufferAttribute attribute] - The attribute.<br />
+			[parameter:number index2] - The index2.
+		</p>
+		<p>
+			Copies data from attribute[index2] to [page:InterleavedBuffer.array array][index1].
+		</p>
+
+		<h3>[method:InterleavedBuffer set](  [param:ArrayLike value],  [param:number index] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ArrayLike value] - The source (typed) array.<br />
+			[parameter:number index] - The index.
+		</p>
+		<p>
+			Stores multiple values in the buffer, reading input values from a specified array.
+		</p>
+
+		<h3>[method:InterleavedBuffer setUsage](  [param:Usage usage] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Usage usage] - The usage.
+		</p>
+		<p>
+			Set [page:InterleavedBuffer.usage usage] to value.
+		</p>
+
+		<h3>[method:void toJSON](  [param:object data] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:object data] - This object holds shared array buffers required for properly serializing geometries with interleaved attributes.
+		</p>
+		<p>
+			Serializes this InterleavedBuffer.
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+		<hr class="interface-line top"/>
+		<h3 id="Usage">Usage <i class="modifier modifier-interface">Enumeration</i></h3>
+		<hr class="interface-line bottom"/>
+		<h4>Properties</h4>
+		<p>
+			[property:Usage DynamicCopyUsage] = 35050 -  The dynamic copy usage.<br />
+			[property:Usage DynamicDrawUsage] = 35048 -  The dynamic draw usage.<br />
+			[property:Usage DynamicReadUsage] = 35049 -  The dynamic read usage.<br />
+			[property:Usage StaticCopyUsage] = 35046 -  The static copy usage.<br />
+			[property:Usage StaticDrawUsage] = 35044 -  The static draw usage.<br />
+			[property:Usage StaticReadUsage] = 35045 -  The static read usage.<br />
+			[property:Usage StreamCopyUsage] = 35042 -  The stream copy usage.<br />
+			[property:Usage StreamDrawUsage] = 35040 -  The stream draw usage.<br />
+			[property:Usage StreamReadUsage] = 35041 -  The stream read usage.
+		</p>
+
+		<p class="desc">
+			
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/core.ts /threejs-library/types/three/core.ts]</p>
+	</body>
+</html>

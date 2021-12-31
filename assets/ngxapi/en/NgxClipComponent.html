@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		[page:NgxAbstractSubscribeComponent] &rarr;
+
+		<h1>NgxClipComponent</h1>
+
+		<p class="desc">
+			The Clip component.<br />
+			See the [page:ClipComponent ngx3js docs] page for details.<br />
+			<br />
+			An AnimationClip is a reusable set of keyframe tracks which represent an animation.<br />
+			<br />
+			For an overview of the different elements of the three.js animation system see the "Animation System" article in the "Next Steps" section of the manual.<br />
+			<br />
+			<code data-type="html"><br />
+			&lt;ngx3js-mixer [action]="'base'"&gt;<br />
+				&lt;ngx3js-clip [name]="'base'" [index]="0"&gt;&lt;/ngx3js-clip&gt;<br />
+			&lt;/ngx3js-mixer&gt;<br />
+			&lt;ngx3js-mixer [action]="'Run'"&gt;<br />
+				&lt;ngx3js-clip [name]="'Run'"&gt;&lt;/ngx3js-clip&gt;<br />
+			&lt;/ngx3js-mixer&gt;<br />
+			</code>
+		</p>
+
+		<h2>Constructor</h2>
+		<h3>[constructor:NgxClipComponent NgxClipComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Creates an instance of clip component.
+		</p>
+
+		<h3>Angular Html Template [ Input ] ( Output )</h3>
+		<code data-type="html">&lt;ngx3js-clip
+			[ additive ]="... boolean -- makeClipAdditive "
+			[ blendMode ]="... string -- The blendMode of clip componen... "
+			[ clampWhenFinished ]="... boolean -- If *clampWhenFinished* is set ... "
+			[ debug ]="... boolean -- Debug this Object "
+			[ duration ]="... number -- The duration of this clip (in ... "
+			[ enabled ]="... boolean -- Enabled or Not "
+			[ endFrame ]="... number -- Creates a new clip, containing... "
+			[ fps ]="... number -- Creates a new clip, containing... "
+			[ index ]="... number -- The index of clip component "
+			[ loop ]="... string -- The looping mode (can be chang... "
+			[ name ]="... string -- A name for this clip. A certai... "
+			( onDestory )="...($event : NgxClipComponent -- Will be called when before des... )"
+			( onLoad )="...($event : NgxClipComponent -- Will be called when load compl... )"
+			[ overrideParams ]="... any -- The override params "
+			[ startFrame ]="... number -- Creates a new clip, containing... "
+			[ subclip ]="... boolean -- subclip "
+			[ timeScale ]="... number -- Scaling factor for the [Animat... "
+			[ tween ]="... any -- Tween animation params "
+			[ userData ]="... any -- An object that can be used to ... "
+			[ weight ]="... number -- The degree of influence of thi... "
+			[ windowExport ]="... string -- Export this Object to window g... "
+		&gt;&lt;/ngx3js-clip&gt;
+		</code>
+
+		<h2>Properties</h2>
+		<p>
+			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
+		</p>
+
+		<h3>[property:string[] OBJECT_ATTR] &nbsp; = ... <i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Object attr of abstract subscribe component
+		</p>
+
+		<h3>[property:string[] _changeList]<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Change list of abstract subscribe component
+		</p>
+
+		<h3>[property:boolean _needUpdate] &nbsp; = true <i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Need update of abstract subscribe component
+		</p>
+
+		<h3>[property:AnimationAction action]<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The Action of clip component
+		</p>
+
+		<h3>[property:boolean additive] &nbsp; = false <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			makeClipAdditive<br />
+			<br />
+			[page:AnimationUtils AnimationUtils] - THREE.AnimationUtils.makeClipAdditive
+		</p>
+
+		<h3>[property:string blendMode] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The blendMode of clip component<br />
+			<table><thead><tr><th>   Three Type               </th><th> Value String(case insensitive) </th></tr></thead><tbody> <tr><td> THREE.NormalAnimationBlendMode </td><td> NormalAnimationBlendMode, NormalAnimation, Normal </td></tr> <tr><td> THREE.AdditiveAnimationBlendMode </td><td> AdditiveAnimationBlendMode, AdditiveAnimation, Additive </td></tr> </table>
+		</p>
+
+		<h3>[property:boolean clampWhenFinished] &nbsp; = false <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			If <i>clampWhenFinished</i> is set to true the animation will automatically be [page:AnimationClip.paused AnimationClip.paused] on its last frame.<br />
+			If <i>clampWhenFinished</i> is set to false, [page:AnimationClip.enabled AnimationClip.enabled] will automatically be switched to false when the last loop of the action has finished, so that this action has no further impact.<br />
+			Default is false.<br />
+			Note: <i>clampWhenFinished</i> has no impact if the action is interrupted (it has only an effect if its last loop has really finished).
+		</p>
+
+		<h3>[property:boolean debug] &nbsp; = false <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Debug this Object
+		</p>
+
+		<h3>[property:number duration] &nbsp; = 3 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The duration of this clip (in seconds). This can be calculated from the [page:AnimationClip.tracks AnimationClip.tracks] array via [page:AnimationClip.resetDuration AnimationClip.resetDuration].
+		</p>
+
+		<h3>[property:boolean enabled] &nbsp; = true <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Enabled or Not
+		</p>
+
+		<h3>[property:number endFrame] &nbsp; = 3 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Creates a new clip, containing only the segment of the original clip between the given frames.
+		</p>
+
+		<h3>[property:number fps]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Creates a new clip, containing only the segment of the original clip between the given frames.
+		</p>
+
+		<h3>[property:string id] &nbsp; = '' <i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The Id of abstract subscribe component
+		</p>
+
+		<h3>[property:number index] &nbsp; = -1 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The index of clip component
+		</p>
+
+		<h3>[property:string loop]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The looping mode (can be changed with [page:AnimationClip.setLoop AnimationClip.setLoop]). Default is [page:Animation THREE.LoopRepeat] (with an infinite number of [page:AnimationClip.repetitions AnimationClip.repetitions])<br />
+			<table><thead><tr><th>   Three Type               </th><th> Value String(case insensitive) </th></tr></thead><tbody> <tr><td> THREE.LoopOnce </td><td> LoopOnce, Once </td></tr> <tr><td> THREE.LoopRepeat </td><td> LoopRepeat, Repeat </td></tr> <tr><td> THREE.LoopPingPong </td><td> LoopPingPong, PingPong </td></tr> </table>
+		</p>
+
+		<h3>[property:string name] &nbsp; = '' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			A name for this clip. A certain clip can be searched via [page:AnimationClip.findByName AnimationClip.findByName].
+		</p>
+
+		<h3>[property:EventEmitter onDestory] &nbsp; = ... <i class="modifier modifier-output">Output</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Will be called when before destory. The argument will be the loaded self
+		</p>
+
+		<h3>[property:EventEmitter onLoad] &nbsp; = ... <i class="modifier modifier-output">Output</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Will be called when load completes. The argument will be the loaded self
+		</p>
+
+		<h3>[property:any overrideParams]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The override params
+		</p>
+
+		<h3>[property:any parent]<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			The Parent of abstract subscribe component
+		</p>
+
+		<h3>[property:any selfAny] &nbsp; = ... <i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			
+		</p>
+
+		<h3>[property:number startFrame] &nbsp; = 2 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Creates a new clip, containing only the segment of the original clip between the given frames.
+		</p>
+
+		<h3>[property:boolean subclip] &nbsp; = false <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			subclip<br />
+			<br />
+			[page:AnimationUtils AnimationUtils] - THREE.AnimationUtils.subclip
+		</p>
+
+		<h3>[property:string subscribeType]<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Subscribe type of abstract subscribe component
+		</p>
+
+		<h3>[property:number timeScale] &nbsp; = 1 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Scaling factor for the [page:AnimationClip.time AnimationClip.time]. A value of 0 causes the animation to pause. Negative values cause the animation to play backwards. Default is 1.
+		</p>
+
+		<h3>[property:any tween]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Tween animation params
+		</p>
+
+		<h3>[property:any userData]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			An object that can be used to store custom data about the Object3D. It should not hold references to functions as these will not be cloned.
+		</p>
+
+		<h3>[property:number weight] &nbsp; = 1 <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The degree of influence of this action (in the interval [0, 1]). Values between 0 (no impact)<br />
+			and 1 (full impact) can be used to blend between several actions. Default is 1.<br />
+			Properties/methods concerning  <i>weight</i> are:
+		</p>
+
+		<h3>[property:string windowExport]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Export this Object to window global variables
+		</p>
+
+		<h2>Methods</h2>
+		<p>
+			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
+		</p>
+
+		<h3>[method:void addChanges](  [param:string|string[]|SimpleChanges key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string|string[]|SimpleChanges key] - The key.
+		</p>
+		<p>
+			Adds changes
+		</p>
+
+		<h3>[method:void applyChanges](  [param:string[] changes] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string[] changes] - The changes.
+		</p>
+		<p>
+			Applys changes
+		</p>
+
+		<h3>[method:void callOnLoad](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Calls on load
+		</p>
+
+		<h3>[method:SimpleChanges checkChanges](  [param:SimpleChanges changes] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:SimpleChanges changes] - The changes.
+		</p>
+		<p>
+			Checks changes<br />
+			<br />
+			Returns : changes
+		</p>
+
+		<h3>[method:void clearChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Clears changes
+		</p>
+
+		<h3>[method:void consoleLog](  [param:string key],  [param:any object],  [param:string level] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:any object] - The object.<br />
+			[parameter:string level] - The level.
+		</p>
+		<p>
+			Consoles log
+		</p>
+
+		<h3>[method:void consoleLogTime](  [param:string key],  [param:any object],  [param:number repeat] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:any object] - The object.<br />
+			[parameter:number repeat] - The repeat.
+		</p>
+		<p>
+			Consoles log time
+		</p>
+
+		<h3>[method:void crossFadeTo](  [param:NgxClipComponent endAction]?,  [param:number duration]? )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:NgxClipComponent endAction] - (optional) The end action.<br />
+			[parameter:number duration] - (optional) The duration.
+		</p>
+		<p>
+			Cross fade to
+		</p>
+
+		<h3>[method:void destroyLocalComponent](  [param:string key] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.
+		</p>
+		<p>
+			Destroys local component
+		</p>
+
+		<h3>[method:void dispose](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Disposes abstract subscribe component
+		</p>
+
+		<h3>[method:void fadeIn](  [param:number duration]? )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number duration] - (optional) The duration.
+		</p>
+		<p>
+			Fades in
+		</p>
+
+		<h3>[method:void fadeOut](  [param:number duration]? )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number duration] - (optional) The duration.
+		</p>
+		<p>
+			Fades out
+		</p>
+
+		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Gets changes<br />
+			<br />
+			Returns : changes
+		</p>
+
+		<h3>[method:AnimationClip getClip](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Gets clip
+		</p>
+
+		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Gets id<br />
+			<br />
+			Returns : id
+		</p>
+
+		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			Gets object<br />
+			<br />
+			Returns : object
+		</p>
+
+		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Gets subscribe<br />
+			<br />
+			Returns : subscribe
+		</p>
+
+		<h3>[method:Promise getTimeout](  [param:number timeDelay] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number timeDelay] - The time delay.
+		</p>
+		<p>
+			Gets timeout<br />
+			특정 시간후에 이벤트 발생시키기<br />
+			<br />
+			Returns : timeout
+		</p>
+
+		<h3>[method:void getUserData](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Gets user data
+		</p>
+
+		<h3>[method:T initLocalComponent](  [param:string key],  [param:T component] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:T component] - The component.
+		</p>
+		<p>
+			Inits local component<br />
+			<br />
+			Returns : local component
+		</p>
+
+		<h3>[method:boolean isIdEuals](  [param:string id] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string id] - The id.
+		</p>
+		<p>
+			Determines whether id euals is<br />
+			<br />
+			Returns : true if id euals
+		</p>
+
+		<h3>[method:boolean isPlayable](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Determines whether playable is
+		</p>
+
+		<h3>[method:void play](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Plays clip component
+		</p>
+
+		<h3>[method:void resetAction](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Resets action
+		</p>
+
+		<h3>[method:void runSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string|string[] key] - The key.
+		</p>
+		<p>
+			Runs subscribe next
+		</p>
+
+		<h3>[method:void setFps](  [param:number fps] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:number fps] - The fps.
+		</p>
+		<p>
+			Sets fps
+		</p>
+
+		<h3>[method:void setMixer](  [param:AnimationMixer mixer],  [param:AnimationClip[] clips],  [param:any model] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:AnimationMixer mixer] - The mixer.<br />
+			[parameter:AnimationClip[] clips] - The clips.<br />
+			[parameter:any model] - The model.
+		</p>
+		<p>
+			Sets mixer
+		</p>
+
+		<h3>[method:void setObject](  [param:any obj] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any obj] - The obj.
+		</p>
+		<p>
+			Sets object
+		</p>
+
+		<h3>[method:boolean setParent](  [param:any parent] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any parent] - The parent.
+		</p>
+		<p>
+			Sets parent<br />
+			<br />
+			Returns : true if parent
+		</p>
+
+		<h3>[method:void setSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string|string[] key] - The key.
+		</p>
+		<p>
+			Sets subscribe next
+		</p>
+
+		<h3>[method:void setSubscribeType](  [param:string subscribeType] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string subscribeType] - The subscribe type.
+		</p>
+		<p>
+			Sets subscribe type
+		</p>
+
+		<h3>[method:void setTween](  [param:any tweenData] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenData] - The tween data.
+		</p>
+		<p>
+			Sets tween
+		</p>
+
+		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:any value] - The value.
+		</p>
+		<p>
+			Sets user data
+		</p>
+
+		<h3>[method:void stop](  )<i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Stops clip component
+		</p>
+
+		<h3>[method:void subscribeListQuery](  [param:QueryList queryList],  [param:string subscribeKey],  [param:string changeKey] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:QueryList queryList] - The query list.<br />
+			[parameter:string subscribeKey] - The subscribe key.<br />
+			[parameter:string changeKey] - The change key.
+		</p>
+		<p>
+			Subscribes list query
+		</p>
+
+		<h3>[method:void subscribeListQueryChange](  [param:QueryList queryList],  [param:string subscribeKey],  [param:string changeKey] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:QueryList queryList] - The query list.<br />
+			[parameter:string subscribeKey] - The subscribe key.<br />
+			[parameter:string changeKey] - The change key.
+		</p>
+		<p>
+			Subscribes list query change
+		</p>
+
+		<h3>[method:void subscribeRefer](  [param:string key],  [param:Subscription subscription] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:Subscription subscription] - The subscription.
+		</p>
+		<p>
+			Subscribes refer
+		</p>
+
+		<h3>[method:void subscribeReferList](  [param:string key],  [param:Subscription subscription] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.<br />
+			[parameter:Subscription subscription] - The subscription.
+		</p>
+		<p>
+			Subscribes refer list
+		</p>
+
+		<h3>[method:void unSubscribeRefer](  [param:string key] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.
+		</p>
+		<p>
+			subscribe refer
+		</p>
+
+		<h3>[method:void unSubscribeReferList](  [param:string key] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:string key] - The key.
+		</p>
+		<p>
+			subscribe refer list
+		</p>
+
+		<h3>[method:Subscription[] unSubscription](  [param:Subscription[] subscriptions] )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Subscription[] subscriptions] - The subscriptions.
+		</p>
+		<p>
+			subscription<br />
+			<br />
+			Returns : subscription
+		</p>
+
+		<h3>[method:void updateInputParams](  [param:any params],  [param:boolean firstChange],  [param:SimpleChanges changes],  [param:string type] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any params] - The params.<br />
+			[parameter:boolean firstChange] - The first change.<br />
+			[parameter:SimpleChanges changes] - The changes.<br />
+			[parameter:string type] - The type.
+		</p>
+		<p>
+			Updates input params
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+		<hr class="interface-line top"/>
+		<h3 id="AnimationAction">AnimationAction <i class="modifier modifier-interface">Interface</i></h3>
+		<hr class="interface-line bottom"/>
+		<h4>Constructor</h4>
+		<p>
+			[constructor:AnimationAction AnimationAction](  [param:AnimationMixer mixer],  [param:AnimationClip clip],  [param:Object3D localRoot]?,  [param:AnimationBlendMode blendMode]? ) - Note: Instead of calling this constructor directly you should instantiate an AnimationAction with [page:AnimationMixer.clipAction AnimationMixer.clipAction] since this method provides caching for better performance.
+		</p>
+		<h4>Properties</h4>
+		<p>
+			[property:AnimationBlendMode blendMode] -  The blend mode.<br />
+			[property:boolean clampWhenFinished] - If <i>clampWhenFinished</i> is set to true the animation will automatically be <i>.paused</i> on its last frame.<br />
+			If <i>clampWhenFinished</i> is set to false, <i>.enabled</i> will automatically be switched to false when the last loop of the action has finished, so that this action has no further impact.<br />
+			Default is false.<br />
+			Note: <i>clampWhenFinished</i> has no impact if the action is interrupted (it has only an effect if its last loop has really finished).<br />
+			[property:boolean enabled] - Setting <i>enabled</i> to <i>false</i> disables this action, so that it has no impact. Default is <i>true</i>.<br />
+			When the action is re-enabled, the animation continues from its current <i>.time</i><br />
+			(setting <i>enabled</i> to <i>false</i> doesn't reset the action).<br />
+			Note: Setting <i>enabled</i> to <i>true</i> doesn’t automatically restart the animation. Setting <i>enabled</i> to <i>true</i> will only restart the animation immediately if the following condition is fulfilled: <i>.paused</i> is <i>false</i>, this action has not been deactivated in the meantime (by executing a <i>.stop</i> or <i>.reset</i> command), and neither <i>.weight</i> nor <i>.timeScale</i> is 0.<br />
+			[property:AnimationActionLoopStyles loop] - The looping mode (can be changed with <i>.setLoop</i>). Default is [page:Animation THREE.LoopRepeat] (with an infinite number of <i>.repetitions</i>)<br />
+			Must be one of these constants:<br />
+			THREE.LoopOnce - playing the clip once,<br />
+			THREE.LoopRepeat - playing the clip with the chosen number of <i>repetitions</i>, each time jumping from the end of the clip directly to its beginning,<br />
+			THREE.LoopPingPong - playing the clip with the chosen number of <i>repetitions</i>, alternately playing forward and backward.<br />
+			[property:boolean paused] - Setting <i>paused</i> to <i>true</i> pauses the execution of the action by setting the effective time scale to 0. Default is <i>false</i>.<br />
+			[property:number repetitions] - The number of repetitions of the performed [page:AnimationClip AnimationClip] over the course of this action.<br />
+			Can be set via <i>.setLoop</i>. Default is <i>Infinity</i>.<br />
+			Setting this number has no effect, if the <i>.loop</i> is set to [page:Animation THREE.LoopOnce].<br />
+			[property:number time] - The local time of this action (in seconds, starting with 0).<br />
+			The value gets clamped or wrapped to 0...clip.duration (according to the loop state). It can be scaled relatively to the global mixer time by changing <i>.timeScale</i> (using <i>.setEffectiveTimeScale</i> or <i>.setDuration</i>).<br />
+			[property:number timeScale] - Scaling factor for the <i>.time</i>. A value of 0 causes the animation to pause. Negative values cause the animation to play backwards. Default is 1.<br />
+			Properties/methods concerning <i>timeScale</i> (respectively <i>time</i>) are: <i>.getEffectiveTimeScale</i>, <i>.halt</i>, <i>.paused</i>, <i>.setDuration</i>, <i>.setEffectiveTimeScale</i>, <i>.stopWarping</i>, <i>.syncWith</i>, <i>.warp</i>.<br />
+			[property:number weight] - The degree of influence of this action (in the interval [0, 1]). Values between 0 (no impact) and 1 (full impact) can be used to blend between several actions. Default is 1.<br />
+			Properties/methods concerning  <i>weight</i> are: <i>.crossFadeFrom</i>, <i>.crossFadeTo</i>, <i>.enabled</i>, <i>.fadeIn</i>, <i>.fadeOut</i>, <i>.getEffectiveWeight</i>, <i>.setEffectiveWeight</i>, <i>.stopFading</i>.<br />
+			[property:boolean zeroSlopeAtEnd] - Enables smooth interpolation without separate clips for start, loop and end. Default is <i>true</i>.<br />
+			[property:boolean zeroSlopeAtStart] - Enables smooth interpolation without separate clips for start, loop and end. Default is <i>true</i>.
+		</p>
+		<h4>Methods</h4>
+		<p>
+			[method:AnimationAction crossFadeFrom](  [param:AnimationAction fadeOutAction],  [param:number duration],  [param:boolean warp] ) - Causes this action to <i>.fadeIn</i>, fading out another action simultaneously, within the passed time interval. This method can be chained.<br />
+			If warpBoolean is true, additional <i>.warp</i> (gradually changes of the time scales) will be applied.<br />
+			Note: Like with <i>fadeIn</i> / <i>fadeOut</i>, the fading starts/ends with a weight of 1.<br />
+			[method:AnimationAction crossFadeTo](  [param:AnimationAction fadeInAction],  [param:number duration],  [param:boolean warp] ) - Causes this action to <i>.fadeOut</i>, fading in another action simultaneously, within the passed time interval. This method can be chained.<br />
+			If warpBoolean is true, additional <i>.warp</i> (gradually changes of the time scales) will be applied.<br />
+			Note: Like with <i>fadeIn</i> / <i>fadeOut</i>, the fading starts/ends with a weight of 1.<br />
+			[method:AnimationAction fadeIn](  [param:number duration] ) - Increases the <i>.weight</i> of this action gradually from 0 to 1, within the passed time interval. This method can be chained.<br />
+			[method:AnimationAction fadeOut](  [param:number duration] ) - Decreases the <i>.weight</i> of this action gradually from 1 to 0, within the passed time interval. This method can be chained.<br />
+			[method:AnimationClip getClip](  ) - Returns : Returns the clip which holds the animation data for this action.<br />
+			[method:number getEffectiveTimeScale](  ) - Returns : Returns the effective time scale (considering the current states of warping and <i>.paused</i>).<br />
+			[method:number getEffectiveWeight](  ) - Returns : Returns the effective weight (considering the current states of fading and <i>.enabled</i>).<br />
+			[method:AnimationMixer getMixer](  ) - Returns : Returns the mixer which is responsible for playing this action.<br />
+			[method:Object3D getRoot](  ) - Returns : Returns the root object on which this action is performed.<br />
+			[method:AnimationAction halt](  [param:number duration] ) - Decelerates this animation's speed to 0 by decreasing <i>.timeScale</i> gradually (starting from its current value), within the passed time interval. This method can be chained.<br />
+			[method:boolean isRunning](  ) - In addition to being activated in the mixer (see <i>.isScheduled</i>) the following conditions must be fulfilled: <i>.paused</i> is equal to false, <i>.enabled</i> is equal to true, <i>.timeScale</i> is different from 0, and there is no scheduling for a delayed start (<i>.startAt</i>).<br />
+			Note: <i>isRunning</i> being true doesn’t necessarily mean that the animation can actually be seen.<br />
+			This is only the case, if <i>.weight</i> is additionally set to a non-zero value.<br />
+			<br />
+			Returns : Returns true if the action’s <i>.time</i> is currently running.<br />
+			[method:boolean isScheduled](  ) - Note: This doesn’t necessarily mean that the animation is actually running (compare the additional conditions for <i>.isRunning</i>).<br />
+			<br />
+			Returns : Returns true, if this action is activated in the mixer.<br />
+			[method:AnimationAction play](  ) - Tells the mixer to activate the action. This method can be chained.<br />
+			Note: Activating this action doesn’t necessarily mean that the animation starts immediately:<br />
+			If the action had already finished before (by reaching the end of its last loop), or if a time for a delayed start has been set (via <i>.startAt</i>), a <i>.reset</i> must be executed first. Some other settings (<i>.paused</i>=true, <i>.enabled</i>=false, <i>.weight</i>=0, <i>.timeScale</i>=0) can prevent the animation from playing, too.<br />
+			[method:AnimationAction reset](  ) - Resets the action. This method can be chained.<br />
+			This method sets <i>.paused</i> to false, <i>.enabled</i> to true, <i>.time</i> to 0, interrupts any scheduled fading and warping, and removes the internal loop count and scheduling for delayed starting.<br />
+			Note: .<i>reset</i> is always called by <i>.stop</i>, but .<i>reset</i> doesn’t call .<i>stop</i> itself.<br />
+			This means: If you want both, resetting and stopping, don’t call .<i>reset</i>; call .<i>stop</i> instead.<br />
+			[method:AnimationAction setDuration](  [param:number duration] ) - Sets the duration for a single loop of this action (by adjusting <i>.timeScale</i> and stopping any scheduled warping). This method can be chained.<br />
+			[method:AnimationAction setEffectiveTimeScale](  [param:number timeScale] ) - Sets the <i>.timeScale</i> and stops any scheduled warping. This method can be chained.<br />
+			If <i>.paused</i> is false, the effective time scale (an internal property) will also be set to this value; otherwise the effective time scale (directly affecting the animation at this moment) will be set to 0.<br />
+			Note: .<i>paused</i> will not be switched to <i>true</i> automatically, if .<i>timeScale</i> is set to 0 by this method.<br />
+			[method:AnimationAction setEffectiveWeight](  [param:number weight] ) - Sets the <i>.weight</i> and stops any scheduled fading. This method can be chained.<br />
+			If <i>.enabled</i> is true, the effective weight (an internal property) will also be set to this value; otherwise the effective weight (directly affecting the animation at this moment) will be set to 0.<br />
+			Note: .<i>enabled</i> will not be switched to <i>false</i> automatically, if .<i>weight</i> is set to 0 by this method.<br />
+			[method:AnimationAction setLoop](  [param:AnimationActionLoopStyles mode],  [param:number repetitions] ) - Sets the <i>.loop</i> and the number of <i>.repetitions</i>. This method can be chained.<br />
+			[method:AnimationAction startAt](  [param:number time] ) - Defines the time for a delayed start (usually passed as [page:AnimationMixer.time AnimationMixer.time] + deltaTimeInSeconds). This method can be chained.<br />
+			Note: The animation will only start at the given time, if .<i>startAt</i> is chained with <i>.play</i>, or if the action has already been activated in the mixer (by a previous call of .<i>play</i>, without stopping or resetting it in the meantime).<br />
+			[method:AnimationAction stop](  ) - Tells the mixer to deactivate this action. This method can be chained.<br />
+			The action will be immediately stopped and completely <i>.reset</i>.<br />
+			Note: You can stop all active actions on the same mixer in one go via [page:AnimationMixer.stopAllAction mixer.stopAllAction].<br />
+			[method:AnimationAction stopFading](  ) - Stops any scheduled <i>.fadeIn</i> which is applied to this action. This method can be chained.<br />
+			[method:AnimationAction stopWarping](  ) - Stops any scheduled <i>.warp</i> which is applied to this action. This method can be chained.<br />
+			[method:AnimationAction syncWith](  [param:AnimationAction action] ) - Synchronizes this action with the passed other action. This method can be chained.<br />
+			Synchronizing is done by setting this action’s <i>.time</i> and <i>.timeScale</i> values to the corresponding values of the other action (stopping any scheduled warping).<br />
+			Note: Future changes of the other action's <i>time</i> and <i>timeScale</i> will not be detected.<br />
+			[method:AnimationAction warp](  [param:number statTimeScale],  [param:number endTimeScale],  [param:number duration] ) - Changes the playback speed, within the passed time interval, by modifying <i>.timeScale</i> gradually from <i>startTimeScale</i> to <i>endTimeScale</i>. This method can be chained.
+		</p>
+
+		<p class="desc">
+			AnimationActions schedule the performance of the animations which are stored in [page:AnimationClip AnimationClips].<br />
+			Note: Most of AnimationAction's methods can be chained.<br />
+			For an overview of the different elements of the three.js animation system see the "Animation System" article in the "Next Steps" section of the manual.<br />
+			There are two events indicating when a single loop of the action respectively the entire action has finished. You can react to them with:<br />
+			mixer.addEventListener( 'loop', function( e ) { …} ); // properties of e: type, action and loopDelta mixer.addEventListener( 'finished', function( e ) { …} ); // properties of e: type, action and direction
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/clip/clip.component.ts /clip/clip.component.ts]</p>
+	</body>
+</html>

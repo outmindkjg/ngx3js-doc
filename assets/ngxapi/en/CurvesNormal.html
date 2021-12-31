@@ -7,7 +7,7 @@
 		<link type="text/css" rel="stylesheet" href="page.css" />
 	</head>
 	<body>
-		[page:Curve] &rarr;
+		[page:Curve] &rarr; [page:CurveVector3] &rarr;
 
 		<h1>CurvesNormal</h1>
 
@@ -22,19 +22,28 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:CurvesNormal CurvesNormal](  [param:Curve curve],  [param:CurvesNormalParameters parameters] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h3>[constructor:CurvesNormal CurvesNormal](  [param:Curve curve],  [param:ICurvesNormalParameters parameters] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Curve curve] - The curve.<br />
-			[parameter:CurvesNormalParameters parameters] - The parameters.
+			[parameter:ICurvesNormalParameters parameters] - The parameters.
 		</p>
 		<p>
 			Creates an instance of curves normal.
 		</p>
 
+		<h2>Constructor</h2>
+		<h3>[constructor:CurvesNormal CurvesNormal](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<p>
+			This constructor creates a new Curve.
+		</p>
+
 		<h2>Properties</h2>
 		<p>
 			See the base [page:Curve Curve] class for common properties.
+		</p>
+		<p>
+			See the base [page:CurveVector3 CurveVector3] class for common properties.
 		</p>
 
 		<h3>[property:Curve curve]<i class="modifier modifier-public">Public</i></h3>
@@ -51,6 +60,9 @@
 		<p>
 			See the base [page:Curve Curve] class for common methods.
 		</p>
+		<p>
+			See the base [page:CurveVector3 CurveVector3] class for common methods.
+		</p>
 
 		<h3>[method:Vector3 getPoint](  [param:number t],  [param:Vector3 optionalTarget]? )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<h4>Parameters</h4>
@@ -64,10 +76,10 @@
 			Returns : point
 		</p>
 
-		<h3>[method:Color getPointColor](  [param:RendererTimer timer],  [param:Color p] )<i class="modifier modifier-public">Public</i></h3>
+		<h3>[method:Color getPointColor](  [param:IRendererTimer timer],  [param:Color p] )<i class="modifier modifier-public">Public</i></h3>
 		<h4>Parameters</h4>
 		<p>
-			[parameter:RendererTimer timer] - The timer.<br />
+			[parameter:IRendererTimer timer] - The timer.<br />
 			[parameter:Color p] - The p.
 		</p>
 		<p>
@@ -76,10 +88,10 @@
 			Returns : point color
 		</p>
 
-		<h3>[method:Euler getPointEuler](  [param:RendererTimer timer],  [param:Euler p] )<i class="modifier modifier-public">Public</i></h3>
+		<h3>[method:Euler getPointEuler](  [param:IRendererTimer timer],  [param:Euler p] )<i class="modifier modifier-public">Public</i></h3>
 		<h4>Parameters</h4>
 		<p>
-			[parameter:RendererTimer timer] - The timer.<br />
+			[parameter:IRendererTimer timer] - The timer.<br />
 			[parameter:Euler p] - The p.
 		</p>
 		<p>
@@ -88,10 +100,10 @@
 			Returns : point euler
 		</p>
 
-		<h3>[method:number getPointFloat](  [param:RendererTimer timer],  [param:number min],  [param:number max] )<i class="modifier modifier-public">Public</i></h3>
+		<h3>[method:number getPointFloat](  [param:IRendererTimer timer],  [param:number min],  [param:number max] )<i class="modifier modifier-public">Public</i></h3>
 		<h4>Parameters</h4>
 		<p>
-			[parameter:RendererTimer timer] - The timer.<br />
+			[parameter:IRendererTimer timer] - The timer.<br />
 			[parameter:number min] - The min.<br />
 			[parameter:number max] - The max.
 		</p>
@@ -101,10 +113,10 @@
 			Returns : point float
 		</p>
 
-		<h3>[method:Vector2 getPointV2](  [param:RendererTimer timer],  [param:Vector2 p] )<i class="modifier modifier-public">Public</i></h3>
+		<h3>[method:Vector2 getPointV2](  [param:IRendererTimer timer],  [param:Vector2 p] )<i class="modifier modifier-public">Public</i></h3>
 		<h4>Parameters</h4>
 		<p>
-			[parameter:RendererTimer timer] - The timer.<br />
+			[parameter:IRendererTimer timer] - The timer.<br />
 			[parameter:Vector2 p] - The p.
 		</p>
 		<p>
@@ -113,10 +125,10 @@
 			Returns : point v2
 		</p>
 
-		<h3>[method:Vector3 getPointV3](  [param:RendererTimer timer],  [param:Vector3 p] )<i class="modifier modifier-public">Public</i></h3>
+		<h3>[method:Vector3 getPointV3](  [param:IRendererTimer timer],  [param:Vector3 p] )<i class="modifier modifier-public">Public</i></h3>
 		<h4>Parameters</h4>
 		<p>
-			[parameter:RendererTimer timer] - The timer.<br />
+			[parameter:IRendererTimer timer] - The timer.<br />
 			[parameter:Vector3 p] - The p.
 		</p>
 		<p>
@@ -143,24 +155,9 @@
 			Sets options
 		</p>
 
-		<hr class="interface-line"/>
-		<h3 id="CurveClass">CurveClass <i class="modifier modifier-interface">Interface</i></h3>
-		<h4>Properties</h4>
-		<p>
-			
-		</p>
-
-		<p>
-			None
-		</p>
-
-
-		<p class="desc">
-			Curve class
-		</p>
-
-		<hr class="interface-line"/>
-		<h3 id="CurvesNormalParameters">CurvesNormalParameters <i class="modifier modifier-interface">Interface</i></h3>
+		<hr class="interface-line top"/>
+		<h3 id="ICurvesNormalParameters">ICurvesNormalParameters <i class="modifier modifier-interface">Interface</i></h3>
+		<hr class="interface-line bottom"/>
 		<h4>Properties</h4>
 		<p>
 			[property:Vector3 center]? -  The center.<br />
@@ -170,18 +167,69 @@
 			[property:Vector3 scale]? -  The scale.
 		</p>
 
-
 		<p class="desc">
 			Curves normal parameters
 		</p>
 
-		<hr class="interface-line"/>
-		<h3 id="CurveConf">CurveConf <i class="modifier modifier-interface">Interface</i></h3>
-		<h3> { [  [param:string key] ] : [param:CurveClass|string emptyName] }</h3>
+		<hr class="interface-line top"/>
+		<h3 id="IRendererTimer">IRendererTimer <i class="modifier modifier-interface">Interface</i></h3>
+		<hr class="interface-line bottom"/>
+		<h4>Properties</h4>
 		<p>
+			[property:number delta] -  The delta.<br />
+			[property:number elapsedTime] -  The elapsed time.<br />
+			[property:IRendererEvent event]? -  The event.<br />
+			[property:Renderer renderer]? -  The renderer.
+		</p>
+
+		<p class="desc">
+			Renderer timer
+		</p>
+
+
+		<p class="desc">
 			
 		</p>
 
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
+
+
+		<p class="desc">
+			
+		</p>
 
 
 		<p class="desc">
