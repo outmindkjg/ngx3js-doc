@@ -82,11 +82,7 @@ export class AppComponent {
 ```
 
 
-<<<<<<< HEAD
 ### Change angular.json for basic assets ###
-=======
-### Change angular.json for  basic assets ###
->>>>>>> 4edae41fb82acc417c63c24678cab02207532b7a
 
 if you need lottie_canvas add "node_modules/ngx3js/assets/js/libs/lottie_canvas.js" to scripts like below.
 if you need DRACOExporter add "node_modules/ngx3js/assets/js/libs/draco/draco_encoder.js" to scripts like below.
