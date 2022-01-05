@@ -126,17 +126,7 @@
 			[page:BufferGeometry BufferGeometry] - THREE.BufferGeometry
 		</p>
 
-		<h2>Constructor</h2>
-		<h3>[constructor:NgxGeometryComponent NgxGeometryComponent](  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
-		<h4>Parameters</h4>
-		<p>
-			[parameter:NgxLocalStorageService localStorageService] - The local storage service.
-		</p>
-		<p>
-			Creates an instance of geometry component.
-		</p>
-
-		<h3>Angular Html Template [ Input ] ( Output )</h3>
+		<h2>Template</h2>
 		<code data-type="html">&lt;ngx3js-geometry
 			[ addGroup ]="... boolean -- The addGroup of geometry compo... "
 			[ align ]="... string -- The align of geometry "
@@ -207,6 +197,7 @@
 			[ curveOption ]="... any -- The curveOption of geometry co... "
 			[ curvePath ]="... INgxVector[] -- The curvePath of geometry comp... "
 			[ curvePathType ]="... string -- The Input of geometry componen... "
+			[ curveScale ]="... number -- The curveOption of geometry co... "
 			[ curveSegments ]="... number -- The curveSegments of geometry ... "
 			[ curveType ]="... string -- The Input of geometry componen... "
 			[ cutOffAngle ]="... number -- The cutoff angle in radians. I... "
@@ -288,6 +279,7 @@
 			[ steps ]="... number -- The steps of geometry componen... "
 			[ storage2Buffer ]="... boolean -- The storage2Buffer of geometry... "
 			[ storageName ]="... string -- The storageName of geometry co... "
+			[ storageOption ]="... any -- The storage Option "
 			[ tension ]="... number -- The tension of geometry compon... "
 			[ tessellate ]="... boolean -- The tessellate of abstract geo... "
 			[ text ]="... string -- The text of geometry component "
@@ -311,6 +303,16 @@
 			[ windowExport ]="... string -- Export this Object to window g... "
 		&gt;&lt;/ngx3js-geometry&gt;
 		</code>
+
+		<h2>Constructor</h2>
+		<h3>[constructor:NgxGeometryComponent NgxGeometryComponent](  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:NgxLocalStorageService localStorageService] - The local storage service.
+		</p>
+		<p>
+			Creates an instance of geometry component.
+		</p>
 
 		<h2>Properties</h2>
 		<p>
@@ -700,6 +702,11 @@
 		<p>
 			The Input of geometry component<br />
 			Notice - case insensitive.
+		</p>
+
+		<h3>[property:number curveScale]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The curveOption of geometry component
 		</p>
 
 		<h3>[property:number curveSegments]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
@@ -1137,6 +1144,11 @@
 		<h3>[property:string storageName]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The storageName of geometry component
+		</p>
+
+		<h3>[property:any storageOption]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			The storage Option
 		</p>
 
 		<h3>[property:string subscribeType]<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -1626,9 +1638,8 @@
 			Updates input params
 		</p>
 
-		<hr class="interface-line top"/>
-		<h3 id="INgxVector">INgxVector <i class="modifier modifier-interface">Interface</i></h3>
-		<hr class="interface-line bottom"/>
+		<h2>Interfaces</h2>
+		<h3 id="INgxVector" class="interface"> INgxVector <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
 		<p>
 			[property:number w]? -  The w.<br />
@@ -1651,9 +1662,7 @@
 			
 		</p>
 
-		<hr class="interface-line top"/>
-		<h3 id="INgxColor">INgxColor <i class="modifier modifier-interface">Type alias</i></h3>
-		<hr class="interface-line bottom"/>
+		<h3 id="INgxColor" class="interface"> INgxColor <i class="modifier modifier-interface">Type alias</i></h3>
 		<h3>[property:string|number|I3JS.Color INgxColor]</h3>
 
 
@@ -1678,9 +1687,7 @@
 			
 		</p>
 
-		<hr class="interface-line top"/>
-		<h3 id="TAttrBufferAttribute">TAttrBufferAttribute <i class="modifier modifier-interface">Type alias</i></h3>
-		<hr class="interface-line bottom"/>
+		<h3 id="TAttrBufferAttribute" class="interface"> TAttrBufferAttribute <i class="modifier modifier-interface">Type alias</i></h3>
 		<h3>[property:number[]|Int8Array|Int16Array|Int32Array|Uint8Array|Uint16Array|Uint32Array|Float32Array|Float64Array|I3JS.BufferAttribute TAttrBufferAttribute]</h3>
 
 
@@ -1708,9 +1715,7 @@
 			
 		</p>
 
-		<hr class="interface-line top"/>
-		<h3 id="RayParameters">RayParameters <i class="modifier modifier-interface">Interface</i></h3>
-		<hr class="interface-line bottom"/>
+		<h3 id="RayParameters" class="interface"> RayParameters <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
 		<p>
 			[property:number birthTime]? -  The birth time.<br />
