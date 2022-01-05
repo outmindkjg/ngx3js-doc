@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		<h1>ViewerCanvas</h1>
+
+		<p class="desc">
+			Viewer canvas<br />
+			See the [page:ViewerCanvas ngx3js docs] page for details.
+		</p>
+
+		<h2>Constructor</h2>
+		<h3>[constructor:ViewerCanvas ViewerCanvas](  [param:Renderer renderer],  [param:any options] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Renderer renderer] - The renderer.<br />
+			[parameter:any options] &nbsp; = {}  - The options.
+		</p>
+		<p>
+			Creates an instance of viewer canvas.
+		</p>
+
+		<h2>Properties</h2>
+		<p>
+			None
+		</p>
+
+		<h2>Methods</h2>
+		<h3>[method:void setOptions](  [param:any options] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any options] - The options.
+		</p>
+		<p>
+			Sets options
+		</p>
+
+		<h3>[method:void setRenderer](  [param:Renderer renderer] )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:Renderer renderer] - The renderer.
+		</p>
+		<p>
+			Sets renderer
+		</p>
+
+		<h2>Interfaces</h2>
+		<h3 id="Renderer" class="interface"> Renderer <i class="modifier modifier-interface">Interface</i></h3>
+		<h4>Constructor</h4>
+		<p>
+			[constructor:Renderer Renderer](  ) 
+		</p>
+		<h4>Properties</h4>
+		<p>
+			[property:HTMLCanvasElement domElement] -  The dom element.
+		</p>
+		<h4>Methods</h4>
+		<p>
+			[method:void render](  [param:Object3D scene],  [param:Camera camera] ) <br />
+			[method:void setSize](  [param:number width],  [param:number height],  [param:boolean updateStyle]? ) 
+		</p>
+
+		<p class="desc">
+			Renderer<br />
+			See the [page:Renderer ngx3js docs] page for details.<br />
+			See the [example:ngx_renderer ngx renderer] page for a live demo.
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/viewer/viewer-canvas.ts /viewer/viewer-canvas.ts]</p>
+	</body>
+</html>

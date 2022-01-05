@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="../../" />
+		<script src="page.js"></script>
+		<link type="text/css" rel="stylesheet" href="page.css" />
+	</head>
+	<body>
+		<h1>ShapeUtils</h1>
+
+		<p class="desc">
+			A class containing utility functions for shapes.<br />
+			Note that these are all linear functions so it is necessary to calculate separately for x, y (and z, w if present) components of a vector.
+		</p>
+
+		<p>
+			None
+		</p>
+
+		<h2>Properties</h2>
+		<p>
+			None
+		</p>
+
+		<h2>Methods</h2>
+		<h3>[method:number area](  [param:ShapeVec2[] contour] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ShapeVec2[] contour] - The contour.
+		</p>
+		<p>
+			Calculate area of a ( 2D ) contour polygon.
+		</p>
+
+		<h3>[method:boolean isClockWise](  [param:ShapeVec2[] pts] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ShapeVec2[] pts] - The pts.
+		</p>
+		<p>
+			Used internally by [page:Path Path],<br />
+			[page:ExtrudeGeometry ExtrudeGeometry] and [page:ShapeGeometry ShapeGeometry].
+		</p>
+
+		<h3>[method:void triangulateShape](  [param:ShapeVec2[] contour],  [param:any holes] )</h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:ShapeVec2[] contour] - The contour.<br />
+			[parameter:any holes] - The holes.
+		</p>
+		<p>
+			Used internally by [page:ExtrudeGeometry ExtrudeGeometry] and [page:ShapeGeometry ShapeGeometry] to calculate faces in shapes with holes.
+		</p>
+
+		<h2>Interfaces</h2>
+		<h3 id="ShapeVec2" class="interface"> ShapeVec2 <i class="modifier modifier-interface">Interface</i></h3>
+		<h4>Properties</h4>
+		<p>
+			[property:number x] -  The x.<br />
+			[property:number y] -  The y.
+		</p>
+
+		<p class="desc">
+			Vec2
+		</p>
+
+		<br /><br />
+		<h2>Source</h2>
+		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/extras.ts /threejs-library/types/three/extras.ts]</p>
+	</body>
+</html>
