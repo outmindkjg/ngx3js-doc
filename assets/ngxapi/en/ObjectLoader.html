@@ -14,13 +14,10 @@
 		<p class="desc">
 			A loader for loading a JSON resource in the [link:https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4 JSON Object/Scene format].<br />
 			This uses the [page:FileLoader FileLoader] internally for loading files.<br />
-			<br />
 			<h3>Preview - WebGL / materials / lightmap</h3><br />
 			<iframe src="#/viewer/webgl_materials_lightmap"></iframe><br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:webgl_materials_lightmap WebGL / materials / lightmap]<br />
-			<br />
 			<h2>Code Example</h2><br />
 			<code data-type="javascript"><br />
 			const loader = new THREE.ObjectLoader();<br />
@@ -42,12 +39,11 @@
 			const object = loader.parse( a_json_object );<br />
 			scene.add( object );<br />
 			</code><br />
-			<br />
 			<h2>Ngx3Js Code Example</h2>
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:ObjectLoader ObjectLoader](  [param:LoadingManager manager]?,  [param:any options]? )<i class="modifier modifier-inherited">Inherited</i></h3>
+				<h3>[constructor:ObjectLoader ObjectLoader](  [param:LoadingManager manager]?,  [param:any options]? )<i class="modifier modifier-inherited">Inherited</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:LoadingManager manager] - (optional) The [page:LoadingManager loadingManager] for the loader to use. Default is [page:LoadingManager THREE.DefaultLoadingManager].<br />
@@ -58,7 +54,7 @@
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:Loader Loader] class for common properties.
 		</p>
 
@@ -96,8 +92,9 @@
 			Default is <i>false</i>.
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:Loader Loader] class for common methods.
 		</p>
 
@@ -130,7 +127,7 @@
 			[parameter:any onLoad] - (optional) Will be called when parsed completes. The argument will be the parsed [page:Object3D object].
 		</p>
 		<p>
-			Parse a &lt;em&gt;JSON&lt;/em&gt; structure and return a threejs object.<br />
+			Parse a <em>JSON</em> structure and return a threejs object.<br />
 			This is used internally by <i>.load</i>() but can also be used directly to parse a previously loaded JSON structure.
 		</p>
 
@@ -149,7 +146,7 @@
 			[parameter:any json] - required. The JSON source to parse.
 		</p>
 		<p>
-			Parse a &lt;em&gt;JSON&lt;/em&gt; structure and return a threejs object.<br />
+			Parse a <em>JSON</em> structure and return a threejs object.<br />
 			This is used internally by <i>.load</i>() but can also be used directly to parse a previously loaded JSON structure.
 		</p>
 
@@ -260,48 +257,8 @@ Set the [link:https://developer.mozilla.org/en-US/docs/Glossary/Request_header r
 			Note that this has no effect if you are loading files locally or from the same domain.
 		</p>
 
-		<h2>Interfaces</h2>
 
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/loaders.ts /threejs-library/types/three/loaders.ts]</p>
 	</body>

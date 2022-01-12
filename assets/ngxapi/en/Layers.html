@@ -13,28 +13,27 @@
 			A [page:Layers Layers] object assigns an [page:Object3D Object3D] to 1 or more of 32 layers numbered 0 to 31 - internally the layers are stored as a [link:https://en.wikipedia.org/wiki/Mask_(computing bit mask]), and by default all Object3Ds are a member of layer 0.<br />
 			This can be used to control visibility - an object must share a layer with a [page:Camera camera] to be visible when that camera's view is rendered.<br />
 			All classes that inherit from [page:Object3D Object3D] have an [page:Object3D.layers Object3D.layers] property which is an instance of this class.<br />
-			<br />
 			<h3>Preview - WebGL / layers</h3><br />
 			<iframe src="#/viewer/webgl_layers"></iframe><br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:webgl_layers WebGL / layers]
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:Layers Layers](  )</h3>
+				<h3>[constructor:Layers Layers](  )</h3>
 		<p>
 			Create a new Layers object, with membership initially set to layer 0.
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:number mask]</h3>
+				<h3>[property:number mask]</h3>
 		<p>
 			A bit mask storing which of the 32 layers this layers object is currently a member of.
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:void disable](  [param:number channel] )</h3>
+				<h3>[method:void disable](  [param:number channel] )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:number channel] - an integer from 0 to 31.
@@ -98,18 +97,8 @@
 			Toggle membership of <i>layer</i>.
 		</p>
 
-		<h2>Interfaces</h2>
 
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/core.ts /threejs-library/types/three/core.ts]</p>
 	</body>

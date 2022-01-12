@@ -13,13 +13,10 @@
 
 		<p class="desc">
 			The Renderer component.<br />
-			<br />
 			<h3>Preview - ngx renderer</h3><br />
 			<iframe src="#/viewer/ngx_renderer"></iframe><br />
-			<br />
-			See the [page:RendererComponent ngx3js docs] page for details.<br />
+			See the [page:NgxRendererComponent ngx3js docs] page for details.<br />
 			See the [example:ngx_renderer ngx renderer] page for a live demo.<br />
-			<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-renderer<br />
 				[controlType]="'orbit'"<br />
@@ -33,11 +30,10 @@
 				(onRender)="onRender($event)"<br />
 			&gt;&lt;/ngx3js-renderer&gt;<br />
 			</code><br />
-			<br />
 			[page:WebGLRenderer WebGLRenderer] - THREE.WebGLRenderer
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-renderer
 			[ afterRender ]="... any"
 			[ alpha ]="... boolean -- whether to perform alpha. Defa... "
@@ -92,13 +88,13 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxRendererComponent NgxRendererComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxRendererComponent NgxRendererComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Creates an instance of renderer component.
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
 		</p>
 
@@ -147,7 +143,7 @@
 			whether to perform antialiasing. Default is <i>false</i>.
 		</p>
 
-		<h3>[property:boolean autoClear] &nbsp; = true <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<h3>[property:boolean autoClear]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Defines whether the renderer should automatically clear its output before rendering a frame.
 		</p>
@@ -216,7 +212,7 @@
 			Enabled or Not
 		</p>
 
-		<h3>[property:boolean globalClippingEnabled] &nbsp; = true <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<h3>[property:boolean globalClippingEnabled]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			User-defined clipping planes specified as THREE.Plane objects in world space.
 		</p>
@@ -256,7 +252,7 @@
 			The Id of abstract subscribe component
 		</p>
 
-		<h3>[property:boolean localClippingEnabled] &nbsp; = false <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<h3>[property:boolean localClippingEnabled]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Defines whether the renderer respects object-level clipping planes. Default is <i>false</i>.
 		</p>
@@ -310,7 +306,6 @@
 		<p>
 			The quality of SVGRenderer<br />
 			Notice - case insensitive.<br />
-			<br />
 			high - high quality.<br />
 			low - low quality.
 		</p>
@@ -361,7 +356,6 @@
 		<p>
 			The Input of renderer component<br />
 			Notice - case insensitive.<br />
-			<br />
 			auto - auto fix the size of renderer.<br />
 			fixed - use fixed size of renderer.
 		</p>
@@ -407,9 +401,7 @@
 		<p>
 			The Input of renderer component<br />
 			Notice - case insensitive.<br />
-			<br />
 			string join by ,<br />
-			<br />
 			change - change.<br />
 			pointerdown, mousedown, down - pointerdown.<br />
 			pointerup, mouseup, up - pointerup.<br />
@@ -458,8 +450,9 @@
 			string : % -/+ number - the percent of renderer and add some value.
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
 		</p>
 
@@ -508,7 +501,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -561,49 +553,52 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Gets Object<br />
-			<br />
 			Returns : Object
 		</p>
 
 		<h3>[method:NgxControlComponent getRenderControl](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets Render controls<br />
-			<br />
 			Returns : controls
+		</p>
+
+		<h3>[method:IRendererInfo getRenderInfo](  [param:IRendererTimer timer]? )<i class="modifier modifier-public">Public</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:IRendererTimer timer] - (optional) The timer.
+		</p>
+		<p>
+			Gets render info<br />
+			Returns : render info
 		</p>
 
 		<h3>[method:Renderer getRenderer](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets Renderer<br />
-			<br />
 			Returns : Renderer
 		</p>
 
 		<h3>[method:Vector2 getSize](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets size<br />
-			<br />
 			Returns : size
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -615,7 +610,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -632,7 +626,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -643,13 +636,17 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
 		<h3>[method:void render](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Renders renderer component
+		</p>
+
+		<h3>[method:void resetTween](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Resets tween
 		</p>
 
 		<h3>[method:void resizeCanvas](  [param:number width],  [param:number height] )<i class="modifier modifier-public">Public</i></h3>
@@ -692,7 +689,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -733,6 +729,15 @@
 			Sets tween
 		</p>
 
+		<h3>[method:void setTweenTarget](  [param:any tweenTarget] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenTarget] - The tween target.
+		</p>
+		<p>
+			Sets tween target
+		</p>
+
 		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<h4>Parameters</h4>
 		<p>
@@ -746,7 +751,6 @@
 		<h3>[method:Observable sizeSubscribe](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Sizes subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -817,7 +821,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -836,7 +839,6 @@
 		<h3>[method:Observable updateSubscribe](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Updates subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -847,17 +849,11 @@
 		</p>
 		<p>
 			Users gesture subscribe<br />
-			<br />
 			Returns : gesture subscribe
 		</p>
 
+
 		<h2>Interfaces</h2>
-
-		<p class="desc">
-			Three gui<br />
-			See the [page:NgxThreeGui ngx3js docs] page for details.
-		</p>
-
 		<h3 id="IControlOptions" class="interface"> IControlOptions <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
 		<p>
@@ -884,10 +880,12 @@
 			[property:number lookSpeed]? - The lookSpeed of control<br />
 			[property:boolean lookVertical]? - The lookVertical of control<br />
 			[property:QueryList lookatList]? - The lookat list of control<br />
+			[property:number maxAzimuthAngle]? - The maxAzimuthAngle of control<br />
 			[property:number maxDistance]? - The maxDistance of control<br />
 			[property:number maxFar]? - The maxFar of control<br />
 			[property:number maxPolarAngle]? - The maxPolarAngle of control<br />
 			[property:number maxZoom]? - The maxZoom of control<br />
+			[property:number minAzimuthAngle]? - The minAzimuthAngle of control<br />
 			[property:number minDistance]? - The minDistance of control<br />
 			[property:number minPolarAngle]? - The minPolarAngle of control<br />
 			[property:number minZoom]? - The minZoom of control<br />
@@ -942,6 +940,19 @@
 			Gui control param
 		</p>
 
+		<h3 id="IRendererTimer" class="interface"> IRendererTimer <i class="modifier modifier-interface">Interface</i></h3>
+		<h4>Properties</h4>
+		<p>
+			[property:number delta] -  The delta.<br />
+			[property:number elapsedTime] -  The elapsed time.<br />
+			[property:IRendererEvent event]? -  The event.<br />
+			[property:Renderer renderer]? -  The renderer.
+		</p>
+
+		<p class="desc">
+			Renderer timer
+		</p>
+
 		<h3 id="Renderer" class="interface"> Renderer <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Constructor</h4>
 		<p>
@@ -963,7 +974,7 @@
 			See the [example:ngx_renderer ngx renderer] page for a live demo.
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/renderer/renderer.component.ts /renderer/renderer.component.ts]</p>
 	</body>

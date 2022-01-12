@@ -12,10 +12,8 @@
 		<p class="desc">
 			This class is designed to assist with [link:https://en.wikipedia.org/wiki/Ray_casting raycasting].<br />
 			Raycasting is used for mouse picking (working out what objects in the 3d space the mouse is over) amongst other things.<br />
-			<br />
 			<h3>Preview - Raycasting to a Mesh</h3><br />
 			<iframe src="#/viewer/webgl_interactive_cubes"></iframe><br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:webgl_interactive_cubes Raycasting to a Mesh]<br />
 			[example:webgl_interactive_cubes_ortho Raycasting to a Mesh in using an OrthographicCamera]<br />
@@ -26,7 +24,6 @@
 			[example:webgl_geometry_terrain_raycast Terrain raycasting]<br />
 			[example:webgl_interactive_voxelpainter Raycasting to paint voxels]<br />
 			[example:webgl_raycast_texture Raycast to a Texture]<br />
-			<br />
 			<h2>Code Example</h2><br />
 			<code data-type="javascript"><br />
 			const raycaster = new THREE.Raycaster();<br />
@@ -51,7 +48,7 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:Raycaster Raycaster](  [param:Vector3 origin]?,  [param:Vector3 direction]?,  [param:number near]?,  [param:number far]? )</h3>
+				<h3>[constructor:Raycaster Raycaster](  [param:Vector3 origin]?,  [param:Vector3 direction]?,  [param:number near]?,  [param:number far]? )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Vector3 origin] - (optional) The origin vector where the ray casts from.<br />
@@ -64,7 +61,7 @@
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:Camera camera]</h3>
+				<h3>[property:Camera camera]</h3>
 		<p>
 			The camera to use when raycasting against view-dependent objects such as billboarded objects like [page:Sprites Sprites]. This field can be set manually or is set when calling "setFromCamera".<br />
 			Defaults to null.
@@ -100,8 +97,9 @@
 			The [page:Ray Ray] used for the raycasting.
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:Intersection[] intersectObject](  [param:Object3D object],  [param:boolean recursive]?,  [param:Intersection[] optionalTarget]? )</h3>
+				<h3>[method:Intersection[] intersectObject](  [param:Object3D object],  [param:boolean recursive]?,  [param:Intersection[] optionalTarget]? )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Object3D object] - The object to check for intersection with the ray.<br />
@@ -145,47 +143,8 @@
 			Updates the ray with a new origin and direction.
 		</p>
 
+
 		<h2>Interfaces</h2>
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="Intersection" class="interface"> Intersection <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
 		<p>
@@ -218,7 +177,7 @@
 			Raycaster parameters
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/core.ts /threejs-library/types/three/core.ts]</p>
 	</body>

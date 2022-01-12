@@ -7,14 +7,13 @@
 		<link type="text/css" rel="stylesheet" href="page.css" />
 	</head>
 	<body>
-		[page:NgxAbstractSubscribeComponent] &rarr; [page:NgxAbstractTweenComponent] &rarr; [page:NgxAbstractObject3dComponent] &rarr;
+		[page:NgxAbstractSubscribeComponent] &rarr; [page:NgxAbstractObject3dComponent] &rarr;
 
 		<h1>NgxMeshComponent</h1>
 
 		<p class="desc">
 			The Mesh component.<br />
-			See the [page:MeshComponent ngx3js docs] page for details.<br />
-			<br />
+			See the [page:NgxMeshComponent ngx3js docs] page for details.<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-mesh [type]="'skybox'" [skyboxType]="'sun'"&gt;&lt;/ngx3js-mesh&gt;<br />
 			&lt;ngx3js-mesh [type]="'HTMLMesh'" [domElement]="domElement"&gt;&lt;/ngx3js-mesh&gt;<br />
@@ -82,12 +81,11 @@
 			&lt;ngx3js-mesh [type]="'Group'"&gt;&lt;/ngx3js-mesh&gt;<br />
 			&lt;ngx3js-mesh [type]="'Mesh'"&gt;&lt;/ngx3js-mesh&gt;<br />
 			</code><br />
-			<br />
 			[page:Mesh Mesh] - THREE.Mesh<br />
 			[page:Group Group] - THREE.Group
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-mesh
 			[ alpha ]="... number -- The alpha of water "
 			[ axis ]="... string -- The axis of mesh component "
@@ -171,7 +169,6 @@
 			[ textureSize ]="... Vector2|NgxSizeComponent -- The texture size "
 			[ textureWidth ]="... number -- The texture Width "
 			[ tween ]="... any -- Tween animation params "
-			[ tweenStart ]="... boolean -- Start tween "
 			[ type ]="... string -- The type of mesh "
 			[ uniforms ]="... any -- The uniform of sun, sky water ... "
 			[ usage ]="... string -- The usage of InstancedMesh "
@@ -187,7 +184,7 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxMeshComponent NgxMeshComponent](  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxMeshComponent NgxMeshComponent](  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:NgxLocalStorageService localStorageService] - The local storage service.
@@ -197,11 +194,8 @@
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
-		</p>
-		<p>
-			See the base [page:NgxAbstractTweenComponent NgxAbstractTweenComponent] class for common properties.
 		</p>
 		<p>
 			See the base [page:NgxAbstractObject3dComponent NgxAbstractObject3dComponent] class for common properties.
@@ -734,11 +728,6 @@
 			Tween animation params
 		</p>
 
-		<h3>[property:boolean tweenStart] &nbsp; = true <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
-		<p>
-			Start tween
-		</p>
-
 		<h3>[property:string type] &nbsp; = 'mesh' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The type of mesh<br />
@@ -796,12 +785,10 @@
 			Export this Object to window global variables
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
-		</p>
-		<p>
-			See the base [page:NgxAbstractTweenComponent NgxAbstractTweenComponent] class for common methods.
 		</p>
 		<p>
 			See the base [page:NgxAbstractObject3dComponent NgxAbstractObject3dComponent] class for common methods.
@@ -835,7 +822,6 @@
 		</p>
 		<p>
 			Adds debug line<br />
-			<br />
 			Returns : debug line
 		</p>
 
@@ -858,7 +844,6 @@
 		</p>
 		<p>
 			Adds position<br />
-			<br />
 			Returns : position
 		</p>
 
@@ -871,7 +856,6 @@
 		</p>
 		<p>
 			Adds rotation<br />
-			<br />
 			Returns : rotation
 		</p>
 
@@ -905,7 +889,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -953,49 +936,42 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:any getClips](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets clips<br />
-			<br />
 			Returns : clips
 		</p>
 
 		<h3>[method:Curve getCurve](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets curve<br />
-			<br />
 			Returns : curve
 		</p>
 
 		<h3>[method:BufferGeometry getGeometry](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets geometry<br />
-			<br />
 			Returns : geometry
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:any getJson](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets json<br />
-			<br />
 			Returns : json
 		</p>
 
 		<h3>[method:Material getMaterial](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets material<br />
-			<br />
 			Returns : material
 		</p>
 
@@ -1007,7 +983,6 @@
 		</p>
 		<p>
 			Gets material one<br />
-			<br />
 			Returns : material one
 		</p>
 
@@ -1019,7 +994,6 @@
 		</p>
 		<p>
 			Gets materials<br />
-			<br />
 			Returns : materials
 		</p>
 
@@ -1031,14 +1005,12 @@
 		</p>
 		<p>
 			Gets materials multi<br />
-			<br />
 			Returns : materials multi
 		</p>
 
 		<h3>[method:T getMesh](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets mesh<br />
-			<br />
 			Returns : mesh
 		</p>
 
@@ -1049,21 +1021,18 @@
 		</p>
 		<p>
 			Gets name<br />
-			<br />
 			Returns : name
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:T getObject3d](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Gets object3d<br />
-			<br />
 			Returns : object3d
 		</p>
 
@@ -1074,7 +1043,6 @@
 		</p>
 		<p>
 			Gets object by id<br />
-			<br />
 			Returns : object by id
 		</p>
 
@@ -1085,7 +1053,6 @@
 		</p>
 		<p>
 			Gets object by name<br />
-			<br />
 			Returns : object by name
 		</p>
 
@@ -1097,56 +1064,48 @@
 		</p>
 		<p>
 			Gets object by property<br />
-			<br />
 			Returns : object by property
 		</p>
 
 		<h3>[method:Object3D getObjectTop](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object top<br />
-			<br />
 			Returns : object top
 		</p>
 
 		<h3>[method:Vector3 getPosition](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets position<br />
-			<br />
 			Returns : position
 		</p>
 
 		<h3>[method:LineSegments|Line|Mesh|Points getRealMesh](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets real mesh<br />
-			<br />
 			Returns : real mesh
 		</p>
 
 		<h3>[method:Euler getRotation](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets rotation<br />
-			<br />
 			Returns : rotation
 		</p>
 
 		<h3>[method:Vector3 getScale](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets scale<br />
-			<br />
 			Returns : scale
 		</p>
 
 		<h3>[method:any getStorageSource](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets storage source<br />
-			<br />
 			Returns : storage source
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -1167,14 +1126,12 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
 		<h3>[method:void getUniforms](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets uniforms<br />
-			<br />
 			Returns : uniforms
 		</p>
 
@@ -1190,7 +1147,6 @@
 		</p>
 		<p>
 			Gets visible<br />
-			<br />
 			Returns : true if visible
 		</p>
 
@@ -1202,7 +1158,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -1213,7 +1168,6 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
@@ -1245,7 +1199,6 @@
 		</p>
 		<p>
 			Sets lookat<br />
-			<br />
 			Returns : lookat
 		</p>
 
@@ -1274,7 +1227,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -1296,7 +1248,6 @@
 		</p>
 		<p>
 			Sets position<br />
-			<br />
 			Returns : position
 		</p>
 
@@ -1309,7 +1260,6 @@
 		</p>
 		<p>
 			Sets rotation<br />
-			<br />
 			Returns : rotation
 		</p>
 
@@ -1331,7 +1281,6 @@
 		</p>
 		<p>
 			Sets scale<br />
-			<br />
 			Returns : scale
 		</p>
 
@@ -1342,7 +1291,6 @@
 		</p>
 		<p>
 			Sets scale scalar<br />
-			<br />
 			Returns : scale scalar
 		</p>
 
@@ -1488,7 +1436,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -1503,6 +1450,7 @@
 		<p>
 			Updates input params
 		</p>
+
 
 		<h2>Interfaces</h2>
 		<h3 id="ICssStyle" class="interface"> ICssStyle <i class="modifier modifier-interface">Interface</i></h3>
@@ -1782,11 +1730,6 @@
 			Volume Options
 		</p>
 
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="INgxColor" class="interface"> INgxColor <i class="modifier modifier-interface">Type alias</i></h3>
 		<h3>[property:string|number|I3JS.Color INgxColor]</h3>
 
@@ -1800,61 +1743,6 @@
 			string random<br />
 			number 0xffffff<br />
 			THREE.Color
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
 		</p>
 
 		<h3 id="MeshBasicMaterialParameters" class="interface">[page:MaterialParameters] &rarr; MeshBasicMaterialParameters <i class="modifier modifier-interface">Interface</i></h3>
@@ -2033,7 +1921,7 @@
 			Storm params
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/mesh/mesh.component.ts /mesh/mesh.component.ts]</p>
 	</body>

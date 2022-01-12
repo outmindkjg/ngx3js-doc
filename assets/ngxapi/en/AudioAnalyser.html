@@ -12,17 +12,13 @@
 		<p class="desc">
 			Create a AudioAnalyser object, which uses an [link:https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode AnalyserNode]<br />
 			to analyse audio data.<br />
-			<br />
 			<h3>Preview - webaudio / sandbox</h3><br />
 			<iframe src="#/viewer/webaudio_sandbox"></iframe><br />
-			<br />
 			This uses the [link:https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API Web Audio API]<br />
 			See the [page:AudioAnalyser ngx3js docs] page for details.<br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:webaudio_sandbox webaudio / sandbox]<br />
 			[example:webaudio_visualizer webaudio / visualizer]<br />
-			<br />
 			<h2>Code Example</h2><br />
 			<code data-type="javascript"><br />
 			//  create an AudioListener and add it to the camera<br />
@@ -46,7 +42,6 @@
 			//  get the average frequency of the sound<br />
 			const data = analyser.getAverageFrequency();<br />
 			</code><br />
-			<br />
 			<h2>Ngx3Js Code Example</h2><br />
 			<code data-type="html"><br />
 			&lt;ngx3js-camera&gt;<br />
@@ -57,7 +52,7 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:AudioAnalyser AudioAnalyser](  [param:Audio audio],  [param:number fftSize]? )</h3>
+				<h3>[constructor:AudioAnalyser AudioAnalyser](  [param:Audio audio],  [param:number fftSize]? )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Audio audio] - The audio.<br />
@@ -68,7 +63,7 @@
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:AnalyserNode analyser]</h3>
+				<h3>[property:AnalyserNode analyser]</h3>
 		<p>
 			An [link:https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode AnalyserNode] used to analyze audio.
 		</p>
@@ -84,8 +79,9 @@
 			See [link:https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/fftSize this page] for details.
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:number getAverageFrequency](  )</h3>
+				<h3>[method:number getAverageFrequency](  )</h3>
 		<p>
 			Get the average of the frequencies returned by the [page:AudioAnalyser.getFrequencyData getFrequencyData] method.
 		</p>
@@ -96,18 +92,8 @@
 			See that page.
 		</p>
 
-		<h2>Interfaces</h2>
 
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/audio.ts /threejs-library/types/three/audio.ts]</p>
 	</body>

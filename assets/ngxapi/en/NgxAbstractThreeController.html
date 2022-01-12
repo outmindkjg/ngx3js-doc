@@ -21,7 +21,7 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxAbstractThreeController NgxAbstractThreeController](  [param:Object3D refObject3D],  [param:IHtmlCollection refObject2D] )</h3>
+				<h3>[constructor:NgxAbstractThreeController NgxAbstractThreeController](  [param:Object3D refObject3D],  [param:IHtmlCollection refObject2D] )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Object3D refObject3D] - The ref object3 d.<br />
@@ -32,7 +32,7 @@
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:TimelineLite|TimelineMax _tweenTimer]<i class="modifier modifier-protected">Protected</i></h3>
+				<h3>[property:Tween _tweenTimer]<i class="modifier modifier-protected">Protected</i></h3>
 		<p>
 			Tween timer of abstract three controller
 		</p>
@@ -112,8 +112,9 @@
 			Yoyo mode of abstract three controller
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:void awake](  )<i class="modifier modifier-public">Public</i></h3>
+				<h3>[method:void awake](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Awakes abstract three controller
 		</p>
@@ -130,7 +131,6 @@
 		</p>
 		<p>
 			Gets abstract material component<br />
-			<br />
 			Returns : abstract material component
 		</p>
 
@@ -141,7 +141,6 @@
 		</p>
 		<p>
 			Gets amplitude<br />
-			<br />
 			Returns : amplitude
 		</p>
 
@@ -152,7 +151,6 @@
 		</p>
 		<p>
 			Gets camera by name<br />
-			<br />
 			Returns : camera by name
 		</p>
 
@@ -163,7 +161,6 @@
 		</p>
 		<p>
 			Gets component<br />
-			<br />
 			Returns : component
 		</p>
 
@@ -174,7 +171,6 @@
 		</p>
 		<p>
 			Gets component2 d<br />
-			<br />
 			Returns : component2 d
 		</p>
 
@@ -186,7 +182,6 @@
 		</p>
 		<p>
 			Gets controller<br />
-			<br />
 			Returns : controller
 		</p>
 
@@ -198,7 +193,6 @@
 		</p>
 		<p>
 			Gets controllers<br />
-			<br />
 			Returns : controllers
 		</p>
 
@@ -209,11 +203,10 @@
 		</p>
 		<p>
 			Gets duration<br />
-			<br />
 			Returns : duration
 		</p>
 
-		<h3>[method:any getEasing](  [param:string def]?,  [param:boolean isTemplate]? )<i class="modifier modifier-protected">Protected</i></h3>
+		<h3>[method:EasingFunction getEasing](  [param:string def]?,  [param:boolean isTemplate]? )<i class="modifier modifier-protected">Protected</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:string def] - (optional) The def.<br />
@@ -221,7 +214,6 @@
 		</p>
 		<p>
 			Gets easing<br />
-			<br />
 			Returns : easing
 		</p>
 
@@ -232,7 +224,6 @@
 		</p>
 		<p>
 			Gets html element<br />
-			<br />
 			Returns : html element
 		</p>
 
@@ -243,7 +234,6 @@
 		</p>
 		<p>
 			Gets linear ratio<br />
-			<br />
 			Returns : linear ratio
 		</p>
 
@@ -256,7 +246,6 @@
 		</p>
 		<p>
 			Gets object by function<br />
-			<br />
 			Returns : object by function
 		</p>
 
@@ -268,7 +257,6 @@
 		</p>
 		<p>
 			Gets object by name<br />
-			<br />
 			Returns : object by name
 		</p>
 
@@ -281,7 +269,6 @@
 		</p>
 		<p>
 			Gets object by property<br />
-			<br />
 			Returns : object by property
 		</p>
 
@@ -295,7 +282,6 @@
 		</p>
 		<p>
 			Gets objects by function<br />
-			<br />
 			Returns : objects by function
 		</p>
 
@@ -306,7 +292,6 @@
 		</p>
 		<p>
 			Gets period<br />
-			<br />
 			Returns : period
 		</p>
 
@@ -317,7 +302,6 @@
 		</p>
 		<p>
 			Gets power<br />
-			<br />
 			Returns : power
 		</p>
 
@@ -328,7 +312,6 @@
 		</p>
 		<p>
 			Gets repeat<br />
-			<br />
 			Returns : repeat
 		</p>
 
@@ -339,8 +322,16 @@
 		</p>
 		<p>
 			Gets steps<br />
-			<br />
 			Returns : steps
+		</p>
+
+		<h3>[method:Tween getTweenTimer](  [param:object object] )<i class="modifier modifier-protected">Protected</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:object object] - The object.
+		</p>
+		<p>
+			Gets tween timer
 		</p>
 
 		<h3>[method:boolean getYoyo](  [param:boolean def]? )<i class="modifier modifier-protected">Protected</i></h3>
@@ -350,7 +341,6 @@
 		</p>
 		<p>
 			Gets yoyo<br />
-			<br />
 			Returns : true if yoyo
 		</p>
 
@@ -361,7 +351,6 @@
 		</p>
 		<p>
 			Gets yoyo mode<br />
-			<br />
 			Returns : true if yoyo mode
 		</p>
 
@@ -466,6 +455,7 @@
 			Updates abstract three controller
 		</p>
 
+
 		<h2>Interfaces</h2>
 		<h3 id="IHtmlCollection" class="interface"> IHtmlCollection <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
@@ -493,26 +483,6 @@
 			Renderer timer
 		</p>
 
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="Renderer" class="interface"> Renderer <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Constructor</h4>
 		<p>
@@ -534,7 +504,7 @@
 			See the [example:ngx_renderer ngx renderer] page for a live demo.
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/controller.abstract.ts /controller.abstract.ts]</p>
 	</body>

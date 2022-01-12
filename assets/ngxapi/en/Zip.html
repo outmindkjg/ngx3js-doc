@@ -14,7 +14,7 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:Zip Zip](  [param:AsyncFlateStreamHandler cb]? )</h3>
+				<h3>[constructor:Zip Zip](  [param:AsyncFlateStreamHandler cb]? )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:AsyncFlateStreamHandler cb] - (optional) The callback to call whenever data for the generated ZIP archive
@@ -25,13 +25,14 @@
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:AsyncFlateStreamHandler ondata]</h3>
+				<h3>[property:AsyncFlateStreamHandler ondata]</h3>
 		<p>
 			The handler to call whenever data is available
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:void add](  [param:ZipInputFile file] )</h3>
+				<h3>[method:void add](  [param:ZipInputFile file] )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:ZipInputFile file] - The file stream to add
@@ -51,6 +52,7 @@
 		<p>
 			A method to terminate any internal workers used by the stream. Subsequent calls to add() will fail.
 		</p>
+
 
 		<h2>Interfaces</h2>
 		<h3 id="ZipInputFile" class="interface">[page:ZipAttributes] &rarr; ZipInputFile <i class="modifier modifier-interface">Interface</i></h3>
@@ -75,12 +77,9 @@
 			[property:string|number|Date mtime]? - When the file was last modified. Defaults to the current time.<br />
 			[property:AsyncFlateStreamHandler ondata]? - The handler to be called when data is added. After passing this stream to the ZIP file object, this handler will always be defined. To call it:<br />
 			`stream.ondata(error, chunk, final)`<br />
-			<br />
 			error = any error that occurred (null if there was no error)<br />
-			<br />
 			chunk = a Uint8Array of the data that was added (null if there was an<br />
 			error)<br />
-			<br />
 			final = boolean, whether this is the final chunk in the stream<br />
 			[property:number os]? - The operating system of origin for this file. The value is defined by PKZIP's APPNOTE.txt, section 4.4.2.2. For example, 0 (the default) is MS/DOS, 3 is UNIX, 19 is macOS.<br />
 			[property:number size] - The size of the file in bytes. This attribute may be invalid after the file is added to the ZIP archive; it must be correct only before the stream completes.<br />
@@ -110,7 +109,7 @@
 			
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/examples/libs.ts /threejs-library/types/three/examples/libs.ts]</p>
 	</body>

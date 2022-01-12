@@ -13,16 +13,14 @@
 			[link:http://en.wikipedia.org/wiki/Frustum Frustums] are used to determine what is inside the camera's field of view. They help speed up the rendering process - objects which lie outside a camera's frustum can safely be excluded from rendering.<br />
 			This class is mainly intended for use internally by a renderer for calculating a [page:Camera camera] or [page:LightShadow.camera shadowCamera]'s frustum.<br />
 			See the [page:Frustum ngx3js docs] page for details.<br />
-			<br />
 			<h3>Preview - webgl / performance / shader</h3><br />
 			<iframe src="#/viewer/webgl_performance_shader"></iframe><br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:webgl_performance_shader webgl / performance / shader]
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:Frustum Frustum](  [param:Plane p0]?,  [param:Plane p1]?,  [param:Plane p2]?,  [param:Plane p3]?,  [param:Plane p4]?,  [param:Plane p5]? )</h3>
+				<h3>[constructor:Frustum Frustum](  [param:Plane p0]?,  [param:Plane p1]?,  [param:Plane p2]?,  [param:Plane p3]?,  [param:Plane p4]?,  [param:Plane p5]? )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Plane p0] - (optional) defaults to a new [page:Plane Plane].<br />
@@ -37,13 +35,14 @@
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:Plane[] planes]</h3>
+				<h3>[property:Plane[] planes]</h3>
 		<p>
 			Array of 6 [page:Plane planes].
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:Frustum clone](  )</h3>
+				<h3>[method:Frustum clone](  )</h3>
 		<p>
 			Returns : Return a new Frustum with the same parameters as this one.
 		</p>
@@ -101,7 +100,6 @@
 		</p>
 		<p>
 			Checks whether the [page:Sprite sprite] is intersecting the Frustum.<br />
-			<br />
 			Returns : true if sprite
 		</p>
 
@@ -129,88 +127,8 @@
 			Sets the frustum planes from the projection matrix.
 		</p>
 
-		<h2>Interfaces</h2>
 
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/math.ts /threejs-library/types/three/math.ts]</p>
 	</body>

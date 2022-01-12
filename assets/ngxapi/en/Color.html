@@ -11,20 +11,16 @@
 
 		<p class="desc">
 			Class representing a color.<br />
-			<br />
 			<h3>Preview - misc / exporter / collada</h3><br />
 			<iframe src="#/viewer/misc_exporter_collada"></iframe><br />
-			<br />
 			A Color can be initialised in any of the following ways:<br />
 			See the [page:Color ngx3js docs] page for details.<br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:misc_exporter_collada misc / exporter / collada]<br />
 			[example:webgl_camera_logarithmicdepthbuffer webgl / camera / logarithmicdepthbuffer]<br />
 			[example:webgl_clipping_advanced webgl / clipping / advanced]<br />
 			[example:webgl_framebuffer_texture webgl / framebuffer / texture]<br />
 			[example:webgl_geometry_colors webgl / geometry / colors]<br />
-			<br />
 			<h2>Code Example</h2><br />
 			<code data-type="javascript"><br />
 			// empty constructor - will default white<br />
@@ -45,7 +41,7 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:Color Color](  [param:ColorRepresentation r]?,  [param:number g]?,  [param:number b]? )</h3>
+				<h3>[constructor:Color Color](  [param:ColorRepresentation r]?,  [param:number g]?,  [param:number b]? )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:ColorRepresentation r] - (optional) If arguments [page:Float g] and [page:Float b] are defined, the red component of the color. If they are not defined, it can be a [link:https://en.wikipedia.org/wiki/Web_colors#Hex_triplet hexadecimal triplet] (recommended), a CSS-style string, or another Color instance.<br />
@@ -59,12 +55,11 @@
 			It can be a [link:https://en.wikipedia.org/wiki/Web_colors#Hex_triplet hexadecimal triplet] representing the color (recommended).<br />
 			It can be an another Color instance.<br />
 			It can be a CSS-style string. For example:<br />
-			<br />
 			'rgb(250, 0,0)', 'rgb(100%,0%,0%)', 'hsl(0, 100%, 50%)', '#ff0000', '#f00', 'red'
 		</p>
 
 		<h2>Properties</h2>
-		<h3>[property:Record NAMES]</h3>
+				<h3>[property:Record NAMES]</h3>
 		<p>
 			List of X11 color names.
 		</p>
@@ -89,8 +84,9 @@
 			Red channel value between 0 and 1. Default is 1.
 		</p>
 
+
 		<h2>Methods</h2>
-		<h3>[method:Color add](  [param:Color color] )</h3>
+				<h3>[method:Color add](  [param:Color color] )</h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:Color color] - The color.
@@ -405,37 +401,11 @@
 		</p>
 		<p>
 			Returns an array [red, green, blue], or copies red, green and blue into the provided array.<br />
-			<br />
 			Returns : Returns an array of the form [ r, g, b ].
 		</p>
 
-		<h2>Interfaces</h2>
 
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/math.ts /threejs-library/types/three/math.ts]</p>
 	</body>

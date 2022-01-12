@@ -13,8 +13,7 @@
 
 		<p class="desc">
 			Texture Component<br />
-			See the [page:TextureComponent ngx3js docs] page for details.<br />
-			<br />
+			See the [page:NgxTextureComponent ngx3js docs] page for details.<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-texture<br />
 				[type]="'environment'"<br />
@@ -86,7 +85,7 @@
 			</code>
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-texture
 			[ add ]="... string|number -- The add of texture component "
 			[ anisotropy ]="... number -- The number of samples taken al... "
@@ -152,7 +151,7 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxTextureComponent NgxTextureComponent](  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxTextureComponent NgxTextureComponent](  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:NgxLocalStorageService localStorageService] - The local storage service.
@@ -162,7 +161,7 @@
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
 		</p>
 		<p>
@@ -555,7 +554,6 @@
 			The other two choices are [page:Textures THREE.RepeatWrapping] and [page:Textures THREE.MirroredRepeatWrapping].<br />
 			See the [page:Textures texture constants] page for details.<br />
 			The Default Value of wrapS, wrapT.<br />
-			<br />
 			<table><thead><tr><th>   Three Type               </th><th> Value String(case insensitive) </th></tr></thead><tbody> <tr><td> THREE.RepeatWrapping </td><td> RepeatWrapping, wraprepeat, repeat </td></tr> <tr><td> THREE.MirroredRepeatWrapping </td><td> MirroredRepeatWrapping, mirroredrepeat </td></tr> <tr><td> THREE.ClampToEdgeWrapping </td><td> ClampToEdgeWrapping, clamptoedge </td></tr> </table>
 		</p>
 
@@ -579,8 +577,9 @@
 			<table><thead><tr><th>   Three Type               </th><th> Value String(case insensitive) </th></tr></thead><tbody> <tr><td> THREE.RepeatWrapping </td><td> RepeatWrapping, wraprepeat, repeat </td></tr> <tr><td> THREE.MirroredRepeatWrapping </td><td> MirroredRepeatWrapping, mirroredrepeat </td></tr> <tr><td> THREE.ClampToEdgeWrapping </td><td> ClampToEdgeWrapping, clamptoedge </td></tr> </table>
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
 		</p>
 		<p>
@@ -628,7 +627,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -676,21 +674,18 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
@@ -702,7 +697,6 @@
 		</p>
 		<p>
 			Gets offset<br />
-			<br />
 			Returns : offset
 		</p>
 
@@ -714,21 +708,18 @@
 		</p>
 		<p>
 			Gets repeat<br />
-			<br />
 			Returns : repeat
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
 		<h3>[method:T getTexture](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Gets texture<br />
-			<br />
 			Returns : texture
 		</p>
 
@@ -742,7 +733,6 @@
 		</p>
 		<p>
 			Gets texture image<br />
-			<br />
 			Returns : texture image
 		</p>
 
@@ -753,7 +743,6 @@
 		</p>
 		<p>
 			Gets texture options<br />
-			<br />
 			Returns : texture options
 		</p>
 
@@ -765,7 +754,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -782,7 +770,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -793,7 +780,6 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
@@ -804,8 +790,12 @@
 		</p>
 		<p>
 			Determines whether texture is<br />
-			<br />
 			Returns : true if texture
+		</p>
+
+		<h3>[method:void resetTween](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Resets tween
 		</p>
 
 		<h3>[method:void runSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -843,7 +833,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -899,6 +888,15 @@
 		</p>
 		<p>
 			Sets tween
+		</p>
+
+		<h3>[method:void setTweenTarget](  [param:any tweenTarget] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenTarget] - The tween target.
+		</p>
+		<p>
+			Sets tween target
 		</p>
 
 		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -978,7 +976,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -1014,7 +1011,6 @@
 		</p>
 		<p>
 			Gets texture image<br />
-			<br />
 			Returns : texture image
 		</p>
 
@@ -1029,7 +1025,6 @@
 		</p>
 		<p>
 			Gets texture image option<br />
-			<br />
 			Returns : texture image option
 		</p>
 
@@ -1041,16 +1036,11 @@
 		</p>
 		<p>
 			Sets texture options<br />
-			<br />
 			Returns : texture options
 		</p>
 
+
 		<h2>Interfaces</h2>
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="TCanvasFunctionType" class="interface"> TCanvasFunctionType <i class="modifier modifier-interface">Type alias</i></h3>
 		<h4>[method:void function](  [param:CanvasRenderingContext2D ctx]?,  [param:string text]?,  [param:number width]?,  [param:number height]?,  [param:any options]? )</h4>
 		<h4>Parameters</h4>
@@ -1071,22 +1061,7 @@
 			
 		</p>
 
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/texture/texture.component.ts /texture/texture.component.ts]</p>
 	</body>

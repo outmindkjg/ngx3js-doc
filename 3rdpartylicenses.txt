@@ -39,9 +39,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 fs-web
 BSD-2-Clause
 
-gsap
-Standard 'no charge' license: https://greensock.com/standard-license. Club GreenSock members get more: https://greensock.com/licensing/. Why GreenSock doesn't employ an MIT license: https://greensock.com/why-license/
-
 highlight.js
 BSD-3-Clause
 BSD 3-Clause License

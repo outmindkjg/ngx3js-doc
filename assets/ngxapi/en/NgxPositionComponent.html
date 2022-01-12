@@ -7,19 +7,16 @@
 		<link type="text/css" rel="stylesheet" href="page.css" />
 	</head>
 	<body>
-		[page:NgxAbstractSubscribeComponent] &rarr; [page:NgxAbstractTweenComponent] &rarr;
+		[page:NgxAbstractSubscribeComponent] &rarr;
 
 		<h1>NgxPositionComponent</h1>
 
 		<p class="desc">
 			The Position component.<br />
-			<br />
 			<h3>Preview - ngx position</h3><br />
 			<iframe src="#/viewer/ngx_position"></iframe><br />
-			<br />
-			See the [page:PositionComponent ngx3js docs] page for details.<br />
+			See the [page:NgxPositionComponent ngx3js docs] page for details.<br />
 			See the [example:ngx_position ngx position] page for a live demo.<br />
-			<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-position<br />
 				[x]="0" [y]="7.5" [z]="0" [multiply]="10" [normalize]="false"<br />
@@ -32,7 +29,7 @@
 			</code>
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-position
 			[ camera ]="... any -- The camera of position compone... "
 			[ debug ]="... boolean -- Debug this Object "
@@ -49,7 +46,6 @@
 			[ setfrom ]="... string -- The Input of position componen... "
 			[ theta ]="... number -- The theta of position componen... "
 			[ tween ]="... any -- Tween animation params "
-			[ tweenStart ]="... boolean -- Start tween "
 			[ type ]="... string -- The type of position component "
 			[ userData ]="... any -- An object that can be used to ... "
 			[ windowExport ]="... string -- Export this Object to window g... "
@@ -60,17 +56,14 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxPositionComponent NgxPositionComponent](  )<i class="modifier modifier-inherited">Inherited</i></h3>
+				<h3>[constructor:NgxPositionComponent NgxPositionComponent](  )<i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Creates an instance of abstract subscribe component.
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
-		</p>
-		<p>
-			See the base [page:NgxAbstractTweenComponent NgxAbstractTweenComponent] class for common properties.
 		</p>
 
 		<h3>[property:string[] OBJECT_ATTR] &nbsp; = ... <i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -184,11 +177,6 @@
 			Tween animation params
 		</p>
 
-		<h3>[property:boolean tweenStart] &nbsp; = true <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
-		<p>
-			Start tween
-		</p>
-
 		<h3>[property:string type] &nbsp; = 'position' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The type of position component<br />
@@ -196,7 +184,6 @@
 			rotate - the rotation angular of geometry.<br />
 			scale - the scale of geometry.<br />
 			translate - the traslate of geometry.<br />
-			<br />
 			[page:Object3D Object3D] - THREE.Object3D#position<br />
 			[page:BufferGeometry BufferGeometry] - THREE.BufferGeometry#rotateX<br />
 			[page:BufferGeometry BufferGeometry] - THREE.BufferGeometry#rotateY<br />
@@ -230,12 +217,10 @@
 			The current value of the z component.
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
-		</p>
-		<p>
-			See the base [page:NgxAbstractTweenComponent NgxAbstractTweenComponent] class for common methods.
 		</p>
 
 		<h3>[method:void addChanges](  [param:string|string[]|SimpleChanges key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -268,7 +253,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -316,35 +300,30 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:Vector3 getPosition](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets position<br />
-			<br />
 			Returns : position
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -355,7 +334,6 @@
 		</p>
 		<p>
 			Gets tag attribute<br />
-			<br />
 			Returns : tag attribute
 		</p>
 
@@ -367,7 +345,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -384,7 +361,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -395,7 +371,6 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
@@ -438,7 +413,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -566,7 +540,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -591,7 +564,8 @@
 			Updates input params
 		</p>
 
-		<br /><br />
+
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/position/position.component.ts /position/position.component.ts]</p>
 	</body>

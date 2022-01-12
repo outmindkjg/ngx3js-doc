@@ -13,13 +13,10 @@
 
 		<p class="desc">
 			NgxControlComponent<br />
-			<br />
 			<h3>Preview - ngx control</h3><br />
 			<iframe src="#/viewer/ngx_control"></iframe><br />
-			<br />
-			See the [page:ControlComponent ngx3js docs] page for details.<br />
+			See the [page:NgxControlComponent ngx3js docs] page for details.<br />
 			See the [example:ngx_control ngx control] page for a live demo.<br />
-			<br />
 			<table><thead><tr></th><th>  Three Type        </th><th> Type Key           </th><th> Acceptable Input          </th><th></tr></thead><tbody> <tr></td><td> OrbitControls </td><td> OrbitControls, Orbit </td><td> autoRotate, autoRotateSpeed, enableDamping, dampingFactor, enablePan, enableKeys, screenSpacePanning, minDistance, maxDistance, enableZoom, minZoom, maxZoom, rotateSpeed, zoomSpeed, panSpeed, minPolarAngle, maxPolarAngle  </td><td></tr> <tr></td><td> TransformControls </td><td> TransformControls, Transform </td><td> eventListener(dragging-changed, objectChange) </td><td></tr> <tr></td><td> DragControls </td><td> DragControls, Drag </td><td> camera </td><td></tr> <tr></td><td> TrackballControls </td><td> TrackballControls, Trackball </td><td> staticMoving, keys  </td><td></tr> <tr></td><td> FlyControls </td><td> FlyControls, Fly </td><td> camera, movementSpeed, rollSpeed, dragToLook, autoForward </td><td></tr> <tr></td><td> PointerLockControls </td><td> PointerLockControls, PointerLock </td><td> objects </td><td></tr> <tr></td><td> FirstPersonControls </td><td> FirstPersonControls, FirstPerson </td><td> movementSpeed, lookSpeed, lookVertical, autoForward, activeLook, heightSpeed, heightCoef, heightMin, heightMax, verticalMin, verticalMax, mouseDragOn </td><td></tr> <tr></td><td> ArcballControls </td><td> ArcballControls, Arcball </td><td> camera, gizmoVisible  </td><td></tr> <tr></td><td> NgxSelectBoxControls </td><td> SelectBoxControls, SelectBox </td><td> camera  </td><td></tr> <tr></td><td> CsmControls </td><td> CsmControls, Csm </td><td> maxFar, cascades, mode, shadowMapSize, lightDirectionX, lightDirectionY, lightDirectionZ  </td><td></tr> <tr></td><td> NgxPlaneControls </td><td> PlaneControls, Plane </td><td> rotateSpeed, zoomSpeed, panSpeed, minDistance, maxDistance  </td><td></tr> </table><br />
 			<code data-type="html"><br />
 			&lt;ngx3js-renderer<br />
@@ -84,7 +81,7 @@
 			</code>
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-control
 			[ activeLook ]="... boolean -- The activeLook of control "
 			[ autoForward ]="... boolean -- The autoForward of control "
@@ -112,10 +109,12 @@
 			[ lightDirectionZ ]="... number -- The lightDirectionZ of control "
 			[ lookSpeed ]="... number -- The lookSpeed of control "
 			[ lookVertical ]="... boolean -- The lookVertical of control "
+			[ maxAzimuthAngle ]="... number -- Input of ngx control component "
 			[ maxDistance ]="... number -- The maxDistance of control "
 			[ maxFar ]="... number -- The maxFar of control "
 			[ maxPolarAngle ]="... number -- The maxPolarAngle of control "
 			[ maxZoom ]="... number -- The maxZoom of control "
+			[ minAzimuthAngle ]="... number -- Input of ngx control component "
 			[ minDistance ]="... number -- The minDistance of control "
 			[ minPolarAngle ]="... number -- The minPolarAngle of control "
 			[ minZoom ]="... number -- The minZoom of control "
@@ -146,13 +145,13 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxControlComponent NgxControlComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxControlComponent NgxControlComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Creates an instance of control.
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
 		</p>
 
@@ -306,6 +305,11 @@
 			The lookVertical of control
 		</p>
 
+		<h3>[property:number maxAzimuthAngle]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Input  of ngx control component
+		</p>
+
 		<h3>[property:number maxDistance]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The maxDistance of control
@@ -324,6 +328,11 @@
 		<h3>[property:number maxZoom]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The maxZoom of control
+		</p>
+
+		<h3>[property:number minAzimuthAngle]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
+		<p>
+			Input  of ngx control component
 		</p>
 
 		<h3>[property:number minDistance]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
@@ -438,7 +447,6 @@
 			See the [example:ngx_control/TransformControls ngx TransformControls control] page for a live demo.<br />
 			See the [example:ngx_control/DragControls ngx DragControls control] page for a live demo.<br />
 			See the [example:ngx_control/OrbitControls ngx OrbitControls control] page for a live demo.<br />
-			<br />
 			<table><thead><tr><th>   Three Type               </th><th> Value String(case insensitive) </th></tr></thead><tbody> <tr><td> FlyControls </td><td> FlyControls, Fly </td></tr> <tr><td> FirstPersonControls </td><td> FirstPersonControls, FirstPerson </td></tr> <tr><td> DeviceOrientationControls </td><td> DeviceOrientationControls, DeviceOrientation </td></tr> <tr><td> DragControls </td><td> DragControls, Drag </td></tr> <tr><td> TransformControls </td><td> TransformControls, Transform </td></tr> <tr><td> TrackballControls </td><td> TrackballControls, Trackball </td></tr> <tr><td> ArcballControls </td><td> ArcballControls, Arcball </td></tr> <tr><td> CSM </td><td> CSM </td></tr> <tr><td> PlaneControls </td><td> PlaneControls, Plane </td></tr> <tr><td> OrbitControls </td><td> OrbitControls, Orbit </td></tr> </table>
 		</p>
 
@@ -477,8 +485,9 @@
 			The zoomSpeed of control
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
 		</p>
 
@@ -512,7 +521,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -560,35 +568,30 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:any getControl](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets control<br />
-			<br />
 			Returns : control
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -600,7 +603,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -617,7 +619,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -628,7 +629,6 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
@@ -639,6 +639,11 @@
 		</p>
 		<p>
 			Renders control component
+		</p>
+
+		<h3>[method:void resetTween](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Resets tween
 		</p>
 
 		<h3>[method:void runSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -679,7 +684,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -708,6 +712,15 @@
 		</p>
 		<p>
 			Sets tween
+		</p>
+
+		<h3>[method:void setTweenTarget](  [param:any tweenTarget] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenTarget] - The tween target.
+		</p>
+		<p>
+			Sets tween target
 		</p>
 
 		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -787,7 +800,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -803,6 +815,7 @@
 			Updates input params
 		</p>
 
+
 		<h2>Interfaces</h2>
 		<h3 id="IRendererTimer" class="interface"> IRendererTimer <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
@@ -815,16 +828,6 @@
 
 		<p class="desc">
 			Renderer timer
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
 		</p>
 
 		<h3 id="Renderer" class="interface"> Renderer <i class="modifier modifier-interface">Interface</i></h3>
@@ -848,7 +851,7 @@
 			See the [example:ngx_renderer ngx renderer] page for a live demo.
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/control/control.component.ts /control/control.component.ts]</p>
 	</body>

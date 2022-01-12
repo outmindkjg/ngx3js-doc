@@ -7,14 +7,13 @@
 		<link type="text/css" rel="stylesheet" href="page.css" />
 	</head>
 	<body>
-		[page:NgxAbstractSubscribeComponent] &rarr; [page:NgxAbstractTweenComponent] &rarr; [page:NgxAbstractObject3dComponent] &rarr;
+		[page:NgxAbstractSubscribeComponent] &rarr; [page:NgxAbstractObject3dComponent] &rarr;
 
 		<h1>NgxSvgComponent</h1>
 
 		<p class="desc">
 			The Svg component.<br />
-			See the [page:SvgComponent ngx3js docs] page for details.<br />
-			<br />
+			See the [page:NgxSvgComponent ngx3js docs] page for details.<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-geometry<br />
 				[type]="'Extrude'"<br />
@@ -42,7 +41,7 @@
 			</code>
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-svg
 			[ align ]="... string -- The align of svg component "
 			[ bevelEnabled ]="... boolean -- The bevelEnabled of svg compon... "
@@ -90,7 +89,6 @@
 			[ translation ]="... NgxTranslationComponent -- The translation of svg compone... "
 			[ transparent ]="... boolean -- The transparent of svg compone... "
 			[ tween ]="... any -- Tween animation params "
-			[ tweenStart ]="... boolean -- Start tween "
 			[ type ]="... string -- The type of svg component "
 			[ uVGenerator ]="... string -- The uVGenerator of svg compone... "
 			[ url ]="... string -- The url of svg component "
@@ -103,7 +101,7 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxSvgComponent NgxSvgComponent](  [param:ElementRef ele],  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxSvgComponent NgxSvgComponent](  [param:ElementRef ele],  [param:NgxLocalStorageService localStorageService] )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:ElementRef ele] - The ele.<br />
@@ -114,11 +112,8 @@
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
-		</p>
-		<p>
-			See the base [page:NgxAbstractTweenComponent NgxAbstractTweenComponent] class for common properties.
 		</p>
 		<p>
 			See the base [page:NgxAbstractObject3dComponent NgxAbstractObject3dComponent] class for common properties.
@@ -460,11 +455,6 @@
 			Tween animation params
 		</p>
 
-		<h3>[property:boolean tweenStart] &nbsp; = true <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
-		<p>
-			Start tween
-		</p>
-
 		<h3>[property:string type] &nbsp; = 'mesh' <i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			The type of svg component<br />
@@ -508,12 +498,10 @@
 			The wireframe of svg component
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
-		</p>
-		<p>
-			See the base [page:NgxAbstractTweenComponent NgxAbstractTweenComponent] class for common methods.
 		</p>
 		<p>
 			See the base [page:NgxAbstractObject3dComponent NgxAbstractObject3dComponent] class for common methods.
@@ -547,7 +535,6 @@
 		</p>
 		<p>
 			Adds debug line<br />
-			<br />
 			Returns : debug line
 		</p>
 
@@ -570,7 +557,6 @@
 		</p>
 		<p>
 			Adds position<br />
-			<br />
 			Returns : position
 		</p>
 
@@ -583,7 +569,6 @@
 		</p>
 		<p>
 			Adds rotation<br />
-			<br />
 			Returns : rotation
 		</p>
 
@@ -614,7 +599,6 @@
 		</p>
 		<p>
 			Applys text align<br />
-			<br />
 			Returns : text align
 		</p>
 
@@ -630,7 +614,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -678,21 +661,18 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:BufferGeometry getGeometry](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets geometry<br />
-			<br />
 			Returns : geometry
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
@@ -704,7 +684,6 @@
 		</p>
 		<p>
 			Gets material one<br />
-			<br />
 			Returns : material one
 		</p>
 
@@ -716,7 +695,6 @@
 		</p>
 		<p>
 			Gets materials<br />
-			<br />
 			Returns : materials
 		</p>
 
@@ -728,7 +706,6 @@
 		</p>
 		<p>
 			Gets materials multi<br />
-			<br />
 			Returns : materials multi
 		</p>
 
@@ -739,21 +716,18 @@
 		</p>
 		<p>
 			Gets name<br />
-			<br />
 			Returns : name
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:T getObject3d](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object3d<br />
-			<br />
 			Returns : object3d
 		</p>
 
@@ -764,7 +738,6 @@
 		</p>
 		<p>
 			Gets object by id<br />
-			<br />
 			Returns : object by id
 		</p>
 
@@ -775,7 +748,6 @@
 		</p>
 		<p>
 			Gets object by name<br />
-			<br />
 			Returns : object by name
 		</p>
 
@@ -787,14 +759,12 @@
 		</p>
 		<p>
 			Gets object by property<br />
-			<br />
 			Returns : object by property
 		</p>
 
 		<h3>[method:Object3D getObjectTop](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object top<br />
-			<br />
 			Returns : object top
 		</p>
 
@@ -810,14 +780,12 @@
 		<h3>[method:Vector3 getPosition](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets position<br />
-			<br />
 			Returns : position
 		</p>
 
 		<h3>[method:Euler getRotation](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets rotation<br />
-			<br />
 			Returns : rotation
 		</p>
 
@@ -833,7 +801,6 @@
 		<h3>[method:Vector3 getScale](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets scale<br />
-			<br />
 			Returns : scale
 		</p>
 
@@ -849,7 +816,6 @@
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -870,7 +836,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -886,7 +851,6 @@
 		</p>
 		<p>
 			Gets visible<br />
-			<br />
 			Returns : true if visible
 		</p>
 
@@ -898,7 +862,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -909,7 +872,6 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
@@ -941,7 +903,6 @@
 		</p>
 		<p>
 			Sets lookat<br />
-			<br />
 			Returns : lookat
 		</p>
 
@@ -970,7 +931,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -992,7 +952,6 @@
 		</p>
 		<p>
 			Sets position<br />
-			<br />
 			Returns : position
 		</p>
 
@@ -1005,7 +964,6 @@
 		</p>
 		<p>
 			Sets rotation<br />
-			<br />
 			Returns : rotation
 		</p>
 
@@ -1018,7 +976,6 @@
 		</p>
 		<p>
 			Sets scale<br />
-			<br />
 			Returns : scale
 		</p>
 
@@ -1029,7 +986,6 @@
 		</p>
 		<p>
 			Sets scale scalar<br />
-			<br />
 			Returns : scale scalar
 		</p>
 
@@ -1165,7 +1121,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -1180,6 +1135,7 @@
 		<p>
 			Updates input params
 		</p>
+
 
 		<h2>Interfaces</h2>
 		<h3 id="INgxVector" class="interface"> INgxVector <i class="modifier modifier-interface">Interface</i></h3>
@@ -1206,46 +1162,6 @@
 
 		<p class="desc">
 			Tag attributes
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
 		</p>
 
 		<h3 id="MeshBasicMaterialParameters" class="interface">[page:MaterialParameters] &rarr; MeshBasicMaterialParameters <i class="modifier modifier-interface">Interface</i></h3>
@@ -1357,7 +1273,7 @@
 			Mesh basic material parameters
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/svg/svg.component.ts /svg/svg.component.ts]</p>
 	</body>

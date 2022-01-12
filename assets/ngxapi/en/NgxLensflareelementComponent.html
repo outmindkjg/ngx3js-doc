@@ -13,13 +13,10 @@
 
 		<p class="desc">
 			The Lensflareelement component.<br />
-			<br />
 			<h3>Preview - ngx lensflares</h3><br />
 			<iframe src="#/viewer/webgl_lensflares"></iframe><br />
-			<br />
-			See the [page:LensflareelementComponent ngx3js docs] page for details.<br />
+			See the [page:NgxLensflareelementComponent ngx3js docs] page for details.<br />
 			See the [example:webgl_lensflares ngx lensflares] page for a live demo.<br />
-			<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-mesh [type]="'lensflare'"&gt;<br />
 				&lt;ngx3js-lensflareelement<br />
@@ -46,7 +43,7 @@
 			</code>
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-lensflareelement
 			[ color ]="... INgxColor -- color of LensflareElement "
 			[ debug ]="... boolean -- Debug this Object "
@@ -64,13 +61,13 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxLensflareelementComponent NgxLensflareelementComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxLensflareelementComponent NgxLensflareelementComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Creates an instance of LensflareElement.
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
 		</p>
 
@@ -169,8 +166,9 @@
 			Export this Object to window global variables
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
 		</p>
 
@@ -204,7 +202,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -252,42 +249,36 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:LensflareElement getLensflareElement](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets lensflare element<br />
-			<br />
 			Returns : lensflare element
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
 		<h3>[method:Texture getTexture](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets texture<br />
-			<br />
 			Returns : texture
 		</p>
 
@@ -299,7 +290,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -316,7 +306,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -327,8 +316,12 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
+		</p>
+
+		<h3>[method:void resetTween](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Resets tween
 		</p>
 
 		<h3>[method:void runSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -365,7 +358,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -394,6 +386,15 @@
 		</p>
 		<p>
 			Sets tween
+		</p>
+
+		<h3>[method:void setTweenTarget](  [param:any tweenTarget] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenTarget] - The tween target.
+		</p>
+		<p>
+			Sets tween target
 		</p>
 
 		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -473,7 +474,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -488,6 +488,7 @@
 		<p>
 			Updates input params
 		</p>
+
 
 		<h2>Interfaces</h2>
 		<h3 id="INgxColor" class="interface"> INgxColor <i class="modifier modifier-interface">Type alias</i></h3>
@@ -505,17 +506,7 @@
 			THREE.Color
 		</p>
 
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/lensflareelement/lensflareelement.component.ts /lensflareelement/lensflareelement.component.ts]</p>
 	</body>

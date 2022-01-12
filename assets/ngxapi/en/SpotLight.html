@@ -14,17 +14,13 @@
 		<p class="desc">
 			This light gets emitted from a single point in one direction, along a cone that increases in size the further from the light it gets.<br />
 			This light can cast shadows - see the [page:SpotLightShadow SpotLightShadow] page for details.<br />
-			<br />
 			<h3>Preview - ngx light</h3><br />
 			<iframe src="#/viewer/ngx_light/SpotLight"></iframe><br />
-			<br />
 			See the [page:SpotLight ngx3js docs] page for details.<br />
 			See the [example:ngx_light/SpotLight ngx light] page for a live demo.<br />
-			<br />
 			<h2>Examples</h2><br />
 			[example:webgl_lights_spotlight lights / spotlight]<br />
 			[example:webgl_lights_spotlights lights / spotlights]<br />
-			<br />
 			<h2>Code Example</h2><br />
 			<code data-type="javascript"><br />
 			//  white spotlight shining from the side, casting a shadow<br />
@@ -38,9 +34,7 @@
 			spotLight.shadow.camera.fov = 30;<br />
 			scene.add( spotLight );<br />
 			</code><br />
-			<br />
 			<h2>Ngx3Js Code Example</h2><br />
-			<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-light [type]="'SpotLight'" [color]="'0xffffff'" [intensity]="1.5" [castShadow]="true"<br />
 				[shadowCameraNear]="500" [shadowCameraFar]="4000" [shadowCameraFov]="30" [shadowMapSize]="1024"<br />
@@ -49,7 +43,7 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:SpotLight SpotLight](  [param:string|number hex]?,  [param:number intensity]? )<i class="modifier modifier-inherited">Inherited</i></h3>
+				<h3>[constructor:SpotLight SpotLight](  [param:string|number hex]?,  [param:number intensity]? )<i class="modifier modifier-inherited">Inherited</i></h3>
 		<h4>Parameters</h4>
 		<p>
 			[parameter:string|number hex] - (optional) The hex.<br />
@@ -60,7 +54,7 @@
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:EventDispatcher EventDispatcher] class for common properties.
 		</p>
 		<p>
@@ -126,8 +120,8 @@
 
 		<h3>[property:number distance]</h3>
 		<p>
-			&lt;em&gt;Default mode&lt;/em&gt; - When distance is zero, light does not attenuate. When distance is non-zero, light will attenuate linearly from maximum intensity at the light's position down to zero at this distance from the light.<br />
-			&lt;em&gt;[page:WebGLRenderer.physicallyCorrectLights Physically correct] mode&lt;/em&gt; - When distance is zero, light will attenuate according to inverse-square law to infinite distance. When distance is non-zero, light will attenuate according to inverse-square law until near the distance cutoff, where it will then attenuate quickly and smoothly to 0. Inherently, cutoffs are not physically correct.<br />
+			<em>Default mode</em> - When distance is zero, light does not attenuate. When distance is non-zero, light will attenuate linearly from maximum intensity at the light's position down to zero at this distance from the light.<br />
+			<em>[page:WebGLRenderer.physicallyCorrectLights Physically correct] mode</em> - When distance is zero, light will attenuate according to inverse-square law to infinite distance. When distance is non-zero, light will attenuate according to inverse-square law until near the distance cutoff, where it will then attenuate quickly and smoothly to 0. Inherently, cutoffs are not physically correct.<br />
 			Default is <i>0.0</i>.
 		</p>
 
@@ -275,7 +269,7 @@
 			*Note</i>: For the target's position to be changed to anything other than the default, it must be added to the [page:Scene scene] using scene.add( light.target );<br />
 			This is so that the target's [page:Object3D.matrixWorld matrixWorld] gets automatically updated each frame.<br />
 			It is also possible to set the target to be another object in the scene (anything with a [page:Object3D.position position] property), like so:<br />
-			<h2>Code Example</h2><br />
+			<h4>Code Example</h4><br />
 			<code data-type="javascript"><br />
 			const targetObject = new THREE.Object3D();<br />
 			scene.add(targetObject);<br />
@@ -311,8 +305,9 @@
 			Object gets rendered if <i>true</i>. Default is <i>true</i>.
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:EventDispatcher EventDispatcher] class for common methods.
 		</p>
 		<p>
@@ -771,182 +766,8 @@
 			Converts the vector from world space to this object's local space.
 		</p>
 
+
 		<h2>Interfaces</h2>
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="Event" class="interface">[page:BaseEvent] &rarr; Event <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Properties</h4>
 		<p>
@@ -1025,7 +846,7 @@
 
 		<p class="desc">
 			This is used internally by [page:SpotLight SpotLights] for calculating shadows.<br />
-			<h2>Code Example</h2><br />
+			<h4>Code Example</h4><br />
 			<code data-type="javascript"><br />
 			// Create a WebGLRenderer and turn on shadows in the renderer<br />
 			const renderer = new THREE.WebGLRenderer();<br />
@@ -1077,7 +898,7 @@
 			
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/threejs-library/types/three/lights.ts /threejs-library/types/three/lights.ts]</p>
 	</body>

@@ -13,8 +13,7 @@
 
 		<p class="desc">
 			NgxControllerComponent<br />
-			See the [page:ControllerComponent ngx3js docs] page for details.<br />
-			<br />
+			See the [page:NgxControllerComponent ngx3js docs] page for details.<br />
 			<code data-type="html"><br />
 			&lt;ngx3js-controller<br />
 				[type]="'tween'" [options]="'once'" [duration]="info.duration"<br />
@@ -48,7 +47,7 @@
 			</code>
 		</p>
 
-		<h2>Template</h2>
+		<h2>Angular Template</h2>
 		<code data-type="html">&lt;ngx3js-controller
 			[ centerX ]="... number -- The centerX of controller comp... "
 			[ centerY ]="... number -- The centerY of controller comp... "
@@ -92,13 +91,13 @@
 		</code>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxControllerComponent NgxControllerComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxControllerComponent NgxControllerComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Creates an instance of controller component.
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
 		</p>
 		<p>
@@ -379,8 +378,9 @@
 			Export this Object to window global variables
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
 		</p>
 		<p>
@@ -417,7 +417,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -465,7 +464,6 @@
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -477,21 +475,18 @@
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -503,7 +498,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -520,7 +514,6 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
@@ -531,13 +524,17 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
 		</p>
 
 		<h3>[method:void refreshRefObject3dPosition](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Refreshs ref object3d position
+		</p>
+
+		<h3>[method:void resetTween](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Resets tween
 		</p>
 
 		<h3>[method:void runSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -592,7 +589,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -642,6 +638,15 @@
 		</p>
 		<p>
 			Sets tween
+		</p>
+
+		<h3>[method:void setTweenTarget](  [param:any tweenTarget] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenTarget] - The tween target.
+		</p>
+		<p>
+			Sets tween target
 		</p>
 
 		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -721,7 +726,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -745,6 +749,7 @@
 		<p>
 			Updates input params
 		</p>
+
 
 		<h2>Interfaces</h2>
 		<h3 id="IHtmlCollection" class="interface"> IHtmlCollection <i class="modifier modifier-interface">Interface</i></h3>
@@ -815,26 +820,6 @@
 			THREE.Color
 		</p>
 
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="Renderer" class="interface"> Renderer <i class="modifier modifier-interface">Interface</i></h3>
 		<h4>Constructor</h4>
 		<p>
@@ -856,7 +841,7 @@
 			See the [example:ngx_renderer ngx renderer] page for a live demo.
 		</p>
 
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/controller/controller.component.ts /controller/controller.component.ts]</p>
 	</body>

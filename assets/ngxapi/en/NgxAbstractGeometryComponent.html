@@ -13,13 +13,10 @@
 
 		<p class="desc">
 			The Abstract Geometry component.<br />
-			<br />
 			<h3>Preview - ngx geometey</h3><br />
 			<iframe src="#/viewer/ngx_geometry"></iframe><br />
-			<br />
-			See the [page:AbstractGeometryComponent ngx3js docs] page for details.<br />
+			See the [page:NgxAbstractGeometryComponent ngx3js docs] page for details.<br />
 			See the [example:ngx_geometry ngx geometey] page for a live demo.<br />
-			<br />
 			<code data-type="typescript"><br />
 			@Component({<br />
 				providers: [<br />
@@ -42,13 +39,13 @@
 		</p>
 
 		<h2>Constructor</h2>
-		<h3>[constructor:NgxAbstractGeometryComponent NgxAbstractGeometryComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
+				<h3>[constructor:NgxAbstractGeometryComponent NgxAbstractGeometryComponent](  )<i class="modifier modifier-overwrite">Overwrite</i></h3>
 		<p>
 			Creates an instance of abstract geometry component.
 		</p>
 
 		<h2>Properties</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common properties.
 		</p>
 
@@ -76,7 +73,6 @@
 		<p>
 			The align of geometry<br />
 			left, center, right, top, bottom, front, back, double<br />
-			<br />
 			Notice - case insensitive. mixed
 		</p>
 
@@ -292,12 +288,10 @@
 			Make the input mesh.geometry's normal attribute encoded and compressed by 3 different methods.<br />
 			Also will change the mesh.material to `PackedPhongMaterial` which let the vertex shader program decode the normal data.<br />
 			"DEFAULT" || "OCT1Byte" || "OCT2Byte" || "ANGLES"<br />
-			<br />
 			"OCT1Byte"<br />
 			It is not recommended to use 1-byte octahedron normals encoding unless you want to extremely reduce the memory usage<br />
 			As it makes vertex data not aligned to a 4 byte boundary which may harm some WebGL implementations and sometimes the normal distortion is visible<br />
 			Please refer to @zeux 's comments in https://github.com/mrdoob/three.js/pull/18208<br />
-			<br />
 			"OCT2Byte"<br />
 			"ANGLES"
 		</p>
@@ -351,14 +345,12 @@
 		<h3>[property:number drawRangeCount]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			drawRangeCount of abstract geometry component<br />
-			<br />
 			[page:BufferGeometry BufferGeometry] - THREE.BufferGeometry setDrawRange
 		</p>
 
 		<h3>[property:number drawRangeStart]<i class="modifier modifier-input">Input</i> <i class="modifier modifier-public">Public</i></h3>
 		<p>
 			drawRangeStart of abstract geometry component<br />
-			<br />
 			[page:BufferGeometry BufferGeometry] - THREE.BufferGeometry setDrawRange
 		</p>
 
@@ -531,8 +523,9 @@
 			Export this Object to window global variables
 		</p>
 
+
 		<h2>Methods</h2>
-		<p>
+				<p>
 			See the base [page:NgxAbstractSubscribeComponent NgxAbstractSubscribeComponent] class for common methods.
 		</p>
 
@@ -566,7 +559,6 @@
 		</p>
 		<p>
 			Checks changes<br />
-			<br />
 			Returns : changes
 		</p>
 
@@ -622,7 +614,6 @@
 		</p>
 		<p>
 			Gets attribute<br />
-			<br />
 			Returns : attribute
 		</p>
 
@@ -633,49 +624,42 @@
 		</p>
 		<p>
 			Gets attributes<br />
-			<br />
 			Returns : attributes
 		</p>
 
 		<h3>[method:string[] getChanges](  )<i class="modifier modifier-protected">Protected</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets changes<br />
-			<br />
 			Returns : changes
 		</p>
 
 		<h3>[method:T getGeometry](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Gets geometry<br />
-			<br />
 			Returns : geometry
 		</p>
 
 		<h3>[method:string getId](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets id<br />
-			<br />
 			Returns : id
 		</p>
 
 		<h3>[method:void getMorphAttributes](  )<i class="modifier modifier-protected">Protected</i></h3>
 		<p>
 			Gets morph attributes<br />
-			<br />
 			Returns : morph attributes
 		</p>
 
 		<h3>[method:T getObject](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets object<br />
-			<br />
 			Returns : object
 		</p>
 
 		<h3>[method:Observable getSubscribe](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
 		<p>
 			Gets subscribe<br />
-			<br />
 			Returns : subscribe
 		</p>
 
@@ -687,7 +671,6 @@
 		<p>
 			Gets timeout<br />
 			특정 시간후에 이벤트 발생시키기<br />
-			<br />
 			Returns : timeout
 		</p>
 
@@ -704,14 +687,12 @@
 		</p>
 		<p>
 			Inits local component<br />
-			<br />
 			Returns : local component
 		</p>
 
 		<h3>[method:boolean isGeometryType](  )<i class="modifier modifier-public">Public</i></h3>
 		<p>
 			Determines whether Geometry type is<br />
-			<br />
 			Returns : true if Geometry type
 		</p>
 
@@ -722,8 +703,12 @@
 		</p>
 		<p>
 			Determines whether id euals is<br />
-			<br />
 			Returns : true if id euals
+		</p>
+
+		<h3>[method:void resetTween](  )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<p>
+			Resets tween
 		</p>
 
 		<h3>[method:void runSubscribeNext](  [param:string|string[] key] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -769,7 +754,6 @@
 		</p>
 		<p>
 			Sets parent<br />
-			<br />
 			Returns : true if parent
 		</p>
 
@@ -798,6 +782,15 @@
 		</p>
 		<p>
 			Sets tween
+		</p>
+
+		<h3>[method:void setTweenTarget](  [param:any tweenTarget] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
+		<h4>Parameters</h4>
+		<p>
+			[parameter:any tweenTarget] - The tween target.
+		</p>
+		<p>
+			Sets tween target
 		</p>
 
 		<h3>[method:void setUserData](  [param:string key],  [param:any value] )<i class="modifier modifier-public">Public</i> <i class="modifier modifier-inherited">Inherited</i></h3>
@@ -877,7 +870,6 @@
 		</p>
 		<p>
 			subscription<br />
-			<br />
 			Returns : subscription
 		</p>
 
@@ -902,17 +894,8 @@
 			Updates input params
 		</p>
 
+
 		<h2>Interfaces</h2>
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
 		<h3 id="TAttrBufferAttribute" class="interface"> TAttrBufferAttribute <i class="modifier modifier-interface">Type alias</i></h3>
 		<h3>[property:number[]|Int8Array|Int16Array|Int32Array|Uint8Array|Uint16Array|Uint32Array|Float32Array|Float64Array|I3JS.BufferAttribute TAttrBufferAttribute]</h3>
 
@@ -921,17 +904,7 @@
 			Attr Buffer Attribute
 		</p>
 
-
-		<p class="desc">
-			
-		</p>
-
-
-		<p class="desc">
-			
-		</p>
-
-		<br /><br />
+		<br />
 		<h2>Source</h2>
 		<p>[link:https://github.com/outmindkjg/ngx3js-module/tree/master/projects/ngx3js/src/lib/geometry.abstract.ts /geometry.abstract.ts]</p>
 	</body>
