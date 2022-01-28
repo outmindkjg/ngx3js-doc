@@ -1,0 +1,73 @@
+{
+  "type": "radar",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "label": "Skip first dataset",
+        "data": [
+          null,
+          13.02897805,
+          34.69135802,
+          20.4483882,
+          27.09019204,
+          85.48096708,
+          45.00342936
+        ],
+        "borderColor": "rgb(255, 99, 132)",
+        "backgroundColor": "rgba(255,99,132,0.5)"
+      },
+      {
+        "label": "Skip mid dataset",
+        "data": [
+          84.66992455,
+          90.90020576,
+          1.96587791,
+          null,
+          84.28240741,
+          24.66906722,
+          63.71827846
+        ],
+        "borderColor": "rgb(54, 162, 235)",
+        "backgroundColor": "rgba(54,162,235,0.5)"
+      },
+      {
+        "label": "Skip last dataset",
+        "data": [
+          98.96090535,
+          46.44633059,
+          51.85356653,
+          68.26903292,
+          0.63100137,
+          16.84070645,
+          null
+        ],
+        "borderColor": "rgb(75, 192, 192)",
+        "backgroundColor": "rgba(75,192,192,0.5)"
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Chart.js Radar Skip Points Chart"
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "Randomize",
+      "handler": "handler(chart) { chart.data.datasets.forEach((dataset, i) => { const data = Utils.numbers({count: chart.data.labels.length, min: 0, max: 100});  if (i === 0) { data[0] = null; } else if (i === 1) { data[Number.parseInt(data.length / 2, 10)] = null; } else { data[data.length - 1] = null; }  dataset.data = data; }); chart.update(); }"
+    }
+  ]
+}

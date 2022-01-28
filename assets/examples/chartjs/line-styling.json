@@ -1,0 +1,95 @@
+{
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "label": "Unfilled",
+        "fill": false,
+        "backgroundColor": "rgb(54, 162, 235)",
+        "borderColor": "rgb(54, 162, 235)",
+        "data": [
+          -99.65706447,
+          -85.34465021,
+          49.74965706,
+          -25.23834019,
+          40.30864198,
+          -32.62174211,
+          69.55075446
+        ]
+      },
+      {
+        "label": "Dashed",
+        "fill": false,
+        "backgroundColor": "rgb(75, 192, 192)",
+        "borderColor": "rgb(75, 192, 192)",
+        "borderDash": [
+          5,
+          5
+        ],
+        "data": [
+          8.55452675,
+          83.15500686,
+          51.37688615,
+          86.05967078,
+          63.74657064,
+          -13.09327846,
+          -60.50925926
+        ]
+      },
+      {
+        "label": "Filled",
+        "backgroundColor": "rgb(255, 99, 132)",
+        "borderColor": "rgb(255, 99, 132)",
+        "data": [
+          -24.18038409,
+          -57.1930727,
+          35.51440329,
+          86.04080933,
+          -14.2558299,
+          40.7973251,
+          61.07681756
+        ],
+        "fill": true
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Chart.js Line Chart"
+      }
+    },
+    "interaction": {
+      "mode": "index",
+      "intersect": false
+    },
+    "scales": {
+      "x": {
+        "display": true,
+        "title": {
+          "display": true,
+          "text": "Month"
+        }
+      },
+      "y": {
+        "display": true,
+        "title": {
+          "display": true,
+          "text": "Value"
+        }
+      }
+    }
+  },
+  "actions": null
+}

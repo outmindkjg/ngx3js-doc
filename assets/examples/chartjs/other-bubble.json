@@ -1,0 +1,134 @@
+{
+  "type": "bubble",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "label": "Dataset 1",
+        "data": [
+          {
+            "x": 57.81550069,
+            "y": 27.97067901,
+            "r": 5.172668038408779
+          },
+          {
+            "x": 51.39146091,
+            "y": 81.32030178,
+            "r": 13.098636831275721
+          },
+          {
+            "x": 57.21021948,
+            "y": 11.11025377,
+            "r": 12.5343792866941
+          },
+          {
+            "x": 20.95078875,
+            "y": 81.53806584,
+            "r": 14.374957133058984
+          },
+          {
+            "x": 95.69958848,
+            "y": 75.31978738,
+            "r": 13.589506172839506
+          },
+          {
+            "x": 86.39489026,
+            "y": 4.80109739,
+            "r": 8.110125171467764
+          },
+          {
+            "x": 60.93792867,
+            "y": 89.7350823,
+            "r": 14.387431412894376
+          }
+        ],
+        "borderColor": "rgb(255, 99, 132)",
+        "backgroundColor": "rgba(255,99,132,0.5)"
+      },
+      {
+        "label": "Dataset 2",
+        "data": [
+          {
+            "x": 46.12782922,
+            "y": 74.35913923,
+            "r": 12.038880315500686
+          },
+          {
+            "x": 43.76757545,
+            "y": 77.45156036,
+            "r": 5.7390260631001375
+          },
+          {
+            "x": 91.92172497,
+            "y": 2.66332305,
+            "r": 10.794624485596707
+          },
+          {
+            "x": 99.23225309,
+            "y": 21.59936557,
+            "r": 12.915552126200275
+          },
+          {
+            "x": 59.5263203,
+            "y": 68.82758916,
+            "r": 9.663537379972565
+          },
+          {
+            "x": 62.9273834,
+            "y": 19.6566358,
+            "r": 12.674382716049383
+          },
+          {
+            "x": 73.63297325,
+            "y": 34.58033265,
+            "r": 6.546853566529492
+          }
+        ],
+        "borderColor": "rgb(255, 159, 64)",
+        "backgroundColor": "rgba(255,159,64,0.5)"
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "legend": {
+        "position": "top"
+      },
+      "title": {
+        "display": true,
+        "text": "Chart.js Bubble Chart"
+      }
+    }
+  },
+  "actions": [
+    {
+      "name": "Randomize",
+      "handler": "handler(chart) { chart.data.datasets.forEach(dataset => { dataset.data = Utils.bubbles({count: chart.data.labels.length, rmin: 5, rmax: 15, min: 0, max: 100}); }); chart.update(); }"
+    },
+    {
+      "name": "Add Dataset",
+      "handler": "handler(chart) { const data = chart.data; const dsColor = Utils.namedColor(chart.data.datasets.length); const newDataset = { label: 'Dataset ' + (data.datasets.length + 1), backgroundColor: Utils.transparentize(dsColor, 0.5), borderColor: dsColor, data: Utils.bubbles({count: data.labels.length, rmin: 5, rmax: 15, min: 0, max: 100}), }; chart.data.datasets.push(newDataset); chart.update(); }"
+    },
+    {
+      "name": "Add Data",
+      "handler": "handler(chart) { const data = chart.data; if (data.datasets.length > 0) {  for (let index = 0; index < data.datasets.length; ++index) { data.datasets[index].data.push(Utils.bubbles({count: 1, rmin: 5, rmax: 15, min: 0, max: 100})[0]); }  chart.update(); } }"
+    },
+    {
+      "name": "Remove Dataset",
+      "handler": "handler(chart) { chart.data.datasets.pop(); chart.update(); }"
+    },
+    {
+      "name": "Remove Data",
+      "handler": "handler(chart) { chart.data.labels.splice(-1, 1); /**  remove the label first */  chart.data.datasets.forEach(dataset => { dataset.data.pop(); });  chart.update(); }"
+    }
+  ]
+}
