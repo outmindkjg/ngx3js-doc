@@ -36,7 +36,7 @@
 			{ "url": "line-pen", "name": "Click to Add Points" },
 			{ "url": "line-draggable", "name": "Try Dragging these Points" },
 			{ "url": "line-polar", "name": "Two Value-Axes in Polar" },
-			{ "url": "line-polar2", "name": "Two Value-Axes in Polar" },
+			{ "url": "line-polar2", "name": "Two Value-Axes in Polar2" },
 			{ "url": "line-tooltip-touch", "name": "Tooltip and DataZoom on Mobile" },
 			{ "url": "dataset-link", "name": "Share Dataset" }
 		]
@@ -48,8 +48,8 @@
 			{ "url": "bar-simple", "name": "Basic Bar" },
 			{ "url": "bar-tick-align", "name": "Axis Align with Tick" },
 			{ "url": "bar-data-color", "name": "Set Style of Single Bar." },
-			{ "url": "bar-waterfall", "name": "Waterfall Chart" },
-			{ "url": "bar-negative2", "name": "Bar Chart with Negative Value" },
+			{ "url": "bar-waterfall", "name": "Bar Waterfall Chart" },
+			{ "url": "bar-negative2", "name": "Bar Chart with Negative Value2" },
 			{
 				"url": "bar-polar-label-radial",
 				"name": "Radial Polar Bar Label Position"
@@ -62,7 +62,7 @@
 			{ "url": "bar-gradient", "name": "Clickable Column Chart with Gradient" },
 			{ "url": "bar-label-rotation", "name": "Bar Label Rotation" },
 			{ "url": "bar-stack", "name": "Stacked Column Chart" },
-			{ "url": "bar-waterfall2", "name": "Waterfall Chart" },
+			{ "url": "bar-waterfall2", "name": "Bar Waterfall Chart2" },
 			{ "url": "bar-y-category-stack", "name": "Stacked Horizontal Bar" },
 			{ "url": "bar-brush", "name": "Brush Select on Column Chart" },
 			{ "url": "bar-negative", "name": "Bar Chart with Negative Value" },
@@ -73,7 +73,7 @@
 			{ "url": "bar-animation-delay", "name": "Animation Delay" },
 			{ "url": "bar-drilldown", "name": "Bar Chart Drilldown Animation." },
 			{ "url": "bar-race", "name": "Bar Race" },
-			{ "url": "bar-race-country", "name": "Bar Race" },
+			{ "url": "bar-race-country", "name": "Bar Race Country" },
 			{ "url": "bar-rich-text", "name": "Wheater Statistics" },
 			{ "url": "dynamic-data", "name": "Dynamic Data" },
 			{ "url": "mix-timeline-finance", "name": "Finance Indices 2002" },
@@ -106,7 +106,7 @@
 			{ "url": "pie-custom", "name": "Customized Pie" },
 			{ "url": "pie-pattern", "name": "Texture on Pie Chart" },
 			{ "url": "pie-roseType", "name": "Nightingale Chart" },
-			{ "url": "pie-roseType-simple", "name": "Nightingale Chart" },
+			{ "url": "pie-roseType-simple", "name": "Nightingale Chart Simple" },
 			{ "url": "pie-alignTo", "name": "Pie Label Align" },
 			{ "url": "pie-labelLine-adjust", "name": "Label Line Adjust" },
 			{ "url": "pie-legend", "name": "Pie with Scrollable Legend" },
@@ -128,7 +128,7 @@
 			{ "url": "scatter-single-axis", "name": "Scatter on Single Axis" },
 			{ "url": "scatter-weight", "name": "Distribution of Height and Weight" },
 			{ "url": "scatter-aggregate-bar", "name": "Aggregate Scatter to Bar" },
-			{ "url": "scatter-label-align-right", "name": "Align Label on the Top" },
+			{ "url": "scatter-label-align-right", "name": "Align Label on the Right" },
 			{ "url": "scatter-label-align-top", "name": "Align Label on the Top" },
 			{ "url": "scatter-symbol-morph", "name": "Symbol Shape Morph" },
 			{
@@ -139,7 +139,7 @@
 			{ "url": "scatter-aqi-color", "name": "Scatter Aqi Color" },
 			{ "url": "scatter-nutrients", "name": "Scatter Nutrients" },
 			{ "url": "scatter-nutrients-matrix", "name": "Scatter Nutrients Matrix" },
-			{ "url": "scatter-polar-punchCard", "name": "Punch Card of Github" },
+			{ "url": "scatter-polar-punchCard", "name": "Polar Punch Card of Github" },
 			{
 				"url": "scatter-life-expectancy-timeline",
 				"name": "Life Expectancy and GDP"
@@ -199,13 +199,13 @@
 	{
 		"title": "Graph",
 		"children": [
-			{ "url": "graph-force2", "name": "Force Layout" },
+			{ "url": "graph-force2", "name": "Force Layout2" },
 			{ "url": "graph-grid", "name": "Graph on Cartesian" },
 			{ "url": "graph-simple", "name": "Simple Graph" },
 			{ "url": "graph-force", "name": "Force Layout" },
 			{ "url": "graph-label-overlap", "name": "Hide Overlapped Label" },
 			{ "url": "graph", "name": "Les Miserables" },
-			{ "url": "graph-circular-layout", "name": "Les Miserables" },
+			{ "url": "graph-circular-layout", "name": "Circular Les Miserables" },
 			{ "url": "graph-force-dynamic", "name": "Graph Dynamic" },
 			{ "url": "graph-webkit-dep", "name": "Graph Webkit Dep" },
 			{ "url": "graph-npm", "name": "NPM Dependencies" },
@@ -320,14 +320,8 @@
 			{
 				"url": "pictorialBar-velocity",
 				"name": "Velocity of Christmas Reindeers"
-			}
-		]
-	},
-	{
-		"title": "ThemeRiver",
-		"children": [
-			{ "url": "themeRiver-basic", "name": "ThemeRiver" },
-			{ "url": "themeRiver-lastfm", "name": "ThemeRiver Lastfm" }
+			},
+			{ "url": "themeRiver-basic", "name": "ThemeRiver" }
 		]
 	},
 	{
